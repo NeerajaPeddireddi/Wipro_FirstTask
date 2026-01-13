@@ -1,3 +1,7 @@
+from math import *
+
+from jupyter_server.auth import passwd
+
 #simple python code
 print("Hello")
 
@@ -245,3 +249,39 @@ print(maxnum(10,20))
 numbers=[1,2,3,4,5]
 result=list(map(lambda x:x**2,numbers))
 print(result)
+
+#Exception handling
+#Zero Division Eror
+a=10
+b=5
+try:
+    div=a/b
+    print(div)
+except ZeroDivisionError:
+    print("division by zero")
+except Exception as e:
+    print(e)
+
+#Perfect root or not with negative values
+x=int(input("Enter num:"))
+try:
+    res=math.sqrt(x)
+    print(res)
+except ValueError:
+    print("ValueError")
+except Exception as e:
+    print(e)
+#User Defined Exception
+# class myError(Exception):
+#     pass
+# raise myError("This is a user defined Error")
+class InvalidAge(Exception):
+    pass
+try:
+    age=int(input("Enter age:"))
+    if age<18:
+        raise InvalidAge("Age must be less than or equal to 18")
+    else:
+        print("Eligible age")
+except InvalidAge as e:
+    print("Error",e)
