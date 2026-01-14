@@ -46,6 +46,7 @@ else:
 a="Neeraja"
 #slicing
 print(a[0])
+#Negatie Indexing
 print(a[-5])
 #multiple line through triple quotes
 str=("""hello
@@ -73,7 +74,7 @@ str1="I am {} I am from {}".format("Neeraja","AP")
 print(str1)
 #split
 str2=str1.split()
-print(str2)
+print("Splitted String",str2)
 
 #List
 num=[1,2,3,4,5]
@@ -155,7 +156,7 @@ print(dict2)
 print(dict2.values())
 #getting keys
 print(dict2.keys())
-#update
+#update,assign
 dict1[1]=10
 print(dict1)
 print(dict1.popitem())
@@ -191,13 +192,14 @@ print(set1)
 
 A={1,2,3}
 B={3,4,5}
-print(A|B)
-print(A&B)
+print(A|B)#Union
+print(A&B)#Intersection
 
 #mutiple assignment
 a=b=2
 
 #control structures
+#If,elif,else,for,while-->dowhile not possible in python
 num=5
 if num%2==0:
     print("even")
