@@ -20,6 +20,8 @@ from absl.testing.parameterized import parameters
 def hello(greeting,name):
     print(greeting,name)
 hello("Hello","Neeraja")
+#no nee
+
 
 def greet(greeting="Hello",name="Neeraja"):
     print(greeting,name)
@@ -27,7 +29,7 @@ greet()
 # # calling one parameters
 greet('Greetings','Neeraja')
 greet("hi")
-# # Single * gives output in tuple format -->(1, 2, 3, 4)
+# # Single * gives output in tuple format -->(1, 2, 3, 4),accept any number of values
 def print_params(*params):
     print(params)
 print_params("Testing")
