@@ -21,3 +21,4 @@ def factorial(n):
 n=int(input("Enter the number:"))
 res=factorial(n)
 print(f"Factorial of {n} is {res}")
+

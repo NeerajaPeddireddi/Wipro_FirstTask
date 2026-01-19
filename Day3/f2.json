@@ -5,4 +5,11 @@
         "python",
         "c"
     ]
+}{
+    "name": "sath",
+    "age": 24,
+    "Skills": [
+        "C",
+        "Java"
+    ]
 }

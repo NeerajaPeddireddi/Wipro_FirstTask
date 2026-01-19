@@ -1,3 +1,9 @@
+from importlib.metadata import files
+
+from zmq.green import device
+from zmq.ssh import paramiko_tunnel
+
+
 class Student:
     def display(self):
         print("hello world")
@@ -86,3 +92,72 @@ class SBI(BANK):
 s=SBI()
 s.interest()
 s.loan()
+
+# The subprocess module allows a Python program to execute
+# operating system commands and interact with their input, output, and errors.
+
+#to echo some thing we use this below code in python
+#in cmd we use echo"hello world"
+# Python → talks to the operating system
+# 👉 run operating system (OS) commands
+# 👉 run other programs/scripts
+# 👉 communicate with them
+import subprocess
+result=subprocess.run(
+    ["echo", "Hello World"],
+    capture_output=True,
+    text=True,
+    shell=True,
+
+)
+print(result.stdout)
+
+#Subprocess run in single line
+import subprocess
+subprocess.run(("python","Assessment_Q1.py"))
+#output execute above pyton file print the output same like cmd pyton filename.py
+#to print ls
+import subprocess
+resultls = subprocess.run(
+    ["dir"],
+     shell=True,
+     capture_output=True,
+     text=True)
+print(resultls.stdout)
+
+#Threading
+import threading
+def task1():
+    print("Task 1")
+t=threading.Thread(target=task1)
+t.start()
+t.join()
+print("Main thread ends")
+
+#Virtual Environment
+#A virtual environment is a self-contained directory that contains its own Python
+# interpreter and libraries, isolated from the system Python.
+#if project A -->need python 3.0
+#if project B -->need python 3.3
+# then we use this virtual env
+# create env
+# python -m venv myenv
+# Activate
+# myenv\Scripts\activate
+# Deactivate
+# deactivate
+# How to Check Active Virtual Environment
+# where python
+#pip install selenium
+
+
+# Remote host\device  using paramiko
+# what is paramiko?
+# connect to a remote machile\device
+# using ssh(Secure Shell)
+# Execute commands remotely
+# Transfer files()
+# Your Python program → connects to another computer → runs commands there
+#
+# remote host-->another device.linux system,cloud virtual machine
+# youneed -->idaddress,username,password,ssh keys

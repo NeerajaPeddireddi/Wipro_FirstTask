@@ -104,7 +104,7 @@ for i in gen:
 # Read
 file=open("f1.txt","r")
 content1=file.read()
-print(content1)
+print("read content",content1)
 content=file.readline()
 print(content)
 content2=file.readlines()
