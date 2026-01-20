@@ -166,7 +166,6 @@ ET.SubElement(emp2, "id").text = "102"
 ET.SubElement(emp2, "Name").text = "pavi"
 ET.SubElement(emp2, "Salary").text = "200000"
 
-
 tree = ET.ElementTree(root)
 tree.write("employee.xml")
 print("xml file written successfully")

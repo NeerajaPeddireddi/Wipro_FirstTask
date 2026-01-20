@@ -13,7 +13,7 @@ def logger(func):
 
 def admin_only(func):
     def wrapper(*args, **kwargs):
-        is_admin = True
+        is_admin =False
         if not is_admin:
             raise PermissionError("Access Denied: Admin privileges required")
         return func(*args, **kwargs)
@@ -259,10 +259,12 @@ while True:
             if students and faculty_list:
                 print("\nStudent Details:")
                 print("--------------------------------")
-                students[0].get_details()
+                for s in students:
+                    s.get_details()
                 print("\nFaculty Details:")
                 print("--------------------------------")
-                faculty_list[0].get_details()
+                for f in faculty_list:
+                    f.get_details()
             else:
                 print("Add at least one student and one faculty first.")
         elif choice == "7":
@@ -307,6 +309,11 @@ while True:
             print("--------------------------------")
             for rec in student_generator(students):
                 print(rec)
+            print("\nCourse Iterator Output")
+            print("--------------------------------")
+            course_iter = CourseIterator(courses)
+            for cname in course_iter:
+                print(cname)
 
         elif choice == "11":
             save_students_json(students)
