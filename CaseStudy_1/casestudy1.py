@@ -3,7 +3,7 @@ import json
 import csv
 import time
 
-# ---------------- DECORATORS ----------------
+# DECORATORS
 def logger(func):
     def wrapper(*args, **kwargs):
         result = func(*args, **kwargs)
@@ -13,8 +13,8 @@ def logger(func):
 
 def admin_only(func):
     def wrapper(*args, **kwargs):
-        is_admin =False
-        if not is_admin:
+        is_admin =True
+        if not kwargs.get("is_admin", False):
             raise PermissionError("Access Denied: Admin privileges required")
         return func(*args, **kwargs)
     return wrapper
@@ -27,7 +27,7 @@ def timer(func):
         return result
     return wrapper
 
-# ---------------- DESCRIPTORS ----------------
+# DESCRIPTORS
 class MarksDescriptor:
     def __set__(self, instance, value):
         if len(value) != 5 or not all(0 <= m <= 100 for m in value):
@@ -44,7 +44,7 @@ class SalaryDescriptor:
     def __set__(self, instance, value):
         instance.__salary = value
 
-# ---------------- ABSTRACT CLASS ----------------
+#ABSTRACT CLASS
 class Person(ABC):
     def __init__(self, pid, name, department):
         self.pid = pid
@@ -58,14 +58,14 @@ class Person(ABC):
     def __del__(self):
         print(f"[CLEANUP] {self.name} object deleted")
 
-# ---------------- DEPARTMENT ----------------
+# DEPARTMENT -->Simple helper class
 class Department:
     def __init__(self, name):
         self.name = name
 
-# ---------------- STUDENT ----------------
+# STUDENT
 class Student(Person):
-    marks = MarksDescriptor()
+    marks = MarksDescriptor() #Used to validate the marks
 
     def __init__(self, pid, name, department, semester, marks):
         super().__init__(pid, name, department)
@@ -93,7 +93,7 @@ class Student(Person):
 
     def enroll(self, course):
         self.courses.append(course)
-
+    #operator overloading
     def __gt__(self, other):
         return self.average() > other.average()
 
@@ -112,7 +112,7 @@ class Faculty(Person):
         print("Role      : Faculty")
         print("Department:", self.department)
 
-# ---------------- COURSE ----------------
+# COURSE
 class Course:
     def __init__(self, code, name, credits, faculty):
         self.code = code
@@ -129,7 +129,7 @@ class Course:
     def __add__(self, other):
         return self.credits + other.credits
 
-# ---------------- ITERATOR ----------------
+# ITERATOR
 class CourseIterator:
     def __init__(self, courses):
         self.courses = courses
@@ -145,15 +145,15 @@ class CourseIterator:
             return course.name
         raise StopIteration
 
-# ---------------- GENERATOR ----------------
+# GENERATOR
 def student_generator(students):
     print("\nFetching Student Records...")
     for s in students:
         yield f"{s.pid} - {s.name}"
 
-# ---------------- FILE HANDLING ----------------
+# FILE HANDLING
 @admin_only
-def save_students_json(students):
+def save_students_json(students,**kwargs):
     data = [{
         "id": s.pid,
         "name": s.name,
@@ -167,7 +167,7 @@ def save_students_json(students):
     print("Student data successfully saved to students.json")
 
 @admin_only
-def generate_students_csv(students):
+def generate_students_csv(students,**kwargs):
     with open("students_report.csv", "w", newline="") as f:
         writer = csv.writer(f)
         writer.writerow(["ID", "Name", "Department", "Average", "Grade"])
@@ -176,7 +176,7 @@ def generate_students_csv(students):
             writer.writerow([s.pid, s.name, s.department, avg, grade])
     print("CSV Report generated successfully")
 
-# ---------------- MAIN PROGRAM ----------------
+# MAIN PROGRAM
 students = []
 faculty_list = []
 courses = []
@@ -257,12 +257,10 @@ while True:
             print("Grade        :", grade)
         elif choice == "6":
             if students and faculty_list:
-                print("\nStudent Details:")
-                print("--------------------------------")
+
                 for s in students:
                     s.get_details()
-                print("\nFaculty Details:")
-                print("--------------------------------")
+
                 for f in faculty_list:
                     f.get_details()
             else:
@@ -300,7 +298,7 @@ while True:
 
             # Call a method decorated with admin_only
             try:
-                save_students_json(students)
+                save_students_json(students,is_admin=True)
             except Exception as e:
                 print(e)
         elif choice == "10":
@@ -316,8 +314,8 @@ while True:
                 print(cname)
 
         elif choice == "11":
-            save_students_json(students)
-            generate_students_csv(students)
+            save_students_json(students,is_admin=True)
+            generate_students_csv(students,is_admin=True)
 
         elif choice == "12":
             print("\nException Handling Output")
