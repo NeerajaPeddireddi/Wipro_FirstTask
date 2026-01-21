@@ -1,12 +1,12 @@
 [
     {
         "id": "101",
-        "name": "ram",
+        "name": "Ram",
         "department": "cse",
-        "semester": 3,
+        "semester": 4,
         "marks": [
-            23,
             45,
+            56,
             67,
             78,
             89
@@ -14,15 +14,15 @@
     },
     {
         "id": "102",
-        "name": "rekha",
-        "department": "cse",
-        "semester": 4,
+        "name": "Rani",
+        "department": "civil",
+        "semester": 3,
         "marks": [
-            45,
             56,
-            34,
-            56,
-            67
+            76,
+            78,
+            92,
+            45
         ]
     }
 ]

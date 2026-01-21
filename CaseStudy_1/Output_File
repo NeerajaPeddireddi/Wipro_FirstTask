@@ -1,0 +1,405 @@
+C:\Users\Neeraja\AppData\Local\Programs\Python\Python313\python.exe C:\Users\Neeraja\Desktop\Wipro_Practice\CaseStudy_1\casestudy1.py
+
+SMART UNIVERSITY MANAGEMENT SYSTEM
+1. Add Student
+2. Add Faculty
+3. Add Course
+4. Enroll Student to Course
+5. Calculate Student Performance
+6.Student and Faculty Details(Polymorphism)
+7. Compare Two Students
+8.Descriptor Validation Output
+9.Decorator Output (Logging / Access Control)
+10.Iterator / Generator Output
+11.File Output
+12.Exception Handling Output
+13. Exit
+Enter your choice: 1
+Student ID: 101
+Name: Ram
+Department: cse
+Semester: 4
+5 Marks: 45 56 67 78 89
+Student Created Successfully
+
+Student Details
+----------------
+Name      : Ram
+Role      : Student
+Department: cse
+
+SMART UNIVERSITY MANAGEMENT SYSTEM
+1. Add Student
+2. Add Faculty
+3. Add Course
+4. Enroll Student to Course
+5. Calculate Student Performance
+6.Student and Faculty Details(Polymorphism)
+7. Compare Two Students
+8.Descriptor Validation Output
+9.Decorator Output (Logging / Access Control)
+10.Iterator / Generator Output
+11.File Output
+12.Exception Handling Output
+13. Exit
+Enter your choice: 2
+Faculty ID: 201
+Name: Dr.Joshi
+Department: cse
+Salary: 78000
+Faculty Created Successfully
+
+Faculty Details
+----------------
+Name      : Dr.Joshi
+Role      : Faculty
+Department: cse
+
+SMART UNIVERSITY MANAGEMENT SYSTEM
+1. Add Student
+2. Add Faculty
+3. Add Course
+4. Enroll Student to Course
+5. Calculate Student Performance
+6.Student and Faculty Details(Polymorphism)
+7. Compare Two Students
+8.Descriptor Validation Output
+9.Decorator Output (Logging / Access Control)
+10.Iterator / Generator Output
+11.File Output
+12.Exception Handling Output
+13. Exit
+Enter your choice: 3
+Course Code: 301
+Course Name: java
+Credits: 4
+Course Added Successfully
+
+Course Details
+----------------
+Code      : 301
+Name      : java
+Credits   : 4
+Faculty: Dr.Joshi
+
+SMART UNIVERSITY MANAGEMENT SYSTEM
+1. Add Student
+2. Add Faculty
+3. Add Course
+4. Enroll Student to Course
+5. Calculate Student Performance
+6.Student and Faculty Details(Polymorphism)
+7. Compare Two Students
+8.Descriptor Validation Output
+9.Decorator Output (Logging / Access Control)
+10.Iterator / Generator Output
+11.File Output
+12.Exception Handling Output
+13. Exit
+Enter your choice: 1
+Student ID: 102
+Name: Rani
+Department: civil
+Semester: 3
+5 Marks: 56 76 78 92 45
+Student Created Successfully
+
+Student Details
+----------------
+Name      : Rani
+Role      : Student
+Department: civil
+
+SMART UNIVERSITY MANAGEMENT SYSTEM
+1. Add Student
+2. Add Faculty
+3. Add Course
+4. Enroll Student to Course
+5. Calculate Student Performance
+6.Student and Faculty Details(Polymorphism)
+7. Compare Two Students
+8.Descriptor Validation Output
+9.Decorator Output (Logging / Access Control)
+10.Iterator / Generator Output
+11.File Output
+12.Exception Handling Output
+13. Exit
+Enter your choice: 2
+Faculty ID: 202
+Name: Ajay das
+Department: civil
+Salary: 56000
+Faculty Created Successfully
+
+Faculty Details
+----------------
+Name      : Ajay das
+Role      : Faculty
+Department: civil
+
+SMART UNIVERSITY MANAGEMENT SYSTEM
+1. Add Student
+2. Add Faculty
+3. Add Course
+4. Enroll Student to Course
+5. Calculate Student Performance
+6.Student and Faculty Details(Polymorphism)
+7. Compare Two Students
+8.Descriptor Validation Output
+9.Decorator Output (Logging / Access Control)
+10.Iterator / Generator Output
+11.File Output
+12.Exception Handling Output
+13. Exit
+Enter your choice: 3
+Course Code: 302
+Course Name: Physics
+Credits: 3
+Course Added Successfully
+
+Course Details
+----------------
+Code      : 302
+Name      : Physics
+Credits   : 3
+Faculty: Dr.Joshi
+
+SMART UNIVERSITY MANAGEMENT SYSTEM
+1. Add Student
+2. Add Faculty
+3. Add Course
+4. Enroll Student to Course
+5. Calculate Student Performance
+6.Student and Faculty Details(Polymorphism)
+7. Compare Two Students
+8.Descriptor Validation Output
+9.Decorator Output (Logging / Access Control)
+10.Iterator / Generator Output
+11.File Output
+12.Exception Handling Output
+13. Exit
+Enter your choice: 4
+
+Enrollment Successful
+--------------------------------
+Student Name : Ram
+Course       : java
+
+SMART UNIVERSITY MANAGEMENT SYSTEM
+1. Add Student
+2. Add Faculty
+3. Add Course
+4. Enroll Student to Course
+5. Calculate Student Performance
+6.Student and Faculty Details(Polymorphism)
+7. Compare Two Students
+8.Descriptor Validation Output
+9.Decorator Output (Logging / Access Control)
+10.Iterator / Generator Output
+11.File Output
+12.Exception Handling Output
+13. Exit
+Enter your choice: 5
+[LOG] Method calculate_performance executed successfully
+[TIME] wrapper took 0.0001s
+
+Student Performance Report
+--------------------------------
+Student Name : Ram
+Marks        : [45, 56, 67, 78, 89]
+Average      : 67.0
+Grade        : C
+
+SMART UNIVERSITY MANAGEMENT SYSTEM
+1. Add Student
+2. Add Faculty
+3. Add Course
+4. Enroll Student to Course
+5. Calculate Student Performance
+6.Student and Faculty Details(Polymorphism)
+7. Compare Two Students
+8.Descriptor Validation Output
+9.Decorator Output (Logging / Access Control)
+10.Iterator / Generator Output
+11.File Output
+12.Exception Handling Output
+13. Exit
+Enter your choice: 6
+
+Student Details
+----------------
+Name      : Ram
+Role      : Student
+Department: cse
+
+Student Details
+----------------
+Name      : Rani
+Role      : Student
+Department: civil
+
+Faculty Details
+----------------
+Name      : Dr.Joshi
+Role      : Faculty
+Department: cse
+
+Faculty Details
+----------------
+Name      : Ajay das
+Role      : Faculty
+Department: civil
+
+SMART UNIVERSITY MANAGEMENT SYSTEM
+1. Add Student
+2. Add Faculty
+3. Add Course
+4. Enroll Student to Course
+5. Calculate Student Performance
+6.Student and Faculty Details(Polymorphism)
+7. Compare Two Students
+8.Descriptor Validation Output
+9.Decorator Output (Logging / Access Control)
+10.Iterator / Generator Output
+11.File Output
+12.Exception Handling Output
+13. Exit
+Enter your choice: 7
+Compare Two Students (> operator)
+Comparing Students Performance
+--------------------------------
+Ram > Rani : False
+
+Merge Course Credits (+ operator)
+Total Credits After Merge : 7
+
+SMART UNIVERSITY MANAGEMENT SYSTEM
+1. Add Student
+2. Add Faculty
+3. Add Course
+4. Enroll Student to Course
+5. Calculate Student Performance
+6.Student and Faculty Details(Polymorphism)
+7. Compare Two Students
+8.Descriptor Validation Output
+9.Decorator Output (Logging / Access Control)
+10.Iterator / Generator Output
+11.File Output
+12.Exception Handling Output
+13. Exit
+Enter your choice: 8
+Invalid Marks
+Error: Marks should be 5 subjects between 0 and 100
+80000
+
+SMART UNIVERSITY MANAGEMENT SYSTEM
+1. Add Student
+2. Add Faculty
+3. Add Course
+4. Enroll Student to Course
+5. Calculate Student Performance
+6.Student and Faculty Details(Polymorphism)
+7. Compare Two Students
+8.Descriptor Validation Output
+9.Decorator Output (Logging / Access Control)
+10.Iterator / Generator Output
+11.File Output
+12.Exception Handling Output
+13. Exit
+Enter your choice: 9
+[LOG] Method calculate_performance executed successfully
+[TIME] wrapper took 0.0001s
+Student data successfully saved to students.json
+
+SMART UNIVERSITY MANAGEMENT SYSTEM
+1. Add Student
+2. Add Faculty
+3. Add Course
+4. Enroll Student to Course
+5. Calculate Student Performance
+6.Student and Faculty Details(Polymorphism)
+7. Compare Two Students
+8.Descriptor Validation Output
+9.Decorator Output (Logging / Access Control)
+10.Iterator / Generator Output
+11.File Output
+12.Exception Handling Output
+13. Exit
+Enter your choice: 10
+Student Record Generator
+Fetching Student Records...
+--------------------------------
+
+Fetching Student Records...
+101 - Ram
+102 - Rani
+
+Course Iterator Output
+--------------------------------
+java
+Physics
+
+SMART UNIVERSITY MANAGEMENT SYSTEM
+1. Add Student
+2. Add Faculty
+3. Add Course
+4. Enroll Student to Course
+5. Calculate Student Performance
+6.Student and Faculty Details(Polymorphism)
+7. Compare Two Students
+8.Descriptor Validation Output
+9.Decorator Output (Logging / Access Control)
+10.Iterator / Generator Output
+11.File Output
+12.Exception Handling Output
+13. Exit
+Enter your choice: 11
+Student data successfully saved to students.json
+[LOG] Method calculate_performance executed successfully
+[TIME] wrapper took 0.0001s
+[LOG] Method calculate_performance executed successfully
+[TIME] wrapper took 0.0000s
+CSV Report generated successfully
+
+SMART UNIVERSITY MANAGEMENT SYSTEM
+1. Add Student
+2. Add Faculty
+3. Add Course
+4. Enroll Student to Course
+5. Calculate Student Performance
+6.Student and Faculty Details(Polymorphism)
+7. Compare Two Students
+8.Descriptor Validation Output
+9.Decorator Output (Logging / Access Control)
+10.Iterator / Generator Output
+11.File Output
+12.Exception Handling Output
+13. Exit
+Enter your choice: 12
+
+Exception Handling Output
+--------------------------------
+Error: Student ID '101' already exists
+
+SMART UNIVERSITY MANAGEMENT SYSTEM
+1. Add Student
+2. Add Faculty
+3. Add Course
+4. Enroll Student to Course
+5. Calculate Student Performance
+6.Student and Faculty Details(Polymorphism)
+7. Compare Two Students
+8.Descriptor Validation Output
+9.Decorator Output (Logging / Access Control)
+10.Iterator / Generator Output
+11.File Output
+12.Exception Handling Output
+13. Exit
+Enter your choice: 13
+Thank you for using Smart University Management System
+[CLEANUP] Ram object deleted
+[CLEANUP] Dr.Joshi object deleted
+[CLEANUP] Rani object deleted
+[CLEANUP] Ajay das object deleted
+
+Process finished with exit code 0

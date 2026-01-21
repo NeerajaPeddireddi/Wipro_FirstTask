@@ -39,6 +39,8 @@ class MarksDescriptor:
 
 class SalaryDescriptor:
     def __get__(self, instance, owner):
+        if getattr(instance, "is_admin", False):
+            return instance.__salary
         raise PermissionError("Access Denied: Salary is confidential")
 
     def __set__(self, instance, value):
@@ -54,7 +56,7 @@ class Person(ABC):
     @abstractmethod
     def get_details(self):
         pass
-
+    #Destructor
     def __del__(self):
         print(f"[CLEANUP] {self.name} object deleted")
 
@@ -83,7 +85,6 @@ class Student(Person):
     def average(self):
         return sum(self.marks) / len(self.marks)
 
-
     @timer
     @logger
     def calculate_performance(self):
@@ -99,7 +100,7 @@ class Student(Person):
 
 # ---------------- FACULTY ----------------
 class Faculty(Person):
-    salary = SalaryDescriptor()
+    salary = SalaryDescriptor()#validate the salary
 
     def __init__(self, fid, name, department, salary):
         super().__init__(fid, name, department)
@@ -222,6 +223,7 @@ while True:
                 input("Department: "),
                 int(input("Salary: "))
             )
+            f.is_admin = True
             faculty_list.append(f)
             print("Faculty Created Successfully")
             f.get_details()

@@ -1,0 +1,62 @@
+Base Url:http://127.0.0.1:5000
+1-->Get All Users
+Endpoint->GET /users
+API URL-->http://127.0.0.1:5000\users
+Postman Setup
+Method: GET
+Headers:
+Content-Type: application/json
+Body: Not required
+Status Code: 200 OK
+Response:
+        [
+            {
+                "id": 1,
+                "name": "beem"
+            },
+            {
+                "id": 2,
+                "name": "ram"
+            },
+            {
+                "id": 2,
+                "name": "Dee"
+            }
+        ]
+
+2.
+Base Url:http://127.0.0.1:5000
+1-->Get Single User
+Endpoint->GET /user/<id>
+API URL-->http://127.0.0.1:5000\users\1
+Postman Setup
+Method: GET
+Headers:
+Content-Type: application/json
+Body: Not required
+Status Code: 200 OK
+Response:
+    {
+    "id": 1,
+    "name": "beem"
+    }
+----If user id is not present ----
+API URL -->http://127.0.0.1:5000/users/10
+Status code:404 Not Found
+
+3.
+Base Url:http://127.0.0.1:5000
+1-->Post User
+Endpoint->POST /user/<id>
+API URL-->http://127.0.0.1:5000\users
+Postman Setup
+Method: POST
+Headers:
+Content-Type: application/json
+Body: {"name":"Dee"}
+Status Code: 201 CREATED
+Response:
+    {
+        "id": 2,
+        "name": "Dee"
+    }
