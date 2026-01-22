@@ -206,3 +206,25 @@ class Fruits(Enum):
     orange=2
 print(Fruits.apple.name)
 print(Fruits.apple.value)
+
+import json
+data={
+    "name": "Alice",
+    "age": 25,
+    "skills": ["Python", "React", "SQL"]
+}
+with open("data.json","w") as f:
+    json.dump(data,f,indent=4)
+    print("json saved")
+
+with open("data.json","r") as f:
+    data=json.load(f)
+    print(data)
+#Modify Json data
+data["age"]=26
+with open("data.json","w") as f:
+    json.dump(data,f,indent=4)
+    print("json updated")
+with open("data.json","r") as f:
+    data=json.load(f)
+    print(data)
