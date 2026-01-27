@@ -114,7 +114,7 @@ print(result.stdout)
 
 #Subprocess run in single line
 import subprocess
-subprocess.run(("python","Assessment_Q1.py"))
+# subprocess.run(("python","Assessment_Q1.py"))
 #output execute above pyton file print the output same like cmd pyton filename.py
 #to print ls
 import subprocess

@@ -19,7 +19,7 @@ import json
 url="https://www.w3schools.com/html/html_tables.asp"
 
 response = requests.get(url)
-soup = BeautifulSoup(response.content,"lxml")
+soup = BeautifulSoup(response.content,"html.parser")
 pagetitle=soup.title.string if soup.title.string else "no title"
 
 links=[]

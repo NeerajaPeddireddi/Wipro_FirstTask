@@ -1,3 +1,4 @@
+#Taking a website apis as reference Restfulapi-dev url from that taking all get,post,put,delete api and checked that using postman
 from flask import Flask,request,jsonify
 
 app=Flask(__name__)
@@ -70,13 +71,13 @@ def delete_user(user_id):
             users.remove(user)
             return jsonify({"message": "User deleted successfully"}), 200
     return jsonify({"error":"user not found"}),404@app.route("/users/<int:user_id>", methods=["PATCH"])
-def patch_user(user_id):
-    data = request.get_json()
-    for user in users:
-        if user["id"] == user_id:
-            user.update(data)
-            return jsonify(user), 200
-    return jsonify({"error": "User not found"}), 404
+# def patch_user(user_id):
+#     data = request.get_json()
+#     for user in users:
+#         if user["id"] == user_id:
+#             user.update(data)
+#             return jsonify(user), 200
+#     return jsonify({"error": "User not found"}), 404
 
 
 
