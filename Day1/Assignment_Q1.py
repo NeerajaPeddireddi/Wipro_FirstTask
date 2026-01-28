@@ -18,3 +18,5 @@ print(sumsqnum)
 fruits=["apple","banana","mango"]
 for i,fruit in enumerate(fruits):
     print(i,fruit)
+for i,val in enumerate(sqnum):
+    print(i,val)
