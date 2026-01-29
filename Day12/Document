@@ -1,0 +1,36 @@
+Installed robot framework
+pip install robotframework
+robot --version
+Installed selenium library
+pip install robotframework-seleniumlibrary
+to open ride
+python -m robotide
+How to create project
+-->File -->Create new project -->enter project name some thing like wipro_practice
+-->Filename ends with .robot
+--------Simple test case--------
+*** Settings ***
+Library    SeleniumLibrary
+
+*** Test Cases ***
+Open Google
+    Open Browser    https://www.google.com    chrome
+    Title Should Be    Google
+    Close Browser
+
+
+--------Using keywords--------
+*** Settings ***
+Library           SeleniumLibrary
+
+*** Keywords ***
+Open Application
+    Open Browser    https://www.google.com    chrome
+    Title Should Be    Google
+
+*** Test Cases ***
+TestCase1.robot
+    Open Application
+    Title Should Be    Google
+    Close Browser
+

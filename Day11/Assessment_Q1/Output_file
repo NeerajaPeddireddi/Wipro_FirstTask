@@ -1,0 +1,5 @@
+pytest
+pytest --env=qa
+pytest -m smoke
+pytest -m "not slow"
+pytest -rsx
