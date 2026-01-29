@@ -1,5 +1,114 @@
+▶Run all tests (verbose)
 pytest
+
+▶ Run with custom environment
 pytest --env=qa
+
+▶ Run only smoke tests
 pytest -m smoke
+
+▶ Run excluding slow tests
 pytest -m "not slow"
+
+▶ Show skipped and xfail reasons
 pytest -rsx
+
+(venv456) C:\Users\Neeraja\Desktop\Wipro_Practice\Day11\Assessment_Q1>pytest --env=qa
+================================================= test session starts =================================================
+platform win32 -- Python 3.13.0, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\Neeraja\Desktop\Wipro_Practice\venv456\Scripts\python.exe
+cachedir: .pytest_cache
+metadata: {'Python': '3.13.0', 'Platform': 'Windows-11-10.0.26100-SP0', 'Packages': {'pytest': '9.0.2', 'pluggy': '1.6.0'}, 'Plugins': {'html': '4.2.0', 'metadata': '3.1.1', 'xdist': '3.8.0'}}
+rootdir: C:\Users\Neeraja\Desktop\Wipro_Practice\Day11\Assessment_Q1
+configfile: pytest.ini
+testpaths: .
+plugins: html-4.2.0, metadata-3.1.1, xdist-3.8.0
+collected 7 items
+
+test_calculator.py::test_add[1-2-3] PASSED                                                                       [ 14%]
+test_calculator.py::test_add[5-5-10] PASSED                                                                      [ 28%]
+test_calculator.py::test_add[3-4-7] PASSED                                                                       [ 42%]
+test_calculator.py::test_skip_example SKIPPED (Feature not implemented yet)                                      [ 57%]
+test_calculator.py::test_xfail_example XFAIL (Known bug - division by zero)                                      [ 71%]
+test_config.py::test_ini_values PASSED                                                                           [ 85%]
+test_config.py::test_environment PASSED                                                                          [100%]
+
+======================================= 5 passed, 1 skipped, 1 xfailed in 0.11s =======================================
+
+(venv456) C:\Users\Neeraja\Desktop\Wipro_Practice\Day11\Assessment_Q1>pytest
+================================================= test session starts =================================================
+platform win32 -- Python 3.13.0, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\Neeraja\Desktop\Wipro_Practice\venv456\Scripts\python.exe
+cachedir: .pytest_cache
+metadata: {'Python': '3.13.0', 'Platform': 'Windows-11-10.0.26100-SP0', 'Packages': {'pytest': '9.0.2', 'pluggy': '1.6.0'}, 'Plugins': {'html': '4.2.0', 'metadata': '3.1.1', 'xdist': '3.8.0'}}
+rootdir: C:\Users\Neeraja\Desktop\Wipro_Practice\Day11\Assessment_Q1
+configfile: pytest.ini
+testpaths: .
+plugins: html-4.2.0, metadata-3.1.1, xdist-3.8.0
+collected 7 items
+
+test_calculator.py::test_add[1-2-3] PASSED                                                                       [ 14%]
+test_calculator.py::test_add[5-5-10] PASSED                                                                      [ 28%]
+test_calculator.py::test_add[3-4-7] PASSED                                                                       [ 42%]
+test_calculator.py::test_skip_example SKIPPED (Feature not implemented yet)                                      [ 57%]
+test_calculator.py::test_xfail_example XFAIL (Known bug - division by zero)                                      [ 71%]
+test_config.py::test_ini_values PASSED                                                                           [ 85%]
+test_config.py::test_environment PASSED                                                                          [100%]
+
+======================================= 5 passed, 1 skipped, 1 xfailed in 0.11s =======================================
+
+(venv456) C:\Users\Neeraja\Desktop\Wipro_Practice\Day11\Assessment_Q1>pytest -m smoke
+================================================= test session starts =================================================
+platform win32 -- Python 3.13.0, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\Neeraja\Desktop\Wipro_Practice\venv456\Scripts\python.exe
+cachedir: .pytest_cache
+metadata: {'Python': '3.13.0', 'Platform': 'Windows-11-10.0.26100-SP0', 'Packages': {'pytest': '9.0.2', 'pluggy': '1.6.0'}, 'Plugins': {'html': '4.2.0', 'metadata': '3.1.1', 'xdist': '3.8.0'}}
+rootdir: C:\Users\Neeraja\Desktop\Wipro_Practice\Day11\Assessment_Q1
+configfile: pytest.ini
+testpaths: .
+plugins: html-4.2.0, metadata-3.1.1, xdist-3.8.0
+collected 7 items / 7 deselected / 0 selected
+
+================================================ 7 deselected in 0.02s ================================================
+
+(venv456) C:\Users\Neeraja\Desktop\Wipro_Practice\Day11\Assessment_Q1>pytest -m "not slow"
+================================================= test session starts =================================================
+platform win32 -- Python 3.13.0, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\Neeraja\Desktop\Wipro_Practice\venv456\Scripts\python.exe
+cachedir: .pytest_cache
+metadata: {'Python': '3.13.0', 'Platform': 'Windows-11-10.0.26100-SP0', 'Packages': {'pytest': '9.0.2', 'pluggy': '1.6.0'}, 'Plugins': {'html': '4.2.0', 'metadata': '3.1.1', 'xdist': '3.8.0'}}
+rootdir: C:\Users\Neeraja\Desktop\Wipro_Practice\Day11\Assessment_Q1
+configfile: pytest.ini
+testpaths: .
+plugins: html-4.2.0, metadata-3.1.1, xdist-3.8.0
+collected 7 items
+
+test_calculator.py::test_add[1-2-3] PASSED                                                                       [ 14%]
+test_calculator.py::test_add[5-5-10] PASSED                                                                      [ 28%]
+test_calculator.py::test_add[3-4-7] PASSED                                                                       [ 42%]
+test_calculator.py::test_skip_example SKIPPED (Feature not implemented yet)                                      [ 57%]
+test_calculator.py::test_xfail_example XFAIL (Known bug - division by zero)                                      [ 71%]
+test_config.py::test_ini_values PASSED                                                                           [ 85%]
+test_config.py::test_environment PASSED                                                                          [100%]
+
+======================================= 5 passed, 1 skipped, 1 xfailed in 0.10s =======================================
+
+(venv456) C:\Users\Neeraja\Desktop\Wipro_Practice\Day11\Assessment_Q1>pytest -rsx
+================================================= test session starts =================================================
+platform win32 -- Python 3.13.0, pytest-9.0.2, pluggy-1.6.0 -- C:\Users\Neeraja\Desktop\Wipro_Practice\venv456\Scripts\python.exe
+cachedir: .pytest_cache
+metadata: {'Python': '3.13.0', 'Platform': 'Windows-11-10.0.26100-SP0', 'Packages': {'pytest': '9.0.2', 'pluggy': '1.6.0'}, 'Plugins': {'html': '4.2.0', 'metadata': '3.1.1', 'xdist': '3.8.0'}}
+rootdir: C:\Users\Neeraja\Desktop\Wipro_Practice\Day11\Assessment_Q1
+configfile: pytest.ini
+testpaths: .
+plugins: html-4.2.0, metadata-3.1.1, xdist-3.8.0
+collected 7 items
+
+test_calculator.py::test_add[1-2-3] PASSED                                                                       [ 14%]
+test_calculator.py::test_add[5-5-10] PASSED                                                                      [ 28%]
+test_calculator.py::test_add[3-4-7] PASSED                                                                       [ 42%]
+test_calculator.py::test_skip_example SKIPPED (Feature not implemented yet)                                      [ 57%]
+test_calculator.py::test_xfail_example XFAIL (Known bug - division by zero)                                      [ 71%]
+test_config.py::test_ini_values PASSED                                                                           [ 85%]
+test_config.py::test_environment PASSED                                                                          [100%]
+
+=============================================== short test summary info ===============================================
+SKIPPED [1] test_calculator.py:12: Feature not implemented yet
+XFAIL test_calculator.py::test_xfail_example - Known bug - division by zero
+======================================= 5 passed, 1 skipped, 1 xfailed in 0.11s =======================================

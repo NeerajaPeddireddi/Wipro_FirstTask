@@ -34,3 +34,6 @@ TestCase1.robot
     Title Should Be    Google
     Close Browser
 
+https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#test-case-syntax
+
+

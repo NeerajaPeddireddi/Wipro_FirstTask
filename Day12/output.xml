@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.13.0 on win32)" generated="2026-01-29T16:49:28.730454" rpa="false" schemaversion="5">
+<suite id="s1" name="Assessment Q1" source="C:\Users\Neeraja\Desktop\Wipro_Practice\Day12\Assessment_Q1.robot">
+<test id="s1-t1" name="Test Case 1 - Logging Scalars" line="18">
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-01-29T16:49:28.777176" level="INFO">Hello, my name is Ram and I am 21 years old</msg>
+<arg>Hello, my name is ${name} and I am ${age} years old</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-01-29T16:49:28.776721" elapsed="0.000534"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>This msg is printed to console</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-01-29T16:49:28.777580" elapsed="0.000539"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-01-29T16:49:28.778766" level="INFO">Today we will demonstrate scalar and list variables</msg>
+<arg>Today we will demonstrate scalar and list variables</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-01-29T16:49:28.778439" elapsed="0.000410"/>
+</kw>
+<status status="PASS" start="2026-01-29T16:49:28.775671" elapsed="0.003505"/>
+</test>
+<test id="s1-t2" name="Test Case 2 - Using Lists" line="23">
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-01-29T16:49:28.780438" level="INFO">List of marks is: ['1', '2', '3']</msg>
+<arg>List of marks is: @{marks}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-01-29T16:49:28.780157" elapsed="0.000336"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>The first mark in the list is: ${marks}[0]</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-01-29T16:49:28.780723" elapsed="0.000433"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>All marks in the list:</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-01-29T16:49:28.781386" elapsed="0.000321"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${mark}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-01-29T16:49:28.782176" elapsed="0.000355"/>
+</kw>
+<var name="${mark}">1</var>
+<status status="PASS" start="2026-01-29T16:49:28.782097" elapsed="0.000478"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${mark}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-01-29T16:49:28.782751" elapsed="0.000365"/>
+</kw>
+<var name="${mark}">2</var>
+<status status="PASS" start="2026-01-29T16:49:28.782679" elapsed="0.000483"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${mark}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-01-29T16:49:28.783325" elapsed="0.000351"/>
+</kw>
+<var name="${mark}">3</var>
+<status status="PASS" start="2026-01-29T16:49:28.783258" elapsed="0.000461"/>
+</iter>
+<var>${mark}</var>
+<value>@{marks}</value>
+<status status="PASS" start="2026-01-29T16:49:28.781901" elapsed="0.001849"/>
+</for>
+<status status="PASS" start="2026-01-29T16:49:28.779756" elapsed="0.004234"/>
+</test>
+<status status="PASS" start="2026-01-29T16:49:28.731893" elapsed="0.052880"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Assessment Q1" id="s1" pass="2" fail="0" skip="0">Assessment Q1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
