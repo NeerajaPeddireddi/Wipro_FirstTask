@@ -1,87 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.1 (Python 3.13.0 on win32)" generated="2026-01-29T16:49:28.730454" rpa="false" schemaversion="5">
-<suite id="s1" name="Assessment Q1" source="C:\Users\Neeraja\Desktop\Wipro_Practice\Day12\Assessment_Q1.robot">
-<test id="s1-t1" name="Test Case 1 - Logging Scalars" line="18">
+<robot generator="Robot 7.4.1 (Python 3.13.0 on win32)" generated="2026-01-30T17:18:25.511914" rpa="false" schemaversion="5">
+<suite id="s1" name="Assessment Q2" source="C:\Users\Neeraja\Desktop\Wipro_Practice\Day12\Assessment_Q2.robot">
+<test id="s1-t1" name="Environment Setup Verification" line="6">
+<kw name="Verify Python Installation">
+<kw name="Run Process" owner="Process">
+<msg time="2026-01-30T17:18:25.805459" level="INFO">Starting process:
+python --version</msg>
+<msg time="2026-01-30T17:18:25.810322" level="INFO">Waiting for process to complete.</msg>
+<msg time="2026-01-30T17:18:25.818054" level="INFO">Process completed.</msg>
+<msg time="2026-01-30T17:18:25.818285" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
+<var>${result}</var>
+<arg>python</arg>
+<arg>--version</arg>
+<arg>stdout=PIPE</arg>
+<arg>stderr=PIPE</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="PASS" start="2026-01-30T17:18:25.803212" elapsed="0.015109"/>
+</kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2026-01-29T16:49:28.777176" level="INFO">Hello, my name is Ram and I am 21 years old</msg>
-<arg>Hello, my name is ${name} and I am ${age} years old</arg>
+<msg time="2026-01-30T17:18:25.820335" level="INFO">✅ Python Version: Python 3.13.0</msg>
+<arg>✅ Python Version: ${result.stdout}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-01-29T16:49:28.776721" elapsed="0.000534"/>
+<status status="PASS" start="2026-01-30T17:18:25.818513" elapsed="0.001890"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>This msg is printed to console</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-01-29T16:49:28.777580" elapsed="0.000539"/>
+<status status="PASS" start="2026-01-30T17:18:25.802542" elapsed="0.017964"/>
+</kw>
+<kw name="Verify Robot Framework Installation">
+<kw name="Run Process" owner="Process">
+<msg time="2026-01-30T17:18:25.822068" level="INFO">Starting process:
+python -m robot --version</msg>
+<msg time="2026-01-30T17:18:25.828339" level="INFO">Waiting for process to complete.</msg>
+<msg time="2026-01-30T17:18:25.866956" level="INFO">Process completed.</msg>
+<msg time="2026-01-30T17:18:25.867182" level="INFO">${result} = &lt;result object with rc 1&gt;</msg>
+<var>${result}</var>
+<arg>python</arg>
+<arg>-m</arg>
+<arg>robot</arg>
+<arg>--version</arg>
+<arg>stdout=PIPE</arg>
+<arg>stderr=PIPE</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="PASS" start="2026-01-30T17:18:25.821247" elapsed="0.045969"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2026-01-29T16:49:28.778766" level="INFO">Today we will demonstrate scalar and list variables</msg>
-<arg>Today we will demonstrate scalar and list variables</arg>
+<msg time="2026-01-30T17:18:25.869254" level="INFO">🤖 Robot Framework Version: C:\Users\Neeraja\AppData\Local\Programs\Python\Python313\python.exe: No module named robot</msg>
+<arg>🤖 Robot Framework Version: ${result.stdout}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-01-29T16:49:28.778439" elapsed="0.000410"/>
+<status status="PASS" start="2026-01-30T17:18:25.867402" elapsed="0.001938"/>
 </kw>
-<status status="PASS" start="2026-01-29T16:49:28.775671" elapsed="0.003505"/>
+<status status="PASS" start="2026-01-30T17:18:25.820931" elapsed="0.048500"/>
+</kw>
+<kw name="Verify SeleniumLibrary Import">
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-01-30T17:18:25.870573" level="INFO">✅ SeleniumLibrary is installed</msg>
+<arg>✅ SeleniumLibrary is installed</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-01-30T17:18:25.870090" elapsed="0.000532"/>
+</kw>
+<status status="PASS" start="2026-01-30T17:18:25.869825" elapsed="0.000867"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-01-30T17:18:25.871211" level="INFO">✅ Environment verification completed successfully</msg>
+<arg>✅ Environment verification completed successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-01-30T17:18:25.870987" elapsed="0.000267"/>
+</kw>
+<status status="PASS" start="2026-01-30T17:18:25.801745" elapsed="0.069764"/>
 </test>
-<test id="s1-t2" name="Test Case 2 - Using Lists" line="23">
-<kw name="Log" owner="BuiltIn">
-<msg time="2026-01-29T16:49:28.780438" level="INFO">List of marks is: ['1', '2', '3']</msg>
-<arg>List of marks is: @{marks}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-01-29T16:49:28.780157" elapsed="0.000336"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>The first mark in the list is: ${marks}[0]</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-01-29T16:49:28.780723" elapsed="0.000433"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>All marks in the list:</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-01-29T16:49:28.781386" elapsed="0.000321"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${mark}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-01-29T16:49:28.782176" elapsed="0.000355"/>
-</kw>
-<var name="${mark}">1</var>
-<status status="PASS" start="2026-01-29T16:49:28.782097" elapsed="0.000478"/>
-</iter>
-<iter>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${mark}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-01-29T16:49:28.782751" elapsed="0.000365"/>
-</kw>
-<var name="${mark}">2</var>
-<status status="PASS" start="2026-01-29T16:49:28.782679" elapsed="0.000483"/>
-</iter>
-<iter>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${mark}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-01-29T16:49:28.783325" elapsed="0.000351"/>
-</kw>
-<var name="${mark}">3</var>
-<status status="PASS" start="2026-01-29T16:49:28.783258" elapsed="0.000461"/>
-</iter>
-<var>${mark}</var>
-<value>@{marks}</value>
-<status status="PASS" start="2026-01-29T16:49:28.781901" elapsed="0.001849"/>
-</for>
-<status status="PASS" start="2026-01-29T16:49:28.779756" elapsed="0.004234"/>
-</test>
-<status status="PASS" start="2026-01-29T16:49:28.731893" elapsed="0.052880"/>
+<status status="PASS" start="2026-01-30T17:18:25.513302" elapsed="0.359219"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Assessment Q1" id="s1" pass="2" fail="0" skip="0">Assessment Q1</stat>
+<stat name="Assessment Q2" id="s1" pass="1" fail="0" skip="0">Assessment Q2</stat>
 </suite>
 </statistics>
 <errors>

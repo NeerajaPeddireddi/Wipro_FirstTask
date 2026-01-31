@@ -70,7 +70,7 @@ def delete_user(user_id):
         if user["id"] == user_id:
             users.remove(user)
             return jsonify({"message": "User deleted successfully"}), 200
-    return jsonify({"error":"user not found"}),404@app.route("/users/<int:user_id>", methods=["PATCH"])
+    return jsonify({"error":"user not found"}),404
 # def patch_user(user_id):
 #     data = request.get_json()
 #     for user in users:

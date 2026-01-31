@@ -1,16 +1,16 @@
-▶Run all tests (verbose)
+Run all tests (verbose)
 pytest
 
-▶ Run with custom environment
+Run with custom environment
 pytest --env=qa
 
-▶ Run only smoke tests
+Run only smoke tests
 pytest -m smoke
 
-▶ Run excluding slow tests
+Run excluding slow tests
 pytest -m "not slow"
 
-▶ Show skipped and xfail reasons
+Show skipped and xfail reasons
 pytest -rsx
 
 (venv456) C:\Users\Neeraja\Desktop\Wipro_Practice\Day11\Assessment_Q1>pytest --env=qa

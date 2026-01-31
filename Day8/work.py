@@ -1,11 +1,15 @@
-import re
+import requests
 
-email="neeraja@123"
-pattern=r"(?=.*[A-Za-z])(?=.*[!@#$%^&*])(?=.*[0-9]).{8,}$"
+from Day8.D8_Practice import body1
 
-print(re.findall(pattern,email))
-res=re.match(pattern,email)
-if res:
-    print("password Found")
-else:
-    print("password Not Found")
+get_url="http://127.0.0.1:5000/users"
+get_response=requests.get(get_url)
+print(get_response.json())
+
+body1={
+    "name": "Anjali",
+}
+post_url="http://127.0.0.1:5000/users"
+post_response=requests.post(post_url,json=body1)
+print(post_response.json())
+print(post_response.status_code)

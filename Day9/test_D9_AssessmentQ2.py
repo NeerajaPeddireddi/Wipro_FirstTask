@@ -66,11 +66,11 @@ def div(a,b):
 # def add(a,b):
 #     return a+b
 # output green we get some thing like test pass
-# Blue -->Improve code wihout breaking tests
+# Blue -->Improve code without breaking tests
 # def add(a: int, b: int) -> int:
 #     """Returns the sum of two numbers"""
 #     return a + b
 # Phase	    Action	            Result
-# RED	        Write test first	Test fails
+# RED	    Write test first	Test fails
 # GREEN	    Write minimal code	Test passes
 # REFACTOR	Improve code	     Tests still pass

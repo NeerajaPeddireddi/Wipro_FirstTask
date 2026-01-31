@@ -10,3 +10,6 @@ Read port: 51382
 1769684590027	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://opensource-demo.orangehrmlive.com."
 console.warn: LoginRecipes: "Falling back to a synchronous message for: https://opensource-demo.orangehrmlive.com."
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.

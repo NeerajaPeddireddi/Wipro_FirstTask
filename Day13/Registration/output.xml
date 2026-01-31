@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.13.0 on win32)" generated="2026-01-30T19:47:54.540197" rpa="false" schemaversion="5">
+<suite id="s1" name="Registration" source="C:\Users\Neeraja\Desktop\Wipro_Practice\Day13\Registration\Registration.robot">
+<kw name="Open TutorialsNinja" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-01-30T19:47:55.499814" level="INFO">Opening browser 'chrome' to base url 'https://tutorialsninja.com/demo/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-01-30T19:47:55.499427" elapsed="11.221887"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-01-30T19:48:06.721761" elapsed="0.046603"/>
+</kw>
+<status status="PASS" start="2026-01-30T19:47:55.497988" elapsed="11.270503"/>
+</kw>
+<test id="s1-t1" name="Register Login Using Excel" line="62">
+<status status="FAIL" start="2026-01-30T19:48:06.768580" elapsed="0.001327">Test cannot be empty.</status>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-01-30T19:48:06.770850" elapsed="2.194793"/>
+</kw>
+<status status="FAIL" start="2026-01-30T19:47:54.541810" elapsed="14.424219"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Registration" id="s1" pass="0" fail="1" skip="0">Registration</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-01-30T19:47:55.493768" level="ERROR">[ DataDriver ] Error in robot file:
+  File "C:\Users\Neeraja\Desktop\Wipro_Practice\Day13\Registration\Registration.robot", line 0</msg>
+<msg time="2026-01-30T19:47:55.493987" level="ERROR">In source file:
+  File "user_registration_data.xlsx", line 0</msg>
+<msg time="2026-01-30T19:47:55.497313" level="ERROR">Calling method '_start_suite' of listener 'DataDriver' failed: ValueError: Unassigned requiered argument detected: ${firstname}.</msg>
+</errors>
+</robot>

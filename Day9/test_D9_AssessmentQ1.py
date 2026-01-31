@@ -33,7 +33,7 @@ from prompt_toolkit.application import create_app_session
 #
 # tests-->All test cases
 # utilities -->Reusable functions,helpers
-# congig -->Environment setting (URLs,credentials)
+# config -->Environment setting (URLs,credentials)
 # reports -->test  execution results
 # pytest.ini -->pytest configuration
 

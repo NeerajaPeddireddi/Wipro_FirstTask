@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.13.0 on win32)" generated="2026-01-31T15:21:41.505098" rpa="false" schemaversion="5">
+<suite id="s1" name="Q2" source="C:\Users\Neeraja\Desktop\Wipro_Practice\Day13\Assessment_Q2\Q2.robot">
+<test id="s1-t1" name="Login Tests From CSV" line="13">
+<kw name="Get File" owner="OperatingSystem">
+<msg time="2026-01-31T15:21:41.817113" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\Neeraja\Desktop\Wipro_Practice\Day13\Assessment_Q2\data_login.csv"&gt;C:\Users\Neeraja\Desktop\Wipro_Practice\Day13\Assessment_Q2\data_login.csv&lt;/a&gt;'.</msg>
+<msg time="2026-01-31T15:21:41.817500" level="INFO">${content} = username,password,expected
+Admin,admin123,success
+Admin,wrongpass,failure
+User,user123,failure
+</msg>
+<var>${content}</var>
+<arg>${DATAFILE}</arg>
+<doc>Returns the contents of a specified file.</doc>
+<status status="PASS" start="2026-01-31T15:21:41.816783" elapsed="0.000758"/>
+</kw>
+<kw name="Split To Lines" owner="String">
+<msg time="2026-01-31T15:21:41.818116" level="INFO">4 lines returned.</msg>
+<msg time="2026-01-31T15:21:41.818214" level="INFO">@{rows} = [ username,password,expected | Admin,admin123,success | Admin,wrongpass,failure | User,user123,failure ]</msg>
+<var>@{rows}</var>
+<arg>${content}</arg>
+<doc>Splits the given string to lines.</doc>
+<status status="PASS" start="2026-01-31T15:21:41.817901" elapsed="0.000342"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2026-01-31T15:21:41.818906" level="INFO">Length is 4.</msg>
+<msg time="2026-01-31T15:21:41.818986" level="INFO">${total} = 4</msg>
+<var>${total}</var>
+<arg>${rows}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2026-01-31T15:21:41.818506" elapsed="0.000507"/>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Split String" owner="String">
+<msg time="2026-01-31T15:21:41.819849" level="INFO">${row} = ['Admin', 'admin123', 'success']</msg>
+<var>${row}</var>
+<arg>${rows}[${i}]</arg>
+<arg>,</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2026-01-31T15:21:41.819601" elapsed="0.000279"/>
+</kw>
+<kw name="Run Login Test">
+<kw name="Open Application">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-01-31T15:21:41.820900" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-01-31T15:21:41.820719" elapsed="8.970680"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-01-31T15:21:50.791653" elapsed="0.035034"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@placeholder='Username']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-31T15:21:50.827532" elapsed="1.123195"/>
+</kw>
+<status status="PASS" start="2026-01-31T15:21:41.820505" elapsed="10.130424"/>
+</kw>
+<kw name="Perform Login">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-31T15:21:51.951897" level="INFO">Typing text 'Admin' into text field 'xpath=//input[@placeholder='Username']'.</msg>
+<arg>xpath=//input[@placeholder='Username']</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-31T15:21:51.951598" elapsed="0.103828"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-31T15:21:52.056027" level="INFO">Typing text 'admin123' into text field 'xpath=//input[@placeholder='Password']'.</msg>
+<arg>xpath=//input[@placeholder='Password']</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-31T15:21:52.055689" elapsed="0.124522"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-01-31T15:21:52.180615" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-31T15:21:52.180435" elapsed="0.106861"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2026-01-31T15:21:51.951125" elapsed="0.336358"/>
+</kw>
+<kw name="Validate Result">
+<if>
+<branch type="IF" condition="'${expected}' == 'success'">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Dashboard</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-01-31T15:21:52.288283" elapsed="2.307833"/>
+</kw>
+<status status="PASS" start="2026-01-31T15:21:52.288032" elapsed="2.308170"/>
+</branch>
+<branch type="ELSE">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Invalid credentials</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" start="2026-01-31T15:21:54.596579" elapsed="0.000033"/>
+</kw>
+<status status="NOT RUN" start="2026-01-31T15:21:54.596282" elapsed="0.000373"/>
+</branch>
+<status status="PASS" start="2026-01-31T15:21:52.288001" elapsed="2.308726"/>
+</if>
+<arg>${expected}</arg>
+<status status="PASS" start="2026-01-31T15:21:52.287722" elapsed="2.309078"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-01-31T15:21:54.596900" elapsed="2.256613"/>
+</kw>
+<arg>${row}[0]</arg>
+<arg>${row}[1]</arg>
+<arg>${row}[2]</arg>
+<status status="PASS" start="2026-01-31T15:21:41.820056" elapsed="15.034058"/>
+</kw>
+<var name="${i}">1</var>
+<status status="PASS" start="2026-01-31T15:21:41.819504" elapsed="15.035023"/>
+</iter>
+<iter>
+<kw name="Split String" owner="String">
+<msg time="2026-01-31T15:21:56.856978" level="INFO">${row} = ['Admin', 'wrongpass', 'failure']</msg>
+<var>${row}</var>
+<arg>${rows}[${i}]</arg>
+<arg>,</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2026-01-31T15:21:56.855940" elapsed="0.001133"/>
+</kw>
+<kw name="Run Login Test">
+<kw name="Open Application">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-01-31T15:21:56.858400" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-01-31T15:21:56.858150" elapsed="14.796604"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-01-31T15:22:11.654999" elapsed="0.044051"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@placeholder='Username']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-31T15:22:11.699322" elapsed="1.332278"/>
+</kw>
+<status status="PASS" start="2026-01-31T15:21:56.857721" elapsed="16.174115"/>
+</kw>
+<kw name="Perform Login">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-31T15:22:13.033229" level="INFO">Typing text 'Admin' into text field 'xpath=//input[@placeholder='Username']'.</msg>
+<arg>xpath=//input[@placeholder='Username']</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-31T15:22:13.032820" elapsed="0.103131"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-31T15:22:13.136426" level="INFO">Typing text 'wrongpass' into text field 'xpath=//input[@placeholder='Password']'.</msg>
+<arg>xpath=//input[@placeholder='Password']</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-31T15:22:13.136152" elapsed="0.146105"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-01-31T15:22:13.283201" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-31T15:22:13.282897" elapsed="0.138951"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2026-01-31T15:22:13.032130" elapsed="0.389895"/>
+</kw>
+<kw name="Validate Result">
+<if>
+<branch type="IF" condition="'${expected}' == 'success'">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Dashboard</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" start="2026-01-31T15:22:13.423453" elapsed="0.000088"/>
+</kw>
+<status status="NOT RUN" start="2026-01-31T15:22:13.422988" elapsed="0.000659"/>
+</branch>
+<branch type="ELSE">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Invalid credentials</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-01-31T15:22:13.424012" elapsed="2.135535"/>
+</kw>
+<status status="PASS" start="2026-01-31T15:22:13.423745" elapsed="2.135958"/>
+</branch>
+<status status="PASS" start="2026-01-31T15:22:13.422930" elapsed="2.136869"/>
+</if>
+<arg>${expected}</arg>
+<status status="PASS" start="2026-01-31T15:22:13.422460" elapsed="2.137472"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-01-31T15:22:15.560201" elapsed="2.227156"/>
+</kw>
+<arg>${row}[0]</arg>
+<arg>${row}[1]</arg>
+<arg>${row}[2]</arg>
+<status status="PASS" start="2026-01-31T15:21:56.857259" elapsed="20.930240"/>
+</kw>
+<var name="${i}">2</var>
+<status status="PASS" start="2026-01-31T15:21:56.855380" elapsed="20.932205"/>
+</iter>
+<iter>
+<kw name="Split String" owner="String">
+<msg time="2026-01-31T15:22:17.788482" level="INFO">${row} = ['User', 'user123', 'failure']</msg>
+<var>${row}</var>
+<arg>${rows}[${i}]</arg>
+<arg>,</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2026-01-31T15:22:17.788005" elapsed="0.000546"/>
+</kw>
+<kw name="Run Login Test">
+<kw name="Open Application">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-01-31T15:22:17.790520" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-01-31T15:22:17.790188" elapsed="18.102057"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-01-31T15:22:35.892547" elapsed="0.043672"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@placeholder='Username']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-31T15:22:35.936415" elapsed="1.374622"/>
+</kw>
+<status status="PASS" start="2026-01-31T15:22:17.789687" elapsed="19.521564"/>
+</kw>
+<kw name="Perform Login">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-31T15:22:37.313889" level="INFO">Typing text 'User' into text field 'xpath=//input[@placeholder='Username']'.</msg>
+<arg>xpath=//input[@placeholder='Username']</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-31T15:22:37.313449" elapsed="0.129696"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-31T15:22:37.444241" level="INFO">Typing text 'user123' into text field 'xpath=//input[@placeholder='Password']'.</msg>
+<arg>xpath=//input[@placeholder='Password']</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-31T15:22:37.443685" elapsed="0.308502"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-01-31T15:22:37.753018" level="INFO">Clicking button 'xpath=//button[@type='submit']'.</msg>
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-31T15:22:37.752635" elapsed="0.216445"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2026-01-31T15:22:37.312413" elapsed="0.656894"/>
+</kw>
+<kw name="Validate Result">
+<if>
+<branch type="IF" condition="'${expected}' == 'success'">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Dashboard</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" start="2026-01-31T15:22:37.970436" elapsed="0.000076"/>
+</kw>
+<status status="NOT RUN" start="2026-01-31T15:22:37.970119" elapsed="0.000517"/>
+</branch>
+<branch type="ELSE">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Invalid credentials</arg>
+<arg>10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-01-31T15:22:37.970947" elapsed="1.950817"/>
+</kw>
+<status status="PASS" start="2026-01-31T15:22:37.970733" elapsed="1.951163"/>
+</branch>
+<status status="PASS" start="2026-01-31T15:22:37.970092" elapsed="1.951884"/>
+</if>
+<arg>${expected}</arg>
+<status status="PASS" start="2026-01-31T15:22:37.969711" elapsed="1.952429"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-01-31T15:22:39.922350" elapsed="2.236429"/>
+</kw>
+<arg>${row}[0]</arg>
+<arg>${row}[1]</arg>
+<arg>${row}[2]</arg>
+<status status="PASS" start="2026-01-31T15:22:17.788952" elapsed="24.370004"/>
+</kw>
+<var name="${i}">3</var>
+<status status="PASS" start="2026-01-31T15:22:17.787796" elapsed="24.371252"/>
+</iter>
+<var>${i}</var>
+<value>1</value>
+<value>${total}</value>
+<status status="PASS" start="2026-01-31T15:21:41.819254" elapsed="60.339964"/>
+</for>
+<status status="PASS" start="2026-01-31T15:21:41.815532" elapsed="60.344385"/>
+</test>
+<status status="PASS" start="2026-01-31T15:21:41.506605" elapsed="60.654765"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Q2" id="s1" pass="1" fail="0" skip="0">Q2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
