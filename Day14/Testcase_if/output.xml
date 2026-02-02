@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.13.0 on win32)" generated="2026-02-02T10:42:30.362301" rpa="false" schemaversion="5">
+<suite id="s1" name="Testcase If" source="C:\Users\Neeraja\Desktop\Wipro_Practice\Day14\Testcase_if\Testcase_If.robot">
+<test id="s1-t1" name="Working with only if" line="5">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-02-02T10:42:30.435704" level="INFO">${num} = 5</msg>
+<var>${num}</var>
+<arg>5</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-02-02T10:42:30.434936" elapsed="0.000872"/>
+</kw>
+<if>
+<branch type="IF" condition="${num} == 5">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Equal</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-02T10:42:30.436517" elapsed="0.000965"/>
+</kw>
+<status status="PASS" start="2026-02-02T10:42:30.436243" elapsed="0.001311"/>
+</branch>
+<status status="PASS" start="2026-02-02T10:42:30.436202" elapsed="0.001397"/>
+</if>
+<status status="PASS" start="2026-02-02T10:42:30.433813" elapsed="0.004080"/>
+</test>
+<test id="s1-t2" name="Validaing age for vote" line="10">
+<if>
+<branch type="IF" condition="${age} &gt;= 18">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Eligible for Vote</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2026-02-02T10:42:30.439511" elapsed="0.000030"/>
+</kw>
+<status status="NOT RUN" start="2026-02-02T10:42:30.439244" elapsed="0.000349"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Not Eligible for vote</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-02T10:42:30.439734" elapsed="0.000491"/>
+</kw>
+<status status="PASS" start="2026-02-02T10:42:30.439629" elapsed="0.000823"/>
+</branch>
+<status status="PASS" start="2026-02-02T10:42:30.439210" elapsed="0.001305"/>
+</if>
+<status status="PASS" start="2026-02-02T10:42:30.438748" elapsed="0.002051"/>
+</test>
+<test id="s1-t3" name="Working with if else if else" line="16">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-02-02T10:42:30.442246" level="INFO">${marks} = 70</msg>
+<var>${marks}</var>
+<arg>70</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-02-02T10:42:30.441870" elapsed="0.000419"/>
+</kw>
+<if>
+<branch type="IF" condition="${marks} &gt;= 90">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Grade A</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2026-02-02T10:42:30.442771" elapsed="0.000032"/>
+</kw>
+<status status="NOT RUN" start="2026-02-02T10:42:30.442518" elapsed="0.000339"/>
+</branch>
+<branch type="ELSE IF" condition="${marks} &gt;=80">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Grade B</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2026-02-02T10:42:30.443094" elapsed="0.000025"/>
+</kw>
+<status status="NOT RUN" start="2026-02-02T10:42:30.442894" elapsed="0.000271"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Grade C</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-02T10:42:30.443298" elapsed="0.000430"/>
+</kw>
+<status status="PASS" start="2026-02-02T10:42:30.443197" elapsed="0.000583"/>
+</branch>
+<status status="PASS" start="2026-02-02T10:42:30.442489" elapsed="0.001322"/>
+</if>
+<status status="PASS" start="2026-02-02T10:42:30.441421" elapsed="0.002636"/>
+</test>
+<test id="s1-t4" name="Sinle Line If" line="25">
+<if>
+<branch type="IF" condition="${age}==17">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Same</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-02T10:42:30.445209" elapsed="0.000397"/>
+</kw>
+<status status="PASS" start="2026-02-02T10:42:30.445003" elapsed="0.000658"/>
+</branch>
+<status status="PASS" start="2026-02-02T10:42:30.444971" elapsed="0.000729"/>
+</if>
+<status status="PASS" start="2026-02-02T10:42:30.444623" elapsed="0.001315"/>
+</test>
+<status status="PASS" start="2026-02-02T10:42:30.364215" elapsed="0.082547"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Testcase If" id="s1" pass="4" fail="0" skip="0">Testcase If</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

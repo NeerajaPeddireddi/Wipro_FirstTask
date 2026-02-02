@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.13.0 on win32)" generated="2026-02-02T17:27:47.869719" rpa="false" schemaversion="5">
+<suite id="s1" name="Q2" source="C:\Users\Neeraja\Desktop\Wipro_Practice\Day14\Assessment_Q2\Q2.robot">
+<kw name="Open Test Browser" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-02T17:27:48.228640" level="INFO">Opening browser 'chrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-02T17:27:48.227962" elapsed="2.349695"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-02-02T17:27:50.578136" elapsed="4.440871"/>
+</kw>
+<status status="PASS" start="2026-02-02T17:27:48.226800" elapsed="6.792459"/>
+</kw>
+<test id="s1-t1" name="Form Interaction Test" line="11">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:name</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-02T17:27:55.020348" elapsed="0.032876"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-02T17:27:55.053963" level="INFO">Typing text 'ram' into text field 'id:name'.</msg>
+<arg>id:name</arg>
+<arg>ram</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-02T17:27:55.053629" elapsed="0.165572"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-02T17:27:55.220113" level="INFO">Typing text 'ram@test.com' into text field 'id:email'.</msg>
+<arg>id:email</arg>
+<arg>ram@test.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-02T17:27:55.219732" elapsed="0.186467"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-02T17:27:55.409804" level="INFO">Clicking element 'id:female'.</msg>
+<arg>id:female</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-02T17:27:55.408845" elapsed="0.121954"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-02T17:27:55.531595" level="INFO">Clicking element 'id:monday'.</msg>
+<arg>id:monday</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-02T17:27:55.531262" elapsed="0.118698"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2026-02-02T17:27:55.650622" level="INFO">Selecting options from selection list 'id:country' by label India.</msg>
+<arg>id:country</arg>
+<arg>India</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2026-02-02T17:27:55.650377" elapsed="0.161572"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-02-02T17:27:55.813656" level="INFO">Running on Chrome browser</msg>
+<arg>Running on Chrome browser</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-02-02T17:27:55.813335" elapsed="0.000400"/>
+</kw>
+<arg>'${BROWSER}' == 'chrome'</arg>
+<arg>Log</arg>
+<arg>Running on Chrome browser</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-02-02T17:27:55.812454" elapsed="0.001370"/>
+</kw>
+<status status="PASS" start="2026-02-02T17:27:55.019451" elapsed="0.794972"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-02-02T17:27:55.816336" elapsed="2.384640"/>
+</kw>
+<status status="PASS" start="2026-02-02T17:27:47.871385" elapsed="10.329869"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Q2" id="s1" pass="1" fail="0" skip="0">Q2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

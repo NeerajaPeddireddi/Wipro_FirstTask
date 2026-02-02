@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.13.0 on win32)" generated="2026-02-02T10:25:32.368626" rpa="false" schemaversion="5">
+<suite id="s1" name="TestCase forloop" source="C:\Users\Neeraja\Desktop\Wipro_Practice\Day14\TestCase_forloop.robot">
+<test id="s1-t1" name="Print Names Using For Loop" line="11">
+<for flavor="IN">
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-02-02T10:25:32.487426" level="INFO">ram</msg>
+<arg>${name}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-02-02T10:25:32.486843" elapsed="0.000770"/>
+</kw>
+<var name="${name}">ram</var>
+<status status="PASS" start="2026-02-02T10:25:32.486029" elapsed="0.001695"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-02-02T10:25:32.488775" level="INFO">arun</msg>
+<arg>${name}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-02-02T10:25:32.488075" elapsed="0.000801"/>
+</kw>
+<var name="${name}">arun</var>
+<status status="PASS" start="2026-02-02T10:25:32.487913" elapsed="0.001047"/>
+</iter>
+<iter>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-02-02T10:25:32.489933" level="INFO">karna</msg>
+<arg>${name}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-02-02T10:25:32.489333" elapsed="0.000787"/>
+</kw>
+<var name="${name}">karna</var>
+<status status="PASS" start="2026-02-02T10:25:32.489122" elapsed="0.001300"/>
+</iter>
+<var>${name}</var>
+<value>@{names}</value>
+<status status="PASS" start="2026-02-02T10:25:32.485629" elapsed="0.004932"/>
+</for>
+<status status="PASS" start="2026-02-02T10:25:32.484814" elapsed="0.006511"/>
+</test>
+<test id="s1-t2" name="Print Names Using While Loop" line="16">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-02-02T10:25:32.493912" level="INFO">${count} = 1</msg>
+<var>${count}</var>
+<arg>1</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-02-02T10:25:32.493289" elapsed="0.000681"/>
+</kw>
+<while condition="${count} &lt;=5">
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${count}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-02T10:25:32.494978" elapsed="0.000862"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-02T10:25:32.496842" level="INFO">${count} = 2</msg>
+<var>${count}</var>
+<arg>${count}+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-02T10:25:32.496049" elapsed="0.000852"/>
+</kw>
+<status status="PASS" start="2026-02-02T10:25:32.494455" elapsed="0.002518"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${count}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-02T10:25:32.497361" elapsed="0.001250"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-02T10:25:32.502441" level="INFO">${count} = 3</msg>
+<var>${count}</var>
+<arg>${count}+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-02T10:25:32.499112" elapsed="0.003521"/>
+</kw>
+<status status="PASS" start="2026-02-02T10:25:32.497022" elapsed="0.005701"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${count}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-02T10:25:32.503255" elapsed="0.000834"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-02T10:25:32.505355" level="INFO">${count} = 4</msg>
+<var>${count}</var>
+<arg>${count}+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-02T10:25:32.504314" elapsed="0.001102"/>
+</kw>
+<status status="PASS" start="2026-02-02T10:25:32.502783" elapsed="0.002709"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${count}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-02T10:25:32.506077" elapsed="0.000789"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-02T10:25:32.508680" level="INFO">${count} = 5</msg>
+<var>${count}</var>
+<arg>${count}+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-02T10:25:32.507186" elapsed="0.001809"/>
+</kw>
+<status status="PASS" start="2026-02-02T10:25:32.505535" elapsed="0.003767"/>
+</iter>
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${count}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-02-02T10:25:32.510009" elapsed="0.000938"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-02T10:25:32.511843" level="INFO">${count} = 6</msg>
+<var>${count}</var>
+<arg>${count}+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-02T10:25:32.511169" elapsed="0.000728"/>
+</kw>
+<status status="PASS" start="2026-02-02T10:25:32.509410" elapsed="0.002611"/>
+</iter>
+<status status="PASS" start="2026-02-02T10:25:32.494451" elapsed="0.017994"/>
+</while>
+<status status="PASS" start="2026-02-02T10:25:32.492521" elapsed="0.020445"/>
+</test>
+<status status="PASS" start="2026-02-02T10:25:32.373794" elapsed="0.140702"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="TestCase forloop" id="s1" pass="2" fail="0" skip="0">TestCase forloop</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

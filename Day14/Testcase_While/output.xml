@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.13.0 on win32)" generated="2026-02-02T11:35:33.702439" rpa="false" schemaversion="5">
+<suite id="s1" name="Testcase While" source="C:\Users\Neeraja\Desktop\Wipro_Practice\Day14\Testcase_While\Testcase_While.robot">
+<test id="s1-t1" name="While loop simple example" line="2">
+<kw name="${i} Set Variable 1">
+<msg time="2026-02-02T11:35:33.744896" level="FAIL">No keyword with name '${i} Set Variable 1' found.</msg>
+<status status="FAIL" start="2026-02-02T11:35:33.744852" elapsed="0.000094">No keyword with name '${i} Set Variable 1' found.</status>
+</kw>
+<while condition="${i}&lt;= 5">
+<iter>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${i}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2026-02-02T11:35:33.745348" elapsed="0.000020"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<var>${i}</var>
+<arg>${i}+1</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2026-02-02T11:35:33.745451" elapsed="0.000074"/>
+</kw>
+<status status="NOT RUN" start="2026-02-02T11:35:33.745187" elapsed="0.000372"/>
+</iter>
+<status status="NOT RUN" start="2026-02-02T11:35:33.745185" elapsed="0.000406"/>
+</while>
+<status status="FAIL" start="2026-02-02T11:35:33.743531" elapsed="0.002436">No keyword with name '${i} Set Variable 1' found.</status>
+</test>
+<status status="FAIL" start="2026-02-02T11:35:33.703804" elapsed="0.043142"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Testcase While" id="s1" pass="0" fail="1" skip="0">Testcase While</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

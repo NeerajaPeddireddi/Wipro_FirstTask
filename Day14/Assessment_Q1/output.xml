@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.13.0 on win32)" generated="2026-02-02T16:32:31.957453" rpa="false" schemaversion="5">
+<suite id="s1" name="Q1" source="C:\Users\Neeraja\Desktop\Wipro_Practice\Day14\Assessment_Q1\Q1.robot">
+<kw name="Suite Setup Keyword" type="SETUP">
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-02-02T16:32:32.021670" level="INFO">Suite Setup:Executed once before all tests</msg>
+<arg>Suite Setup:Executed once before all tests</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-02-02T16:32:32.021335" elapsed="0.000428"/>
+</kw>
+<status status="PASS" start="2026-02-02T16:32:32.020369" elapsed="0.001537"/>
+</kw>
+<test id="s1-t1" name="Valid Login Test" line="21">
+<kw name="Test Setup Keyword" type="SETUP">
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-02-02T16:32:32.023234" level="INFO">Test Setup: Executed before each test</msg>
+<arg>Test Setup: Executed before each test</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-02-02T16:32:32.022955" elapsed="0.000337"/>
+</kw>
+<status status="PASS" start="2026-02-02T16:32:32.022642" elapsed="0.000719"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-02-02T16:32:32.023884" level="INFO">Executing Valid Login Test</msg>
+<arg>Executing Valid Login Test</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-02-02T16:32:32.023608" elapsed="0.000366"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>1</arg>
+<arg>1</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-02-02T16:32:32.024472" elapsed="0.000603"/>
+</kw>
+<kw name="Test Teardown Keyword" type="TEARDOWN">
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-02-02T16:32:32.026186" level="INFO">Test Teardown: Executed after each test</msg>
+<arg>Test Teardown: Executed after each test</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-02-02T16:32:32.025910" elapsed="0.000342"/>
+</kw>
+<status status="PASS" start="2026-02-02T16:32:32.025564" elapsed="0.000768"/>
+</kw>
+<tag>login</tag>
+<tag>smoke</tag>
+<status status="PASS" start="2026-02-02T16:32:32.021987" elapsed="0.004624"/>
+</test>
+<test id="s1-t2" name="Invalid Login Test" line="25">
+<kw name="Test Setup Keyword" type="SETUP">
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-02-02T16:32:32.029337" level="INFO">Test Setup: Executed before each test</msg>
+<arg>Test Setup: Executed before each test</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-02-02T16:32:32.028996" elapsed="0.000452"/>
+</kw>
+<status status="PASS" start="2026-02-02T16:32:32.028401" elapsed="0.001135"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-02-02T16:32:32.030391" level="INFO">Executing InValid Login Test</msg>
+<arg>Executing InValid Login Test</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-02-02T16:32:32.029945" elapsed="0.000553"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<msg time="2026-02-02T16:32:32.031666" level="FAIL">1 != 2</msg>
+<arg>1</arg>
+<arg>2</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="FAIL" start="2026-02-02T16:32:32.030907" elapsed="0.000971">1 != 2</status>
+</kw>
+<kw name="Test Teardown Keyword" type="TEARDOWN">
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-02-02T16:32:32.033358" level="INFO">Test Teardown: Executed after each test</msg>
+<arg>Test Teardown: Executed after each test</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-02-02T16:32:32.032829" elapsed="0.000634"/>
+</kw>
+<status status="PASS" start="2026-02-02T16:32:32.032467" elapsed="0.001167"/>
+</kw>
+<tag>login</tag>
+<tag>smoke</tag>
+<status status="FAIL" start="2026-02-02T16:32:32.027669" elapsed="0.006178">1 != 2</status>
+</test>
+<kw name="Suite Teardown Keyword" type="TEARDOWN">
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-02-02T16:32:32.035648" level="INFO">Suite Teardown:Executed once after all tests</msg>
+<arg>Suite Teardown:Executed once after all tests</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-02-02T16:32:32.035397" elapsed="0.000307"/>
+</kw>
+<status status="PASS" start="2026-02-02T16:32:32.035193" elapsed="0.000599"/>
+</kw>
+<status status="FAIL" start="2026-02-02T16:32:31.959195" elapsed="0.076653"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="1" skip="0">login</stat>
+<stat pass="1" fail="1" skip="0">smoke</stat>
+</tag>
+<suite>
+<stat name="Q1" id="s1" pass="1" fail="1" skip="0">Q1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
