@@ -1,0 +1,113 @@
+<!Doctype html>
+<html>
+<head>
+    <title>Patient Registration Page</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f2f6f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background: #ffffff;
+            padding: 25px 30px;
+            width: 350px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .gender-group {
+            margin-top: 5px;
+        }
+
+        .gender-group input {
+            margin-right: 5px;
+        }
+
+        button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 10px;
+            background: #3498db;
+            border: none;
+            color: white;
+            font-size: 15px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #2980b9;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="form-container">
+
+    <h2>Patient Registration</h2>
+
+    <form method="post" action="http://127.0.0.1:5000/api/patients">
+
+        <label>Name</label>
+        <input type="text" name="name" required>
+
+        <label>Age</label>
+        <input type="number" name="age" required>
+
+        <label>Gender</label>
+        <div class="gender-group">
+            <input type="radio" name="gender" value="Male" required> Male
+            <input type="radio" name="gender" value="Female"> Female
+        </div>
+
+        <label>Contact</label>
+        <input type="text" name="contact" required>
+
+        <label>Disease</label>
+        <input type="text" name="disease" required>
+
+        <label>Doctor</label>
+        <select name="doctor" required>
+            <option value="">Select Doctor</option>
+            <option>Dr. Sharma</option>
+            <option>Dr. Reddy</option>
+        </select>
+
+        <button type="submit">Register</button>
+
+    </form>
+</div>
+
+
+</body>
+</html>

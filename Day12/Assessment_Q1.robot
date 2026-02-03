@@ -25,5 +25,5 @@ Test Case 2 - Using Lists
     Log To Console    The first mark in the list is: ${marks}[0]
     Log To Console    All marks in the list:
     FOR    ${mark}    IN    @{marks}
-    Log To Console    ${mark}
+        Log To Console    ${mark}
     END

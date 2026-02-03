@@ -1,73 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.1 (Python 3.13.0 on win32)" generated="2026-01-30T17:18:25.511914" rpa="false" schemaversion="5">
-<suite id="s1" name="Assessment Q2" source="C:\Users\Neeraja\Desktop\Wipro_Practice\Day12\Assessment_Q2.robot">
-<test id="s1-t1" name="Environment Setup Verification" line="6">
-<kw name="Verify Python Installation">
-<kw name="Run Process" owner="Process">
-<msg time="2026-01-30T17:18:25.805459" level="INFO">Starting process:
-python --version</msg>
-<msg time="2026-01-30T17:18:25.810322" level="INFO">Waiting for process to complete.</msg>
-<msg time="2026-01-30T17:18:25.818054" level="INFO">Process completed.</msg>
-<msg time="2026-01-30T17:18:25.818285" level="INFO">${result} = &lt;result object with rc 0&gt;</msg>
-<var>${result}</var>
-<arg>python</arg>
-<arg>--version</arg>
-<arg>stdout=PIPE</arg>
-<arg>stderr=PIPE</arg>
-<doc>Runs a process and waits for it to complete.</doc>
-<status status="PASS" start="2026-01-30T17:18:25.803212" elapsed="0.015109"/>
+<robot generator="Robot 7.4.1 (Python 3.13.0 on win32)" generated="2026-02-02T19:43:26.961009" rpa="false" schemaversion="5">
+<suite id="s1" name="Testcase 1" source="C:\Users\Neeraja\Desktop\Wipro_Practice\Day12\Testcase_1.robot">
+<test id="s1-t1" name="Verify Google" line="5">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-02T19:43:27.223183" level="INFO">Opening browser 'chrome' to base url 'https://www.google.com'.</msg>
+<arg>https://www.google.com</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-02T19:43:27.222932" elapsed="4.275731"/>
 </kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2026-01-30T17:18:25.820335" level="INFO">✅ Python Version: Python 3.13.0</msg>
-<arg>✅ Python Version: ${result.stdout}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-01-30T17:18:25.818513" elapsed="0.001890"/>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-02-02T19:43:31.499158" elapsed="0.045072"/>
 </kw>
-<status status="PASS" start="2026-01-30T17:18:25.802542" elapsed="0.017964"/>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2026-02-02T19:43:31.564785" level="INFO">Page title is 'Google'.</msg>
+<arg>Google</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2026-02-02T19:43:31.544838" elapsed="0.020128"/>
 </kw>
-<kw name="Verify Robot Framework Installation">
-<kw name="Run Process" owner="Process">
-<msg time="2026-01-30T17:18:25.822068" level="INFO">Starting process:
-python -m robot --version</msg>
-<msg time="2026-01-30T17:18:25.828339" level="INFO">Waiting for process to complete.</msg>
-<msg time="2026-01-30T17:18:25.866956" level="INFO">Process completed.</msg>
-<msg time="2026-01-30T17:18:25.867182" level="INFO">${result} = &lt;result object with rc 1&gt;</msg>
-<var>${result}</var>
-<arg>python</arg>
-<arg>-m</arg>
-<arg>robot</arg>
-<arg>--version</arg>
-<arg>stdout=PIPE</arg>
-<arg>stderr=PIPE</arg>
-<doc>Runs a process and waits for it to complete.</doc>
-<status status="PASS" start="2026-01-30T17:18:25.821247" elapsed="0.045969"/>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-02-02T19:43:31.565324" elapsed="2.197518"/>
 </kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2026-01-30T17:18:25.869254" level="INFO">🤖 Robot Framework Version: C:\Users\Neeraja\AppData\Local\Programs\Python\Python313\python.exe: No module named robot</msg>
-<arg>🤖 Robot Framework Version: ${result.stdout}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-01-30T17:18:25.867402" elapsed="0.001938"/>
-</kw>
-<status status="PASS" start="2026-01-30T17:18:25.820931" elapsed="0.048500"/>
-</kw>
-<kw name="Verify SeleniumLibrary Import">
-<kw name="Log" owner="BuiltIn">
-<msg time="2026-01-30T17:18:25.870573" level="INFO">✅ SeleniumLibrary is installed</msg>
-<arg>✅ SeleniumLibrary is installed</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-01-30T17:18:25.870090" elapsed="0.000532"/>
-</kw>
-<status status="PASS" start="2026-01-30T17:18:25.869825" elapsed="0.000867"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2026-01-30T17:18:25.871211" level="INFO">✅ Environment verification completed successfully</msg>
-<arg>✅ Environment verification completed successfully</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2026-01-30T17:18:25.870987" elapsed="0.000267"/>
-</kw>
-<status status="PASS" start="2026-01-30T17:18:25.801745" elapsed="0.069764"/>
+<status status="PASS" start="2026-02-02T19:43:27.221801" elapsed="6.541478"/>
 </test>
-<status status="PASS" start="2026-01-30T17:18:25.513302" elapsed="0.359219"/>
+<status status="PASS" start="2026-02-02T19:43:26.962384" elapsed="6.802247"/>
 </suite>
 <statistics>
 <total>
@@ -76,7 +34,7 @@ python -m robot --version</msg>
 <tag>
 </tag>
 <suite>
-<stat name="Assessment Q2" id="s1" pass="1" fail="0" skip="0">Assessment Q2</stat>
+<stat name="Testcase 1" id="s1" pass="1" fail="0" skip="0">Testcase 1</stat>
 </suite>
 </statistics>
 <errors>

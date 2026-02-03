@@ -1,8 +1,9 @@
 *** Settings ***
-Library    SeleniumLibrary
+Library     SeleniumLibrary
 
 *** Test Cases ***
-Open Google
+Verify Google
     Open Browser    https://www.google.com    chrome
-    Title Should Be    Google
+    Maximize Browser Window
+    Title Should be     Google
     Close Browser

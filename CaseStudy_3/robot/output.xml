@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.13.0 on win32)" generated="2026-02-03T17:46:35.459273" rpa="false" schemaversion="5">
+<suite id="s1" name="Registration" source="C:\Users\Neeraja\Desktop\Wipro_Practice\CaseStudy_3\robot\registration.robot">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2026-02-03T17:46:35.816073" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:5000'.</msg>
+<arg>http://127.0.0.1:5000</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-03T17:46:35.815099" elapsed="25.402839"/>
+</kw>
+<test id="s1-t1" name="Register New Patient" line="7">
+<kw name="Input Patient Details">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-03T17:47:01.233020" level="INFO">Typing text 'Ravi' into text field 'name=name'.</msg>
+<arg>name=name</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-03T17:47:01.223741" elapsed="0.261625"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-03T17:47:01.486554" level="INFO">Typing text '35' into text field 'name=age'.</msg>
+<arg>name=age</arg>
+<arg>${age}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-03T17:47:01.485963" elapsed="0.150139"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-03T17:47:01.636858" level="INFO">Clicking element 'xpath=//input[@value='Male']'.</msg>
+<arg>xpath=//input[@value='${gender}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-03T17:47:01.636393" elapsed="0.146712"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-03T17:47:01.783952" level="INFO">Typing text '9876543210' into text field 'name=contact'.</msg>
+<arg>name=contact</arg>
+<arg>${contact}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-03T17:47:01.783443" elapsed="0.140150"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-03T17:47:01.924314" level="INFO">Typing text 'Fever' into text field 'name=disease'.</msg>
+<arg>name=disease</arg>
+<arg>${disease}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-03T17:47:01.923893" elapsed="0.154781"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2026-02-03T17:47:02.079631" level="INFO">Selecting options from selection list 'name=doctor' by label Dr. Sharma.</msg>
+<arg>name=doctor</arg>
+<arg>${doctor}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2026-02-03T17:47:02.079095" elapsed="0.140477"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-02-03T17:47:02.220234" level="INFO">Clicking button 'Register'.</msg>
+<arg>Register</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-03T17:47:02.219916" elapsed="0.121796"/>
+</kw>
+<arg>Ravi</arg>
+<arg>35</arg>
+<arg>Male</arg>
+<arg>9876543210</arg>
+<arg>Fever</arg>
+<arg>Dr. Sharma</arg>
+<status status="PASS" start="2026-02-03T17:47:01.221695" elapsed="1.120517"/>
+</kw>
+<status status="PASS" start="2026-02-03T17:47:01.218436" elapsed="1.128180"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-02-03T17:47:02.352409" elapsed="2.542354"/>
+</kw>
+<status status="PASS" start="2026-02-03T17:46:35.460830" elapsed="29.434016"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Registration" id="s1" pass="1" fail="0" skip="0">Registration</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
