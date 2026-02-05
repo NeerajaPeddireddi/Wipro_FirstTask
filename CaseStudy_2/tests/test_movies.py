@@ -6,7 +6,7 @@ def test_get_movies(base_url):
         assert response.status_code == 200
         assert isinstance(response.json(), list)
     except Exception as e:
-        pytest.fail(f"Test failed due to exception: {e}")
+        pytest.fail(f"Test failed : {e}")
 def test_add_movie(base_url):
     data={
     "id":102,
