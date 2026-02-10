@@ -26,3 +26,6 @@ def test_add_movie(base_url):
 def test_get_movie_by_id(base_url, movie_id, status):
     response = requests.get(f"{base_url}/api/movies/{movie_id}")
     assert response.status_code == status
+
+
+

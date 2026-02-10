@@ -39,7 +39,7 @@ if post_response.status_code == 201:
     print("Patient created successfully")
 
 else:
-    print("Patient creation failed"
+    print("Patient creation failed")
 # Negative Validation
 invalid_body = {}
 

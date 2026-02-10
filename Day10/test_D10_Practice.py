@@ -7,7 +7,7 @@ def test_sub():
 #using fixtures this is passing data
 #if you want run single file pytest filename,.py
 # pytest -s Day10\test_work.py will give print data also
-#we need to set method as test_methodname then only that methods execured inside test file
+#we need to set method as test_ method name then only that methods executed inside test file
 #Fixures
 import pytest
 @pytest.fixture
@@ -35,15 +35,17 @@ def test_example(setup_teardown):
     print("test running")
 
 #we use two like this
-def test_example(setup_teardown):
+def test_example1(setup_teardown):
     print("test2 running")
+
 # parameters passing syntax
-# @pytest.mark.parametrize("param_names", param_values)
+# @pytest.mark.parametrize("param_names", [param_values])
 
 import pytest
 @pytest.mark.parametrize("a,b,res",[(2,3,5),(3,4,7)])
 def test_add(a,b,res):
     assert a+b ==res
+
 #Smoke testing
 @pytest.mark.smoke
 def test_smoke():

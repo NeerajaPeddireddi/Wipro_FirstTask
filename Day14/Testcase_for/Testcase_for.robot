@@ -54,7 +54,7 @@ For loop with break
     END
 
 
-For loop with skip
+For loop with skip(Continue)
     FOR    ${i}    IN RANGE    1    5
         IF    ${i} == 3
             CONTINUE

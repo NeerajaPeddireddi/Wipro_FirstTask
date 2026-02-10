@@ -25,7 +25,7 @@ Verify single_User
 #        Status Should Be    404      ${response}
 #        ${res_jon}=     To Json    ${response.content}
 #        log       ${res_jon}=   console=True
-Verify  Create New_User
+Verify Create_New_User
         ${data}=  Create Dictionary    name=arjun
         Create Session    mysession             ${baseurl}
         ${response}=  POST On Session    mysession   /users    json=${data}

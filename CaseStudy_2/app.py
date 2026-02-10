@@ -27,6 +27,7 @@ def getMovieById(movie_id):
         if movie["id"] == movie_id:
             return jsonify(movie)
     return jsonify({"error":"Movie not found"}),404
+
 @app.route("/api/movies",methods=['POST'])
 def addMovie():
     data=request.get_json()

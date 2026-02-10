@@ -220,7 +220,7 @@ def health():
 
         return jsonify({
 
-            "Message": "Internal server errro",
+            "Message": "Internal server error",
 
             "error": str(e)
 
