@@ -1,0 +1,7 @@
+flask
+requests
+pytest
+pytest-html
+pytest-xdist
+robotframework
+robotframework-requests

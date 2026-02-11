@@ -1,0 +1,8 @@
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+marks=[50,60,70,80,80,65]
+
+sns.histplot(marks,bins=5)
+plt.title("Marks")
+plt.show()
