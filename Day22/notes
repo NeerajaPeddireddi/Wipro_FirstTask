@@ -1,3 +1,5 @@
 mongodb://localhost:27017/
 
 https://app.getpostman.com/join-team?invite_code=d16740a985b90f99e1bd5e9801e2673f964879b51ef9b5288ccf24f799e18157
+
+robot -d reports tests/

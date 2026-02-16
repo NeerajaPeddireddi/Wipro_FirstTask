@@ -1,0 +1,590 @@
+{
+  "info": {
+    "_postman_id": "901e54e7-8523-4c1b-a9be-837e2def12ad",
+    "name": "Foodie_App",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "42736061",
+    "_collection_link": "https://go.postman.co/collection/42736061-901e54e7-8523-4c1b-a9be-837e2def12ad?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "restaurant",
+      "item": [
+        {
+          "name": "add_restaurant",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Food Hub\",\r\n  \"category\": \"Indian\",\r\n  \"location\": \"Hyderabad\",\r\n  \"images\": [\"img1.jpg\"],\r\n  \"contact\": \"9876543210\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:5000/api/v1/restaurants",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "restaurants"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get_restaurant",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Rahul\",\r\n  \"movie_id\": 101,\r\n  \"movie_name\": \"Interstellar\",\r\n  \"tickets\":1,\r\n  \"price_per_ticket\": 250,\r\n  \"show_time\": \"2026-02-02 18:30\"\r\n}\r\n"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:5000/api/v1/restaurants/1",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "restaurants",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update_restaurant",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"location\": \"Bangalore\",\r\n  \"contact\": \"9999999999\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:5000/api/v1/restaurants/1",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "restaurants",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "disable_restaurant",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:5000/api/v1/restaurants/1/disable",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "restaurants",
+                "1",
+                "disable"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "search_restaurants",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:5000/api/v1/restaurants/search?location=Hyderabad",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "restaurants",
+                "search"
+              ],
+              "query": [
+                {
+                  "key": "location",
+                  "value": "Hyderabad"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "admin",
+      "item": [
+        {
+          "name": "approve_restaurant",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:5000/api/v1/admin/restaurants/1/approve",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "admin",
+                "restaurants",
+                "1",
+                "approve"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "admin_disable_restaurant",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": ""
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get_orders",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:5000/api/v1/admin/orders",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "admin",
+                "orders"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get_feedback",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:5000/api/v1/admin/feedback",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "admin",
+                "feedback"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "dishes",
+      "item": [
+        {
+          "name": "add_dish",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Paneer Biryani\",\r\n  \"type\": \"Veg\",\r\n  \"price\": 250,\r\n  \"available_time\": \"12PM-10PM\",\r\n  \"image\": \"paneer.jpg\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:5000/api/v1/restaurants/1/dishes",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "restaurants",
+                "1",
+                "dishes"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update_dish",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"price\": 270\r\n}\r\n"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:5000/api/v1/dishes/1",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "dishes",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update_dish_status",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"enabled\": false\r\n}\r\n"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:5000/api/v1/dishes/1/status",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "dishes",
+                "1",
+                "status"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete_dish",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": ""
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "users",
+      "item": [
+        {
+          "name": "user_register",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Ravi\",\r\n  \"email\": \"ravi@gmail.com\",\r\n  \"password\": \"ravi@123\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:5000/api/v1/user/register",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "user",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "postfeedback",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"user_id\": 1,\r\n  \"order_id\": 2,\r\n  \"rating\": 5,\r\n  \"comment\": \"Excellent food!\"\r\n}\r\n"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:5000/api/v1/user/feedback",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "user",
+                "feedback"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "orders",
+      "item": [
+        {
+          "name": "place_order",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"user_id\": 1,\r\n  \"restaurant_id\": 1,\r\n  \"dishes\": [\r\n    {\"dish_id\": 1, \"qty\": 2}\r\n  ]\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:5000/api/v1/orders",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "orders"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "add_rating",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"order_id\": 1,\r\n  \"rating\": 5,\r\n  \"comment\": \"Excellent food\"\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:5000/api/v1/ratings",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "ratings"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getorderbyrestaurantid",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:5000/api/v1/restaurants/1/orders",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "restaurants",
+                "1",
+                "orders"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getorderbyuserid",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:5000/api/v1/users/1/orders",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "users",
+                "1",
+                "orders"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

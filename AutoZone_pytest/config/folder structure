@@ -1,0 +1,29 @@
+pytest-framework/
+│
+├── config/
+│   └── config.ini
+│
+├── data/
+│   └── test_data.json
+│
+├── pages/
+│   ├── base_page.py
+│   ├── login_page.py
+│   ├── home_page.py
+│   ├── product_page.py
+│   └── cart_page.py
+│
+├── tests/
+│   ├── test_login.py
+│   ├── test_search.py
+│   ├── test_cart.py
+│   └── test_logout.py
+│
+├── utilities/
+│   ├── driver_factory.py
+│   ├── logger.py
+│   └── wait_utils.py
+│
+├── screenshots/
+├── reports/
+└── pytest.ini
