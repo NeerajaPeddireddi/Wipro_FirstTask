@@ -1,7 +1,7 @@
-import location
-from flask import Flask, request, jsonify, Blueprint
 
-from CaseStudy_4.data.datastore import restaurants, ratings, dishes
+from flask import  request, jsonify, Blueprint
+
+from CaseStudy_4.data.datastore import restaurants, dishes, ratings
 
 restaurant_bp=Blueprint('restaurant_bp',__name__)
 @restaurant_bp.route('/api/v1/restaurants',methods=['POST'])

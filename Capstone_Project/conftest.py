@@ -1,7 +1,8 @@
 import pytest
 import configparser
 import os
-from AutoZone_pytest.utilities.driver_factory import get_driver
+
+from Capstone_Project.utilities.driver_factory import get_driver
 
 
 @pytest.fixture(scope="function")

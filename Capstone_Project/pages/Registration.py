@@ -11,33 +11,35 @@ class RegistrationPage:
 
     # ----------- LOCATORS ------------
 
-    sign_up_btn = (By.LINK_TEXT, "Signup / Login")
+    sign_up_btn = (By.LINK_TEXT, "My Account")
 
 
-    name_input = (By.XPATH, "//input[@data-qa='signup-name']")
-    email_input= (By.XPATH, "//input[@data-qa='signup-email']")
 
-    signup_btn = (By.XPATH, "//button[@data-qa='signup-button']")
+    email_input= (By.XPATH, "//input[@id='reg_email']")
+    password_input = (By.XPATH, "//input[@id='reg_password']")
+
+    register = (By.XPATH, "//input[@name='register']")
 
     # ----------- METHODS ------------
 
     def click_sign_up(self):
         self.wait.until(EC.element_to_be_clickable(self.sign_up_btn)).click()
 
-    def enter_name(self,name):
-        self.wait.until(
-            EC.visibility_of_element_located(self.name_input)
-        ).send_keys(name)
+
 
 
     def enter_email(self, value):
         self.wait.until(
             EC.element_to_be_clickable(self.email_input)
         ).send_keys(value)
+    def enter_password(self,name):
+        self.wait.until(
+            EC.visibility_of_element_located(self.password_input)
+        ).send_keys(name)
 
 
-    def click_signupbtn(self):
-        self.wait.until(EC.element_to_be_clickable(self.signup_btn)).click()
+    def click_register(self):
+        self.wait.until(EC.element_to_be_clickable(self.register)).click()
 
 
 

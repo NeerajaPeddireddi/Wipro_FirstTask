@@ -1,6 +1,5 @@
 import pytest
-import requests
-from CaseStudy_4.data import datastore
+
 
 BASE_URL = "http://127.0.0.1:5000"
 

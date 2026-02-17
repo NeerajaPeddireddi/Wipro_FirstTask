@@ -1,7 +1,8 @@
 import pytest
 import random
 import string
-from AutoZone_pytest.pages.Registration import RegistrationPage
+
+from Capstone_Project.pages.Registration import RegistrationPage
 
 
 def generate_random_email():
@@ -18,13 +19,14 @@ def test_user_registration(setup):
     registration.click_sign_up()
 
     # Step 4:name
-    registration.enter_name("Test")
+
     # Step 3: Enter Email OR Username
     email = generate_random_email()
+    password="Neeru@34523456"
     registration.enter_email(email)
+    registration.enter_password(password)
 
+    registration.click_register()
+    driver.implicitly_wait(3)
+    return {"email": email, "password": password}
 
-    registration.click_signupbtn()
-
-    # # Assertion
-    # assert "Account" in driver.page_source or "Welcome" in driver.page_source
