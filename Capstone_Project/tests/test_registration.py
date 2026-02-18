@@ -17,16 +17,19 @@ def test_user_registration(setup):
 
     # Step 1: Click Sign In
     registration.click_sign_up()
-
-    # Step 4:name
-
+    # assert registration.is_registration_page_loaded(), \
+    #     "Registration page did not load"
     # Step 3: Enter Email OR Username
     email = generate_random_email()
-    password="Neeru@34523456"
+    password="Test@12345Aa!k"
     registration.enter_email(email)
     registration.enter_password(password)
 
+    # assert driver.find_element(*registration.email_input).get_attribute("value") == email, \
+    #     "Email was not entered correctly"
+
     registration.click_register()
     driver.implicitly_wait(3)
-    return {"email": email, "password": password}
+    # assert registration.is_registration_successful(), \
+    #     "User registration failed"
 

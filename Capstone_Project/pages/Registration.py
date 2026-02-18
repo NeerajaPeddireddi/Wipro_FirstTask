@@ -1,6 +1,7 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.keys import Keys
 
 
 class RegistrationPage:
@@ -15,10 +16,11 @@ class RegistrationPage:
 
 
 
-    email_input= (By.XPATH, "//input[@id='reg_email']")
-    password_input = (By.XPATH, "//input[@id='reg_password']")
+    email_input= (By.ID, "reg_email")
+    password_input =  (By.ID, "reg_password")
+    password_strength = (By.CSS_SELECTOR, ".woocommerce-password-strength")
 
-    register = (By.XPATH, "//input[@name='register']")
+    register = (By.NAME, "register")
 
     # ----------- METHODS ------------
 
@@ -32,14 +34,42 @@ class RegistrationPage:
         self.wait.until(
             EC.element_to_be_clickable(self.email_input)
         ).send_keys(value)
-    def enter_password(self,name):
-        self.wait.until(
-            EC.visibility_of_element_located(self.password_input)
-        ).send_keys(name)
 
+    def enter_password(self, password):
+        password_element = self.wait.until(
+            EC.visibility_of_element_located(self.password_input)
+        )
+
+        password_element.clear()
+        password_element.send_keys(password)
+
+        # 🔥 Wait until password strength becomes STRONG
+        self.wait.until(
+            lambda driver: "strong" in driver.find_element(
+                By.CSS_SELECTOR,
+                ".woocommerce-password-strength"
+            ).get_attribute("class").lower()
+        )
+
+        # 🔥 Wait until button becomes enabled (disabled attribute removed)
+        self.wait.until(
+            lambda driver: not driver.find_element(*self.register)
+            .get_attribute("disabled")
+        )
 
     def click_register(self):
-        self.wait.until(EC.element_to_be_clickable(self.register)).click()
+        register_button = self.wait.until(
+            EC.element_to_be_clickable(self.register)
+        )
+        register_button.click()
 
+    def is_registration_page_loaded(self):
+        return self.wait.until(
+            EC.visibility_of_element_located(self.email_input)
+        ).is_displayed()
 
+    def is_registration_successful(self):
+        return self.wait.until(
+            EC.visibility_of_element_located(self.logout_link)
+        ).is_displayed()
 

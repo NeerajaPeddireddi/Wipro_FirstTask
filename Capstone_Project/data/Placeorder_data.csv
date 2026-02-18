@@ -1,0 +1,3 @@
+first_name,last_name,company,email,phone,country,address,city,state,zipcode,order_notes,payment_method
+Rani,Kumari,ABC Pvt Ltd,rani12@gmail.com,9876543210,IN,Hitech City,Hyderabad,Telangana,500081,"Please deliver between 10 AM - 12 PM",cod
+John,Doe,XYZ Ltd,john@example.com,9876501234,IN,Madhapur,Hyderabad,Telangana,500081,"Leave at reception",bacs

@@ -8,13 +8,14 @@ pytest-framework/
 │
 ├── pages/
 │   ├── base_page.py
-│   ├── login_page.py
-│   ├── home_page.py
+│   ├── Login.py
+│   ├── Registration.py
 │   ├── product_page.py
 │   └── cart_page.py
 │
 ├── tests/
-│   ├── test_login.py
+│   ├── test_login_page.py
+    |── test_registration_page.py
 │   ├── test_search.py
 │   ├── test_cart.py
 │   └── test_logout.py
