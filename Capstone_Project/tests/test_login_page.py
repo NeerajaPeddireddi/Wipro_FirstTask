@@ -29,6 +29,7 @@ def read_login_data_excel(file_name):
 
 
 login_test_data = read_login_data_excel("data.xlsx")
+@pytest.mark.order(2)
 @pytest.mark.parametrize("data", login_test_data)
 def test_login(setup,data):
     logger.info("========== STARTING LOGIN TEST ==========")
@@ -59,7 +60,7 @@ def test_login(setup,data):
     # Check login success
     login_page.assert_login_success(data["username"])
     logger.info("========== LOGIN TEST PASSED ==========")
-
+@pytest.mark.order(10)
 @pytest.mark.parametrize("data", login_test_data)
 def test_logout(setup,data):
     logger.info("========== STARTING LOGOUT TEST ==========")

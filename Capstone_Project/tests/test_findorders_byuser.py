@@ -31,6 +31,7 @@ def read_filterorder_data_excel(file_name):
 
 
 login_test_data = read_filterorder_data_excel("data.xlsx")
+@pytest.mark.order(8)
 @pytest.mark.parametrize("data", login_test_data)
 def test_findOrdersByUser(setup,data):
     logger.info("========== STARTING FILTER ORDERS BY USER TEST ==========")

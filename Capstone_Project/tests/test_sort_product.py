@@ -30,7 +30,7 @@ def read_sort_data_excel(file_name):
 
 
 sort_test_data = read_sort_data_excel("data.xlsx")
-
+@pytest.mark.order(7)
 @pytest.mark.parametrize("data", sort_test_data)
 def test_sort_products(setup, data):
     logger.info("========== STARTING SORT PRODUCTS TEST ==========")

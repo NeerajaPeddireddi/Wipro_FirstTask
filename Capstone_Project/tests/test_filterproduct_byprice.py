@@ -32,6 +32,7 @@ def read_filterproduct_data_excel(file_name):
 
 filter_test_data = read_filterproduct_data_excel("data.xlsx")
 # --------- Test ----------
+@pytest.mark.order(9)
 @pytest.mark.parametrize("data", filter_test_data)
 def test_filter_product(setup, data):
     logger.info("========== STARTING FILTER PRODUCT BY PRICE TEST ==========")

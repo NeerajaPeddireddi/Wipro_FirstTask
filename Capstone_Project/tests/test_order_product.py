@@ -35,7 +35,7 @@ def read_order_data_excel(file_name):
 
 
 order_test_data = read_order_data_excel("data.xlsx")
-
+@pytest.mark.order(6)
 @pytest.mark.parametrize("data", order_test_data)
 def test_place_order_cod(setup, data):
     logger.info("========== PLACE ORDER LOGIN TEST ==========")

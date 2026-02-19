@@ -1,17 +1,39 @@
+import os
+
 import pytest
-import random
-import string
+
+
+from openpyxl.reader.excel import load_workbook
 
 from Capstone_Project.conftest import logger
 from Capstone_Project.pages.Registration import RegistrationPage
 
 
-def generate_random_email():
-    random_string = ''.join(random.choices(string.ascii_lowercase + string.digits, k=5))
-    return f"tests{random_string}@gmail.com"
+@pytest.mark.order(1)
+def read_registration_data_excel(file_name):
+    base_path = os.path.join(os.path.dirname(__file__), "../data")
+    file_path = os.path.join(base_path, file_name)
+    logger.info(f"Reading registration data from Excel file: {file_path}")
 
+    workbook = load_workbook(file_path)
+    sheet = workbook["registration_data"]   # Sheet name
 
-def test_user_registration(setup):
+    data = []
+    headers = []
+
+    # Get headers (first row)
+    for cell in sheet[1]:
+        headers.append(cell.value)
+
+    # Get rows
+    for row in sheet.iter_rows(min_row=2, values_only=True):
+        row_data = dict(zip(headers, row))
+        data.append(row_data)
+    logger.info(f"Total test data rows loaded: {len(data)}")
+    return data
+registration_test_data = read_registration_data_excel("data.xlsx")
+@pytest.mark.parametrize("data", registration_test_data)
+def test_user_registration(setup,data):
     logger.info("========== STARTING USER REGISTRATION TEST ==========")
     driver = setup
     registration = RegistrationPage(driver)
@@ -22,18 +44,14 @@ def test_user_registration(setup):
     logger.info("Verifying registration page is loaded")
     assert registration.is_registration_page_loaded(), "Registration page did not load"
     # Step 2: Enter Email OR Username
-    email = generate_random_email()
-    password = "TestPassword123!@Bjl"
-    logger.info(f"Generated Email: {email}")
-    # Step 3: Enter Email
-    logger.info("Entering email")
-    registration.enter_email(email)
-    entered_email = driver.find_element(*registration.email_input).get_attribute("value")
-    logger.info(f"Entered Email Field Value: {entered_email}")
-    assert entered_email == email, f"Email was not entered correctly. Expected '{email}', got '{entered_email}'"
-    # Step 4: Enter Password
+    logger.info(f"Entering email: {data['email']}")
+    registration.enter_email(data["email"])
+    email_value = driver.find_element(*registration.email_input).get_attribute("value")
+    assert email_value == data["email"], f"Email input failed. Expected '{data['email']}', got '{email_value}'"
     logger.info("Entering password")
-    registration.enter_password(password)
+    registration.enter_password(data["password"])
+    password_value = driver.find_element(*registration.password_input).get_attribute("value")
+    assert password_value == data["password"], "Password input failed"
     assert driver.find_element(*registration.register).is_enabled(), \
         "Register button is not enabled after entering password"
     # Step 5: Click Register

@@ -30,6 +30,7 @@ def read_search_data_excel(file_name):
     logger.info(f"Total test data rows loaded: {len(data)}")
     return data
 search_test_data = read_search_data_excel("data.xlsx")
+@pytest.mark.order(3)
 @pytest.mark.parametrize("data", search_test_data)
 def test_search_product(setup,data):
     logger.info("========== STARTING SEARCH PRODUCT TEST ==========")

@@ -1,8 +1,9 @@
+import pytest
 
 from Capstone_Project.conftest import logger
 from Capstone_Project.pages.Add_Product import AddProduct
 
-
+@pytest.mark.order(4)
 def test_add_product_to_cart(setup):
     logger.info("========== STARTING ADD PRODUCT TO CART TEST ==========")
     driver = setup

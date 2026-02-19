@@ -1,7 +1,9 @@
+import pytest
+
 from Capstone_Project.conftest import logger
 from Capstone_Project.pages.Remove_Product import RemoveProduct
 
-
+@pytest.mark.order(5)
 def test_remove_product(setup):
     logger.info("========== STARTING REMOVE PRODUCT TEST ==========")
     driver = setup
