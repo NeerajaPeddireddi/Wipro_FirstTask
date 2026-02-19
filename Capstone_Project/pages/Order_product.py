@@ -3,6 +3,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+from Capstone_Project.conftest import logger
+
 
 class OrderProduct:
 
@@ -33,6 +35,7 @@ class OrderProduct:
     zipcode_input=(By.XPATH,"//input[@id='billing_postcode']")
     payment_method_radio = (By.ID, "payment_method_{}")
     place_order_btn = (By.ID, "place_order")
+    success_msg = (By.CSS_SELECTOR, ".woocommerce-thankyou-order-received")
 
     # ----------- METHODS ------------
 
@@ -173,6 +176,13 @@ class OrderProduct:
 
         # Wait until URL changes to order-received
         self.wait.until(lambda d: "order-received" in d.current_url)
+
+    def get_success_message(self):
+        logger.info("Waiting for success message")
+        element = self.wait.until(
+            EC.visibility_of_element_located(self.success_msg)
+        )
+        return element.text
 
     # order.select_payment_method("cod")
     # order.select_payment_method("bacs")

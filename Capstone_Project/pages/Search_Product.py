@@ -13,6 +13,8 @@ class SearchProduct:
     click_shop = (By.XPATH, "//a[text()='Shop']")
     search_box = (By.ID, "s")
     search_result_link = (By.CSS_SELECTOR, "h2.post-title.entry-title a")
+    search_box_value=(By.CSS_SELECTOR, "input[name='s']")
+    product_title=(By.CSS_SELECTOR, "h1.product_title")
     #---------METHODS-------
     def go_to_shop(self):
         self.wait.until(EC.element_to_be_clickable(self.click_shop)).click()

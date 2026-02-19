@@ -12,8 +12,10 @@ class SortProducts:
         self.wait = WebDriverWait(driver, 10)
 
     # ----------- LOCATORS ------------
+        self.click_shop = (By.XPATH, "//a[text()='Shop']")
         self.sort_dropdown = (By.NAME, "orderby")
-
+    def go_to_shop(self):
+        self.wait.until(EC.element_to_be_clickable(self.click_shop)).click()
     def select_sort_option(self, value):
         """
         Select a sorting option from the dropdown.

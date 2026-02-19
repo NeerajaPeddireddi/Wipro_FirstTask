@@ -55,19 +55,21 @@ def pytest_runtest_makereport(item, call):
             logger.error(f"Test Failed: {item.name}")
             logger.error(f"Screenshot saved at: {file_path}")
 # ----------- SETUP / TEARDOWN -----------
-@pytest.fixture(scope="function")
-def setup():
-    logger.info("Browser Setup Started")
-    driver = get_driver()
+browsers = ["chrome", "firefox"]
+@pytest.fixture(scope="function",params=browsers)
+def setup(request):
+    browser_name = request.param
+    logger.info(f"Browser Setup Started: {browser_name}")
+
+    driver = get_driver(browser_name)  # Pass browser_name to your driver_factory
 
     config = configparser.ConfigParser()
     config.read(os.path.join(os.path.dirname(__file__), "config/config.ini"))
     base_url = config["DEFAULT"]["base_url"]
 
     driver.get(base_url)
-
     yield driver
 
-    logger.info("Browser Teardown Started")
+    logger.info(f"Browser Teardown Started: {browser_name}")
     driver.quit()
-    logger.info("Browser Closed Successfully\n")
+    logger.info(f"Browser Closed Successfully: {browser_name}\n")

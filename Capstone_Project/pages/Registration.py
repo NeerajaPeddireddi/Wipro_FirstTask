@@ -21,14 +21,12 @@ class RegistrationPage:
     password_strength = (By.CSS_SELECTOR, ".woocommerce-password-strength")
 
     register = (By.NAME, "register")
+    logout_link = (By.LINK_TEXT, "Sign out")
 
     # ----------- METHODS ------------
 
     def click_sign_up(self):
         self.wait.until(EC.element_to_be_clickable(self.sign_up_btn)).click()
-
-
-
 
     def enter_email(self, value):
         self.wait.until(
@@ -43,18 +41,9 @@ class RegistrationPage:
         password_element.clear()
         password_element.send_keys(password)
 
-        # 🔥 Wait until password strength becomes STRONG
+        # Wait until register button becomes enabled
         self.wait.until(
-            lambda driver: "strong" in driver.find_element(
-                By.CSS_SELECTOR,
-                ".woocommerce-password-strength"
-            ).get_attribute("class").lower()
-        )
-
-        # 🔥 Wait until button becomes enabled (disabled attribute removed)
-        self.wait.until(
-            lambda driver: not driver.find_element(*self.register)
-            .get_attribute("disabled")
+            lambda driver: driver.find_element(*self.register).is_enabled()
         )
 
     def click_register(self):

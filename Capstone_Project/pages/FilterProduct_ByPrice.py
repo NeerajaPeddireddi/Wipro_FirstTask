@@ -13,6 +13,7 @@ class FilterProduct:
     min_price_input = (By.XPATH, "//span[contains(@class,'ui-slider-handle')][1]")
     max_price_input =  (By.XPATH, "//span[contains(@class,'ui-slider-handle')][2]")
     filter_button = (By.XPATH, "//button[text()='Filter']")
+    products=(By.CSS_SELECTOR, "ul.products li")
 
     # ----------- METHODS ------------
     def go_to_shop(self):
@@ -29,21 +30,4 @@ class FilterProduct:
 
         # Click filter button
         self.wait.until(EC.element_to_be_clickable(self.filter_button)).click()
-        # wait = WebDriverWait(self.driver, 10)
-        #
-        # min_field = wait.until(
-        #     EC.visibility_of_element_located((By.ID, "min_price"))
-        # )
-        # min_field.clear()
-        # min_field.send_keys(min_price)
-        #
-        # max_field = wait.until(
-        #     EC.visibility_of_element_located((By.ID, "max_price"))
-        # )
-        # max_field.clear()
-        # max_field.send_keys(max_price)
-        #
-        # apply_btn = wait.until(
-        #     EC.element_to_be_clickable((By.CSS_SELECTOR, "button.apply"))
-        # )
-        # apply_btn.click()
+

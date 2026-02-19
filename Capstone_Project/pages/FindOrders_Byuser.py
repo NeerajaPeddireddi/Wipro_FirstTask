@@ -22,6 +22,7 @@ class FindOrdersPage:
     checkbox=(By.ID,"rememberme")
     greeting_message = (By.CSS_SELECTOR, "p strong")
     find_orders_link=(By.LINK_TEXT,"Orders")
+    orders_table = (By.CSS_SELECTOR, "table.my_account_orders")
     # ----------- METHODS ------------
 
     def click_login(self):
@@ -50,4 +51,6 @@ class FindOrdersPage:
     def find_orders(self):
 
         self.wait.until(EC.element_to_be_clickable(self.find_orders_link)).click()
-
+        # Wait for orders table to be visible
+        table = self.wait.until(EC.visibility_of_element_located(self.orders_table))
+        return table
