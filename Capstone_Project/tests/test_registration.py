@@ -9,7 +9,7 @@ from Capstone_Project.conftest import logger
 from Capstone_Project.pages.Registration import RegistrationPage
 
 
-@pytest.mark.order(1)
+
 def read_registration_data_excel(file_name):
     base_path = os.path.join(os.path.dirname(__file__), "../data")
     file_path = os.path.join(base_path, file_name)
@@ -32,6 +32,7 @@ def read_registration_data_excel(file_name):
     logger.info(f"Total test data rows loaded: {len(data)}")
     return data
 registration_test_data = read_registration_data_excel("data.xlsx")
+@pytest.mark.order(1)
 @pytest.mark.parametrize("data", registration_test_data)
 def test_user_registration(setup,data):
     logger.info("========== STARTING USER REGISTRATION TEST ==========")

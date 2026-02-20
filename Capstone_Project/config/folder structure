@@ -2,23 +2,33 @@ pytest-framework/
 │
 ├── config/
 │   └── config.ini
+│   └── folder structure
 │
 ├── data/
-│   └── test_data.json
+│   └── data.xlsx
 │
 ├── pages/
-│   ├── base_page.py
+│   ├── Add_Product.py
+│   ├── FilterProduct_ByPrice.py
+│   ├── FindOrders_Byuser.py
 │   ├── Login.py
+│   ├── Order_product.py
 │   ├── Registration.py
-│   ├── product_page.py
-│   └── cart_page.py
+│   ├── Remove_Product.py
+│   ├── Search_Product.py
+│   ├── Sort_Product.py
 │
 ├── tests/
+│   ├── test_add_product_page.py
+│   ├── test_filterproduct_byprice.py
+│   ├── test_findorder_byuser.py
+│   ├── test_home_page.py
 │   ├── test_login_page.py
-    |── test_registration_page.py
-│   ├── test_search.py
-│   ├── test_cart.py
-│   └── test_logout.py
+│   ├── test_order_product.py
+│    |── test_registration.py
+│   ├── test_remove_product.py
+│   ├── test_search_product.py
+│   ├── test_sort_product.py
 │
 ├── utilities/
 │   ├── driver_factory.py
