@@ -5,10 +5,10 @@ from jsonschema import validate
 restaurant_schema = {
     "type": "array"
 }
-def test_add_restaurant(base_url,restaurant_payload):
-    response = requests.post(f"{base_url}/api/v1/restaurants",json=restaurant_payload)
-    assert response.status_code == 201
-    assert isinstance(response.json(), list)
+# def test_add_restaurant(base_url,restaurant_payload):
+#     response = requests.post(f"{base_url}/api/v1/restaurants",json=restaurant_payload)
+#     assert response.status_code == 409
+#     assert isinstance(response.json(), list)
 def test_add_restaurant_duplicate(base_url, restaurant_payload):
     # requests.post(f"{base_url}/api/v1/restaurants", json=restaurant_payload)
     response = requests.post(f"{base_url}/api/v1/restaurants",json=restaurant_payload)

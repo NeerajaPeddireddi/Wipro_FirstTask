@@ -1,0 +1,361 @@
+2026-02-23 11:05:21,479 - INFO - ========== TEST SUITE STARTED ==========
+2026-02-23 11:05:21,953 - INFO - Reading login data from Excel file: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\../data\data.xlsx
+2026-02-23 11:05:21,964 - INFO - Total test data rows loaded: 3
+2026-02-23 11:05:21,969 - INFO - Reading login data from Excel file: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\../data\data.xlsx
+2026-02-23 11:05:21,980 - INFO - Total test data rows loaded: 2
+2026-02-23 11:05:21,985 - INFO - Reading login data from Excel file: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\../data\data.xlsx
+2026-02-23 11:05:21,996 - INFO - Total test data rows loaded: 2
+2026-02-23 11:05:22,001 - INFO - Reading place order data from Excel file: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\../data\data.xlsx
+2026-02-23 11:05:22,012 - INFO - Total test data rows loaded: 2
+2026-02-23 11:05:22,016 - INFO - Reading registration data from Excel file: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\../data\data.xlsx
+2026-02-23 11:05:22,025 - INFO - Total test data rows loaded: 1
+2026-02-23 11:05:22,031 - INFO - Reading search data from Excel file: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\../data\data.xlsx
+2026-02-23 11:05:22,041 - INFO - Total test data rows loaded: 2
+2026-02-23 11:05:22,044 - INFO - Reading sort data from Excel file: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\../data\data.xlsx
+2026-02-23 11:05:22,054 - INFO - Total test data rows loaded: 6
+2026-02-23 11:05:22,057 - INFO - ------ Test Started: test_user_registration[data0] ------
+2026-02-23 11:05:22,059 - INFO - Browser Setup Started: chrome
+2026-02-23 11:05:38,972 - INFO - ========== STARTING USER REGISTRATION TEST ==========
+2026-02-23 11:05:38,972 - INFO - Clicking on Sign Up / My Account link
+2026-02-23 11:05:40,801 - INFO - Verifying registration page is loaded
+2026-02-23 11:05:40,839 - INFO - Entering email: Neeraja43@gmail.com
+2026-02-23 11:05:41,050 - INFO - Entering password
+2026-02-23 11:05:51,582 - ERROR - Test Failed: test_user_registration[data0]
+2026-02-23 11:05:51,582 - ERROR - Screenshot saved at: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\screenshots\test_user_registration[data0]_20260223_110551.png
+2026-02-23 11:05:51,584 - INFO - Browser Teardown Started
+2026-02-23 11:05:53,871 - INFO - Browser Closed Successfully
+
+2026-02-23 11:05:53,877 - INFO - ------ Test Finished: test_user_registration[data0] ------
+
+2026-02-23 11:05:53,877 - INFO - ------ Test Started: test_login[data0] ------
+2026-02-23 11:05:53,880 - INFO - Browser Setup Started: chrome
+2026-02-23 11:06:02,342 - INFO - ========== STARTING LOGIN TEST ==========
+2026-02-23 11:06:02,342 - INFO - Opening My Account page
+2026-02-23 11:06:03,616 - INFO - Entering email: Rani12@gmail.com
+2026-02-23 11:06:03,843 - INFO - Entering password
+2026-02-23 11:06:03,942 - INFO - Clicking checkbox
+2026-02-23 11:06:04,058 - INFO - Clicking login button
+2026-02-23 11:06:05,401 - INFO - Validating logged in username
+2026-02-23 11:06:05,451 - INFO - Valid login successful
+2026-02-23 11:06:05,451 - INFO - ========== LOGIN TEST PASSED ==========
+2026-02-23 11:06:05,453 - INFO - Browser Teardown Started
+2026-02-23 11:06:07,732 - INFO - Browser Closed Successfully
+
+2026-02-23 11:06:07,734 - INFO - ------ Test Finished: test_login[data0] ------
+
+2026-02-23 11:06:07,735 - INFO - ------ Test Started: test_login[data1] ------
+2026-02-23 11:06:07,738 - INFO - Browser Setup Started: chrome
+2026-02-23 11:06:16,114 - INFO - ========== STARTING LOGIN TEST ==========
+2026-02-23 11:06:16,114 - INFO - Opening My Account page
+2026-02-23 11:06:17,220 - INFO - Entering email: Rani16@gmail.com
+2026-02-23 11:06:17,422 - INFO - Entering password
+2026-02-23 11:06:17,552 - INFO - Clicking checkbox
+2026-02-23 11:06:17,661 - INFO - Clicking login button
+2026-02-23 11:06:18,800 - INFO - Validating logged in username
+2026-02-23 11:06:28,871 - INFO - Invalid login handled correctly
+2026-02-23 11:06:28,872 - INFO - ========== LOGIN TEST PASSED ==========
+2026-02-23 11:06:28,873 - INFO - Browser Teardown Started
+2026-02-23 11:06:31,127 - INFO - Browser Closed Successfully
+
+2026-02-23 11:06:31,129 - INFO - ------ Test Finished: test_login[data1] ------
+
+2026-02-23 11:06:31,129 - INFO - ------ Test Started: test_search_product[data0] ------
+2026-02-23 11:06:31,132 - INFO - Browser Setup Started: chrome
+2026-02-23 11:06:40,894 - INFO - ========== STARTING SEARCH PRODUCT TEST ==========
+2026-02-23 11:06:40,894 - INFO - Navigating to Shop page
+2026-02-23 11:06:43,102 - INFO - Current URL after navigation: https://practice.automationtesting.in/shop/
+2026-02-23 11:06:43,107 - INFO - Searching for product: Selenium Ruby
+2026-02-23 11:06:45,114 - INFO - Search submitted successfully
+2026-02-23 11:06:45,137 - INFO - Validating search results presence
+2026-02-23 11:06:45,160 - INFO - Search results found
+2026-02-23 11:06:47,357 - INFO - ========== SEARCH PRODUCT TEST COMPLETED ==========
+2026-02-23 11:06:47,359 - INFO - Browser Teardown Started
+2026-02-23 11:06:49,732 - INFO - Browser Closed Successfully
+
+2026-02-23 11:06:49,734 - INFO - ------ Test Finished: test_search_product[data0] ------
+
+2026-02-23 11:06:49,735 - INFO - ------ Test Started: test_search_product[data1] ------
+2026-02-23 11:06:49,738 - INFO - Browser Setup Started: chrome
+2026-02-23 11:06:58,738 - INFO - ========== STARTING SEARCH PRODUCT TEST ==========
+2026-02-23 11:06:58,738 - INFO - Navigating to Shop page
+2026-02-23 11:07:01,121 - INFO - Current URL after navigation: https://practice.automationtesting.in/shop/
+2026-02-23 11:07:01,127 - INFO - Searching for product: Robot
+2026-02-23 11:07:01,262 - INFO - Search submitted successfully
+2026-02-23 11:07:03,439 - INFO - Validating search results presence
+2026-02-23 11:07:13,533 - INFO - No products found - Validating negative scenario
+2026-02-23 11:07:13,567 - INFO - ========== SEARCH PRODUCT TEST COMPLETED ==========
+2026-02-23 11:07:13,568 - INFO - Browser Teardown Started
+2026-02-23 11:07:15,924 - INFO - Browser Closed Successfully
+
+2026-02-23 11:07:15,926 - INFO - ------ Test Finished: test_search_product[data1] ------
+
+2026-02-23 11:07:15,926 - INFO - ------ Test Started: test_add_product_to_cart ------
+2026-02-23 11:07:15,930 - INFO - Browser Setup Started: chrome
+2026-02-23 11:07:29,837 - INFO - ========== STARTING ADD PRODUCT TO CART TEST ==========
+2026-02-23 11:07:29,838 - INFO - Navigating to Shop page
+2026-02-23 11:07:32,595 - INFO - Current URL after navigation: https://practice.automationtesting.in/shop/
+2026-02-23 11:07:32,595 - INFO - Adding product to basket
+2026-02-23 11:07:32,644 - INFO - Validating product added to basket (View Basket visible)
+2026-02-23 11:07:32,727 - INFO - View basket button clicked
+2026-02-23 11:07:35,043 - INFO - Validating basket page URL
+2026-02-23 11:07:35,063 - INFO - Validating page title
+2026-02-23 11:07:35,070 - INFO - Page title: Basket – Automation Practice Site
+2026-02-23 11:07:35,074 - INFO - ========== ADD PRODUCT TO CART TEST PASSED ==========
+2026-02-23 11:07:35,076 - INFO - Browser Teardown Started
+2026-02-23 11:07:37,460 - INFO - Browser Closed Successfully
+
+2026-02-23 11:07:37,463 - INFO - ------ Test Finished: test_add_product_to_cart ------
+
+2026-02-23 11:07:37,463 - INFO - ------ Test Started: test_remove_product ------
+2026-02-23 11:07:37,466 - INFO - Browser Setup Started: chrome
+2026-02-23 11:07:47,407 - INFO - ========== STARTING REMOVE PRODUCT TEST ==========
+2026-02-23 11:07:47,408 - INFO - Navigating to Shop page
+2026-02-23 11:07:49,565 - INFO - Current URL after navigation: https://practice.automationtesting.in/shop/
+2026-02-23 11:07:49,572 - INFO - Adding product to basket
+2026-02-23 11:07:49,629 - INFO - Validating View Basket button visibility
+2026-02-23 11:07:49,874 - INFO - Clicking View Basket button
+2026-02-23 11:07:51,691 - INFO - Current URL after clicking View Basket: https://practice.automationtesting.in/basket/
+2026-02-23 11:07:51,696 - INFO - Removing product from cart
+2026-02-23 11:08:02,534 - INFO - Remaining remove buttons count: 0
+2026-02-23 11:08:12,561 - INFO - Final URL after removal: https://practice.automationtesting.in/basket/
+2026-02-23 11:08:12,562 - INFO - ========== REMOVE PRODUCT TEST PASSED ==========
+2026-02-23 11:08:12,564 - INFO - Browser Teardown Started
+2026-02-23 11:08:14,860 - INFO - Browser Closed Successfully
+
+2026-02-23 11:08:14,862 - INFO - ------ Test Finished: test_remove_product ------
+
+2026-02-23 11:08:14,862 - INFO - ------ Test Started: test_place_order_cod[data0] ------
+2026-02-23 11:08:14,865 - INFO - Browser Setup Started: chrome
+2026-02-23 11:08:24,938 - INFO - ========== PLACE ORDER LOGIN TEST ==========
+2026-02-23 11:08:24,939 - INFO - Navigating to Shop page
+2026-02-23 11:08:27,284 - INFO - Current URL after navigation: https://practice.automationtesting.in/shop/
+2026-02-23 11:08:27,284 - INFO - Adding product to basket
+2026-02-23 11:08:27,339 - INFO - Viewing basket
+2026-02-23 11:08:29,208 - INFO - Proceeding to checkout
+2026-02-23 11:08:31,504 - INFO - Filling billing details
+2026-02-23 11:08:32,475 - INFO - Selecting country: IN
+2026-02-23 11:08:32,485 - INFO - Entering address details
+2026-02-23 11:08:34,095 - ERROR - Test Failed: test_place_order_cod[data0]
+2026-02-23 11:08:34,095 - ERROR - Screenshot saved at: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\screenshots\test_place_order_cod[data0]_20260223_110833.png
+2026-02-23 11:08:34,097 - INFO - Browser Teardown Started
+2026-02-23 11:08:36,446 - INFO - Browser Closed Successfully
+
+2026-02-23 11:08:36,453 - INFO - ------ Test Finished: test_place_order_cod[data0] ------
+
+2026-02-23 11:08:36,453 - INFO - ------ Test Started: test_place_order_cod[data1] ------
+2026-02-23 11:08:36,456 - INFO - Browser Setup Started: chrome
+2026-02-23 11:08:44,564 - INFO - ========== PLACE ORDER LOGIN TEST ==========
+2026-02-23 11:08:44,564 - INFO - Navigating to Shop page
+2026-02-23 11:08:46,966 - INFO - Current URL after navigation: https://practice.automationtesting.in/shop/
+2026-02-23 11:08:46,966 - INFO - Adding product to basket
+2026-02-23 11:08:47,022 - INFO - Viewing basket
+2026-02-23 11:08:48,357 - INFO - Proceeding to checkout
+2026-02-23 11:08:50,380 - INFO - Filling billing details
+2026-02-23 11:08:51,152 - INFO - Selecting country: IN
+2026-02-23 11:08:51,164 - INFO - Entering address details
+2026-02-23 11:08:51,942 - INFO - Entering order notes
+2026-02-23 11:08:52,133 - INFO - Selecting payment method: bacs
+2026-02-23 11:08:52,174 - INFO - Clicking Place Order button
+2026-02-23 11:08:54,043 - INFO - Verifying order success message
+2026-02-23 11:08:54,044 - INFO - Waiting for success message
+2026-02-23 11:08:54,081 - INFO - Success Message Received: Thank you. Your order has been received.
+2026-02-23 11:08:54,081 - INFO - ========== PLACE ORDER TEST PASSED ==========
+2026-02-23 11:08:54,082 - INFO - Browser Teardown Started
+2026-02-23 11:08:56,518 - INFO - Browser Closed Successfully
+
+2026-02-23 11:08:56,520 - INFO - ------ Test Finished: test_place_order_cod[data1] ------
+
+2026-02-23 11:08:56,520 - INFO - ------ Test Started: test_sort_products[data0] ------
+2026-02-23 11:08:56,523 - INFO - Browser Setup Started: chrome
+2026-02-23 11:09:08,264 - INFO - ========== STARTING SORT PRODUCTS TEST ==========
+2026-02-23 11:09:08,264 - INFO - Navigating to Shop page
+2026-02-23 11:09:10,509 - INFO - Current URL after navigation: https://practice.automationtesting.in/shop/
+2026-02-23 11:09:10,516 - INFO - Selecting sort option: menu_order
+2026-02-23 11:09:10,582 - INFO - Current URL after sorting: https://practice.automationtesting.in/shop/
+2026-02-23 11:09:10,582 - INFO - Validating default sorting (no orderby parameter expected)
+2026-02-23 11:09:10,582 - INFO - ========== SORT PRODUCTS TEST PASSED ==========
+2026-02-23 11:09:10,583 - INFO - Browser Teardown Started
+2026-02-23 11:09:12,976 - INFO - Browser Closed Successfully
+
+2026-02-23 11:09:12,977 - INFO - ------ Test Finished: test_sort_products[data0] ------
+
+2026-02-23 11:09:12,977 - INFO - ------ Test Started: test_sort_products[data1] ------
+2026-02-23 11:09:12,979 - INFO - Browser Setup Started: chrome
+2026-02-23 11:09:21,731 - INFO - ========== STARTING SORT PRODUCTS TEST ==========
+2026-02-23 11:09:21,731 - INFO - Navigating to Shop page
+2026-02-23 11:09:24,525 - INFO - Current URL after navigation: https://practice.automationtesting.in/shop/
+2026-02-23 11:09:24,532 - INFO - Selecting sort option: popularity
+2026-02-23 11:09:25,665 - INFO - Current URL after sorting: https://practice.automationtesting.in/shop/?orderby=popularity
+2026-02-23 11:09:25,665 - INFO - Validating URL contains parameter: orderby=popularity
+2026-02-23 11:09:25,666 - INFO - ========== SORT PRODUCTS TEST PASSED ==========
+2026-02-23 11:09:25,668 - INFO - Browser Teardown Started
+2026-02-23 11:09:27,982 - INFO - Browser Closed Successfully
+
+2026-02-23 11:09:27,983 - INFO - ------ Test Finished: test_sort_products[data1] ------
+
+2026-02-23 11:09:27,984 - INFO - ------ Test Started: test_sort_products[data2] ------
+2026-02-23 11:09:27,986 - INFO - Browser Setup Started: chrome
+2026-02-23 11:09:35,637 - INFO - ========== STARTING SORT PRODUCTS TEST ==========
+2026-02-23 11:09:35,638 - INFO - Navigating to Shop page
+2026-02-23 11:09:38,946 - INFO - Current URL after navigation: https://practice.automationtesting.in/shop/
+2026-02-23 11:09:38,953 - INFO - Selecting sort option: rating
+2026-02-23 11:09:40,699 - INFO - Current URL after sorting: https://practice.automationtesting.in/shop/?orderby=rating
+2026-02-23 11:09:40,700 - INFO - Validating URL contains parameter: orderby=rating
+2026-02-23 11:09:40,700 - INFO - ========== SORT PRODUCTS TEST PASSED ==========
+2026-02-23 11:09:40,701 - INFO - Browser Teardown Started
+2026-02-23 11:09:43,005 - INFO - Browser Closed Successfully
+
+2026-02-23 11:09:43,008 - INFO - ------ Test Finished: test_sort_products[data2] ------
+
+2026-02-23 11:09:43,009 - INFO - ------ Test Started: test_sort_products[data3] ------
+2026-02-23 11:09:43,013 - INFO - Browser Setup Started: chrome
+2026-02-23 11:09:52,775 - INFO - ========== STARTING SORT PRODUCTS TEST ==========
+2026-02-23 11:09:52,775 - INFO - Navigating to Shop page
+2026-02-23 11:09:54,794 - INFO - Current URL after navigation: https://practice.automationtesting.in/shop/
+2026-02-23 11:09:54,798 - INFO - Selecting sort option: date
+2026-02-23 11:09:56,743 - INFO - Current URL after sorting: https://practice.automationtesting.in/shop/?orderby=date
+2026-02-23 11:09:56,744 - INFO - Validating URL contains parameter: orderby=date
+2026-02-23 11:09:56,744 - INFO - ========== SORT PRODUCTS TEST PASSED ==========
+2026-02-23 11:09:56,745 - INFO - Browser Teardown Started
+2026-02-23 11:09:59,140 - INFO - Browser Closed Successfully
+
+2026-02-23 11:09:59,142 - INFO - ------ Test Finished: test_sort_products[data3] ------
+
+2026-02-23 11:09:59,142 - INFO - ------ Test Started: test_sort_products[data4] ------
+2026-02-23 11:09:59,144 - INFO - Browser Setup Started: chrome
+2026-02-23 11:10:08,507 - INFO - ========== STARTING SORT PRODUCTS TEST ==========
+2026-02-23 11:10:08,508 - INFO - Navigating to Shop page
+2026-02-23 11:10:10,753 - INFO - Current URL after navigation: https://practice.automationtesting.in/shop/
+2026-02-23 11:10:10,759 - INFO - Selecting sort option: price
+2026-02-23 11:10:12,762 - INFO - Current URL after sorting: https://practice.automationtesting.in/shop/?orderby=price
+2026-02-23 11:10:12,762 - INFO - Validating URL contains parameter: orderby=price
+2026-02-23 11:10:12,762 - INFO - ========== SORT PRODUCTS TEST PASSED ==========
+2026-02-23 11:10:12,764 - INFO - Browser Teardown Started
+2026-02-23 11:10:15,074 - INFO - Browser Closed Successfully
+
+2026-02-23 11:10:15,075 - INFO - ------ Test Finished: test_sort_products[data4] ------
+
+2026-02-23 11:10:15,075 - INFO - ------ Test Started: test_sort_products[data5] ------
+2026-02-23 11:10:15,077 - INFO - Browser Setup Started: chrome
+2026-02-23 11:10:25,846 - INFO - ========== STARTING SORT PRODUCTS TEST ==========
+2026-02-23 11:10:25,846 - INFO - Navigating to Shop page
+2026-02-23 11:10:27,935 - INFO - Current URL after navigation: https://practice.automationtesting.in/shop/
+2026-02-23 11:10:27,942 - INFO - Selecting sort option: price-desc
+2026-02-23 11:10:29,120 - INFO - Current URL after sorting: https://practice.automationtesting.in/shop/?orderby=price-desc
+2026-02-23 11:10:29,120 - INFO - Validating URL contains parameter: orderby=price-desc
+2026-02-23 11:10:29,120 - INFO - ========== SORT PRODUCTS TEST PASSED ==========
+2026-02-23 11:10:29,122 - INFO - Browser Teardown Started
+2026-02-23 11:10:31,539 - INFO - Browser Closed Successfully
+
+2026-02-23 11:10:31,541 - INFO - ------ Test Finished: test_sort_products[data5] ------
+
+2026-02-23 11:10:31,542 - INFO - ------ Test Started: test_findOrdersByUser[data0] ------
+2026-02-23 11:10:31,546 - INFO - Browser Setup Started: chrome
+2026-02-23 11:10:42,473 - INFO - ========== STARTING FILTER ORDERS BY USER TEST ==========
+2026-02-23 11:10:42,473 - INFO - Clicking on Login/My Account link
+2026-02-23 11:10:43,860 - INFO - Current URL after clicking login: https://practice.automationtesting.in/my-account/
+2026-02-23 11:10:43,867 - INFO - Entering Email: Rani12@gmail.com
+2026-02-23 11:10:44,165 - INFO - Email entered in field: Rani12@gmail.com
+2026-02-23 11:10:44,165 - INFO - Entering Password
+2026-02-23 11:10:44,330 - INFO - Password entered successfully
+2026-02-23 11:10:44,330 - INFO - Selecting Remember Me checkbox
+2026-02-23 11:10:44,532 - INFO - Checkbox selected status: True
+2026-02-23 11:10:44,532 - INFO - Clicking Login button
+2026-02-23 11:10:45,813 - INFO - URL after login: https://practice.automationtesting.in/my-account/
+2026-02-23 11:10:45,818 - INFO - Checking if Orders table is displayed
+2026-02-23 11:10:45,819 - INFO - Checking if Orders table is displayed
+2026-02-23 11:10:47,744 - INFO - Orders table is visible
+2026-02-23 11:10:47,744 - INFO - ========== FILTER ORDERS BY USER TEST PASSED ==========
+2026-02-23 11:10:47,745 - INFO - Browser Teardown Started
+2026-02-23 11:10:50,041 - INFO - Browser Closed Successfully
+
+2026-02-23 11:10:50,042 - INFO - ------ Test Finished: test_findOrdersByUser[data0] ------
+
+2026-02-23 11:10:50,042 - INFO - ------ Test Started: test_findOrdersByUser[data1] ------
+2026-02-23 11:10:50,043 - INFO - Browser Setup Started: chrome
+2026-02-23 11:10:58,840 - INFO - ========== STARTING FILTER ORDERS BY USER TEST ==========
+2026-02-23 11:10:58,840 - INFO - Clicking on Login/My Account link
+2026-02-23 11:11:00,421 - INFO - Current URL after clicking login: https://practice.automationtesting.in/my-account/
+2026-02-23 11:11:00,425 - INFO - Entering Email: Rani13@gmail.com
+2026-02-23 11:11:00,597 - INFO - Email entered in field: Rani13@gmail.com
+2026-02-23 11:11:00,597 - INFO - Entering Password
+2026-02-23 11:11:00,748 - INFO - Password entered successfully
+2026-02-23 11:11:00,748 - INFO - Selecting Remember Me checkbox
+2026-02-23 11:11:00,976 - INFO - Checkbox selected status: True
+2026-02-23 11:11:00,976 - INFO - Clicking Login button
+2026-02-23 11:11:02,152 - INFO - URL after login: https://practice.automationtesting.in/my-account/
+2026-02-23 11:11:02,160 - INFO - Checking if Orders table is displayed
+2026-02-23 11:11:02,160 - INFO - Checking if Orders table is displayed
+2026-02-23 11:11:14,277 - INFO - No orders / Invalid login - Negative case handled
+2026-02-23 11:11:14,278 - INFO - ========== FILTER ORDERS BY USER TEST PASSED ==========
+2026-02-23 11:11:14,281 - INFO - Browser Teardown Started
+2026-02-23 11:11:16,621 - INFO - Browser Closed Successfully
+
+2026-02-23 11:11:16,623 - INFO - ------ Test Finished: test_findOrdersByUser[data1] ------
+
+2026-02-23 11:11:16,623 - INFO - ------ Test Started: test_filter_product[data0] ------
+2026-02-23 11:11:16,626 - INFO - Browser Setup Started: chrome
+2026-02-23 11:11:32,008 - INFO - ========== STARTING FILTER PRODUCT BY PRICE TEST ==========
+2026-02-23 11:11:32,008 - INFO - Navigating to Shop page
+2026-02-23 11:11:34,477 - INFO - Current URL after navigation: https://practice.automationtesting.in/shop/
+2026-02-23 11:11:34,486 - INFO - Applying price filter -> Min: 150.0, Max: 300.0
+2026-02-23 11:11:36,306 - INFO - Price filter applied successfully
+2026-02-23 11:11:36,318 - INFO - Number of products displayed after filtering: 4
+2026-02-23 11:11:36,324 - INFO - URL after filtering: https://practice.automationtesting.in/shop/?min_price=150.0&max_price=300.0
+2026-02-23 11:11:36,330 - INFO - ========== FILTER PRODUCT TEST PASSED ==========
+2026-02-23 11:11:36,331 - INFO - Browser Teardown Started
+2026-02-23 11:11:38,635 - INFO - Browser Closed Successfully
+
+2026-02-23 11:11:38,638 - INFO - ------ Test Finished: test_filter_product[data0] ------
+
+2026-02-23 11:11:38,639 - INFO - ------ Test Started: test_filter_product[data1] ------
+2026-02-23 11:11:38,642 - INFO - Browser Setup Started: chrome
+2026-02-23 11:11:48,361 - INFO - ========== STARTING FILTER PRODUCT BY PRICE TEST ==========
+2026-02-23 11:11:48,361 - INFO - Navigating to Shop page
+2026-02-23 11:11:50,841 - INFO - Current URL after navigation: https://practice.automationtesting.in/shop/
+2026-02-23 11:11:50,846 - INFO - Applying price filter -> Min: 200.0, Max: 400.0
+2026-02-23 11:11:52,477 - INFO - Price filter applied successfully
+2026-02-23 11:11:52,489 - INFO - Number of products displayed after filtering: 4
+2026-02-23 11:11:52,495 - INFO - URL after filtering: https://practice.automationtesting.in/shop/?min_price=200.0&max_price=400.0
+2026-02-23 11:11:52,501 - INFO - ========== FILTER PRODUCT TEST PASSED ==========
+2026-02-23 11:11:52,502 - INFO - Browser Teardown Started
+2026-02-23 11:11:54,886 - INFO - Browser Closed Successfully
+
+2026-02-23 11:11:54,889 - INFO - ------ Test Finished: test_filter_product[data1] ------
+
+2026-02-23 11:11:54,889 - INFO - ------ Test Started: test_filter_product[data2] ------
+2026-02-23 11:11:54,892 - INFO - Browser Setup Started: chrome
+2026-02-23 11:12:04,886 - INFO - ========== STARTING FILTER PRODUCT BY PRICE TEST ==========
+2026-02-23 11:12:04,886 - INFO - Navigating to Shop page
+2026-02-23 11:12:08,811 - INFO - Current URL after navigation: https://practice.automationtesting.in/shop/
+2026-02-23 11:12:08,818 - INFO - Applying price filter -> Min: 250.0, Max: 500.0
+2026-02-23 11:12:08,960 - INFO - Price filter applied successfully
+2026-02-23 11:12:10,740 - INFO - Number of products displayed after filtering: 8
+2026-02-23 11:12:10,746 - INFO - URL after filtering: https://practice.automationtesting.in/shop/?min_price=250.0&max_price=500.0
+2026-02-23 11:12:10,763 - INFO - ========== FILTER PRODUCT TEST PASSED ==========
+2026-02-23 11:12:10,765 - INFO - Browser Teardown Started
+2026-02-23 11:12:13,140 - INFO - Browser Closed Successfully
+
+2026-02-23 11:12:13,142 - INFO - ------ Test Finished: test_filter_product[data2] ------
+
+2026-02-23 11:12:13,143 - INFO - ------ Test Started: test_logout[data0] ------
+2026-02-23 11:12:13,146 - INFO - Browser Setup Started: chrome
+2026-02-23 11:12:22,907 - INFO - ========== STARTING LOGOUT TEST ==========
+2026-02-23 11:12:22,907 - INFO - Opening My Account page
+2026-02-23 11:12:24,615 - INFO - Performing login before logout
+2026-02-23 11:12:26,806 - INFO - Clicking sign out
+2026-02-23 11:12:28,758 - INFO - ========== LOGOUT TEST PASSED ==========
+2026-02-23 11:12:28,759 - INFO - Browser Teardown Started
+2026-02-23 11:12:31,054 - INFO - Browser Closed Successfully
+
+2026-02-23 11:12:31,055 - INFO - ------ Test Finished: test_logout[data0] ------
+
+2026-02-23 11:12:31,055 - INFO - ------ Test Started: test_open_homepage ------
+2026-02-23 11:12:31,057 - INFO - Browser Setup Started: chrome
+2026-02-23 11:12:40,410 - INFO - Browser Teardown Started
+2026-02-23 11:12:42,719 - INFO - Browser Closed Successfully
+
+2026-02-23 11:12:42,721 - INFO - ------ Test Finished: test_open_homepage ------
+
+2026-02-23 11:12:42,727 - INFO - ========== TEST SUITE FINISHED ==========
+2026-02-23 11:12:42,728 - INFO - Total Tests Collected: 22

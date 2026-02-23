@@ -5,3 +5,5 @@ pytest-html
 pytest-xdist
 robotframework
 robotframework-requests
+
+#robot -d reports tests/

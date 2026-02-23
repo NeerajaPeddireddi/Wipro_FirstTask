@@ -1,49 +1,20 @@
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options as ChromeOptions, Options
-from selenium.webdriver.firefox.options import Options as FirefoxOptions
-from selenium.webdriver.chrome.service import Service as ChromeService, Service
-from selenium.webdriver.firefox.service import Service as FirefoxService
-from webdriver_manager.chrome import ChromeDriverManager
-from webdriver_manager.firefox import GeckoDriverManager
-import configparser
-import os
-def get_driver(browser):
 
-    config = configparser.ConfigParser()
-    config.read(os.path.join(os.path.dirname(__file__), "../config/config.ini"))
+def get_driver(browser_name):
 
-    browser = browser.lower()
+    if browser_name == "chrome":
+        driver = webdriver.Chrome()
 
-    if browser == "chrome":
-        chrome_options = Options()
-        chrome_options.add_argument("--disable-notifications")
-        chrome_options.add_argument("--disable-popup-blocking")
-        chrome_options.add_argument("--disable-extensions")
-        chrome_options.add_argument("--start-maximized")
-        chrome_options.add_argument("--disable-autofill")
-        chrome_options.add_argument("--disable-password-manager-reauthentication")
-        chrome_options.add_argument("--disable-save-password-bubble")
+    elif browser_name == "firefox":
+        driver = webdriver.Firefox()
 
-        driver = webdriver.Chrome(
-            service=Service(ChromeDriverManager().install()),
-            options=chrome_options
-        )
-        # -------- Firefox --------
-    elif browser == "firefox":
-        firefox_options = FirefoxOptions()
-        firefox_options.add_argument("--disable-notifications")
-        firefox_options.add_argument("--disable-popup-blocking")
-        firefox_options.add_argument("--disable-extensions")
-        firefox_options.add_argument("--start-maximized")
-
-        driver = webdriver.Firefox(
-            service=FirefoxService(GeckoDriverManager().install()),
-            options=firefox_options
-        )
+    elif browser_name == "edge":
+        driver = webdriver.Edge()
 
     else:
-        raise Exception("Browser not supported")
+        raise Exception("Browser not supported! Use chrome / firefox / edge")
 
-    driver.implicitly_wait(int(config["DEFAULT"]["implicit_wait"]))
+    driver.maximize_window()
+    driver.implicitly_wait(10)
 
     return driver
