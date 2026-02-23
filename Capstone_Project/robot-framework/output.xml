@@ -1,0 +1,1364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.13.0 on win32)" generated="2026-02-21T23:33:04.311601" rpa="false" schemaversion="5">
+<suite id="s1" name="End To End" source="C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\robot-framework\tests\end_to_end.robot">
+<test id="s1-t1" name="User1" line="21">
+<kw name="Start User Session" type="SETUP">
+<kw name="Open Application" owner="common">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:04.661167" level="INFO">Opening browser 'chrome' to base url 'https://practice.automationtesting.in/'.</msg>
+<arg>${URL}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-21T23:33:04.660869" elapsed="5.630083"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-02-21T23:33:10.291332" elapsed="0.040706"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>${TIMEOUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2026-02-21T23:33:10.332329" elapsed="0.004319"/>
+</kw>
+<arg>${BROWSER}</arg>
+<status status="PASS" start="2026-02-21T23:33:04.659976" elapsed="5.677022"/>
+</kw>
+<status status="PASS" start="2026-02-21T23:33:04.659529" elapsed="5.678113"/>
+</kw>
+<kw name="Ecommerce Flow">
+<kw name="Registration Validation">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:10.357974" level="INFO">Opening url 'https://practice.automationtesting.in/my-account/'</msg>
+<arg>${BASE_URL}/my-account/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-02-21T23:33:10.357493" elapsed="1.525232"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=reg_email</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-21T23:33:11.883077" elapsed="0.038183"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:11.921882" level="INFO">Typing text 'testuser004@test.com' into text field 'id=reg_email'.</msg>
+<arg>id=reg_email</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-21T23:33:11.921517" elapsed="0.333336"/>
+</kw>
+<kw name="Textfield Value Should Be" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:12.289737" level="INFO">Content of text field 'id=reg_email' is 'testuser004@test.com'.</msg>
+<arg>id=reg_email</arg>
+<arg>${EMAIL}</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<status status="PASS" start="2026-02-21T23:33:12.255305" elapsed="0.034544"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:12.290311" level="INFO">Typing text 'Neeraja@123' into text field 'id=reg_password'.</msg>
+<arg>id=reg_password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-21T23:33:12.290037" elapsed="0.157375"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:12.472516" level="INFO">Element 'id=reg_password' is displayed.</msg>
+<arg>id=reg_password</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-21T23:33:12.447666" elapsed="0.024964"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:12.473044" level="INFO">Clicking button 'name=register'.</msg>
+<arg>name=register</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-21T23:33:12.472817" elapsed="1.758515"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Check Registration Result">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:14.756881" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-47.png"&gt;&lt;img src="selenium-screenshot-47.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-21T23:33:14.757177" level="FAIL">Page should have contained text 'Logout' but did not.</msg>
+<arg>Logout</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="FAIL" start="2026-02-21T23:33:14.233356" elapsed="0.526497">Page should have contained text 'Logout' but did not.</status>
+</kw>
+<msg time="2026-02-21T23:33:14.760044" level="INFO">${logout} = False</msg>
+<var>${logout}</var>
+<arg>Page Should Contain</arg>
+<arg>Logout</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-21T23:33:14.232942" elapsed="0.527143"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:14.783843" level="INFO">Current page contains text 'already registered'.</msg>
+<arg>already registered</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-02-21T23:33:14.760719" elapsed="0.023242"/>
+</kw>
+<msg time="2026-02-21T23:33:14.784159" level="INFO">${exists} = True</msg>
+<var>${exists}</var>
+<arg>Page Should Contain</arg>
+<arg>already registered</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-21T23:33:14.760282" elapsed="0.023939"/>
+</kw>
+<if>
+<branch type="IF" condition="${logout}">
+<kw name="Log" owner="BuiltIn">
+<arg>New user registered</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:14.784697" elapsed="0.000037"/>
+</kw>
+<kw name="Logout User" owner="login_keywords">
+<status status="NOT RUN" start="2026-02-21T23:33:14.784899" elapsed="0.000035"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=username</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:14.785032" elapsed="0.000028"/>
+</kw>
+<status status="NOT RUN" start="2026-02-21T23:33:14.784462" elapsed="0.000637"/>
+</branch>
+<branch type="ELSE IF" condition="${exists}">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:14.914947" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-48.png"&gt;&lt;img src="selenium-screenshot-48.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-02-21T23:33:14.785388" elapsed="0.129740"/>
+</kw>
+<kw name="Fail" owner="BuiltIn">
+<msg time="2026-02-21T23:33:14.915739" level="FAIL">User already registered — registration must be new</msg>
+<arg>User already registered — registration must be new</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="FAIL" start="2026-02-21T23:33:14.915341" elapsed="0.000508">User already registered — registration must be new</status>
+</kw>
+<status status="FAIL" start="2026-02-21T23:33:14.785148" elapsed="0.130797">User already registered — registration must be new</status>
+</branch>
+<branch type="ELSE">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:14.916137" elapsed="0.000031"/>
+</kw>
+<kw name="Fail" owner="BuiltIn">
+<arg>Registration result not detected</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:14.916257" elapsed="0.000027"/>
+</kw>
+<status status="NOT RUN" start="2026-02-21T23:33:14.916008" elapsed="0.000314"/>
+</branch>
+<status status="FAIL" start="2026-02-21T23:33:14.784412" elapsed="0.132043">User already registered — registration must be new</status>
+</if>
+<status status="FAIL" start="2026-02-21T23:33:14.232534" elapsed="0.684052">User already registered — registration must be new</status>
+</kw>
+<kw name="Check Registration Result">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:17.374713" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-49.png"&gt;&lt;img src="selenium-screenshot-49.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-21T23:33:17.374880" level="FAIL">Page should have contained text 'Logout' but did not.</msg>
+<arg>Logout</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="FAIL" start="2026-02-21T23:33:16.917980" elapsed="0.457551">Page should have contained text 'Logout' but did not.</status>
+</kw>
+<msg time="2026-02-21T23:33:17.375660" level="INFO">${logout} = False</msg>
+<var>${logout}</var>
+<arg>Page Should Contain</arg>
+<arg>Logout</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-21T23:33:16.917608" elapsed="0.458080"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:17.388044" level="INFO">Current page contains text 'already registered'.</msg>
+<arg>already registered</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-02-21T23:33:17.376138" elapsed="0.012023"/>
+</kw>
+<msg time="2026-02-21T23:33:17.388299" level="INFO">${exists} = True</msg>
+<var>${exists}</var>
+<arg>Page Should Contain</arg>
+<arg>already registered</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-21T23:33:17.375822" elapsed="0.012509"/>
+</kw>
+<if>
+<branch type="IF" condition="${logout}">
+<kw name="Log" owner="BuiltIn">
+<arg>New user registered</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:17.388645" elapsed="0.000036"/>
+</kw>
+<kw name="Logout User" owner="login_keywords">
+<status status="NOT RUN" start="2026-02-21T23:33:17.388875" elapsed="0.000039"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=username</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:17.389025" elapsed="0.000030"/>
+</kw>
+<status status="NOT RUN" start="2026-02-21T23:33:17.388450" elapsed="0.000650"/>
+</branch>
+<branch type="ELSE IF" condition="${exists}">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:17.501882" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-50.png"&gt;&lt;img src="selenium-screenshot-50.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-02-21T23:33:17.389282" elapsed="0.112757"/>
+</kw>
+<kw name="Fail" owner="BuiltIn">
+<msg time="2026-02-21T23:33:17.502555" level="FAIL">User already registered — registration must be new</msg>
+<arg>User already registered — registration must be new</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="FAIL" start="2026-02-21T23:33:17.502204" elapsed="0.000436">User already registered — registration must be new</status>
+</kw>
+<status status="FAIL" start="2026-02-21T23:33:17.389145" elapsed="0.113590">User already registered — registration must be new</status>
+</branch>
+<branch type="ELSE">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:17.502917" elapsed="0.000034"/>
+</kw>
+<kw name="Fail" owner="BuiltIn">
+<arg>Registration result not detected</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:17.503049" elapsed="0.000031"/>
+</kw>
+<status status="NOT RUN" start="2026-02-21T23:33:17.502792" elapsed="0.000332"/>
+</branch>
+<status status="FAIL" start="2026-02-21T23:33:17.388420" elapsed="0.114743">User already registered — registration must be new</status>
+</if>
+<status status="FAIL" start="2026-02-21T23:33:16.917201" elapsed="0.586098">User already registered — registration must be new</status>
+</kw>
+<kw name="Check Registration Result">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:20.000172" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-51.png"&gt;&lt;img src="selenium-screenshot-51.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-21T23:33:20.000416" level="FAIL">Page should have contained text 'Logout' but did not.</msg>
+<arg>Logout</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="FAIL" start="2026-02-21T23:33:19.505087" elapsed="0.496641">Page should have contained text 'Logout' but did not.</status>
+</kw>
+<msg time="2026-02-21T23:33:20.002050" level="INFO">${logout} = False</msg>
+<var>${logout}</var>
+<arg>Page Should Contain</arg>
+<arg>Logout</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-21T23:33:19.504686" elapsed="0.497437"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:20.020556" level="INFO">Current page contains text 'already registered'.</msg>
+<arg>already registered</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-02-21T23:33:20.002997" elapsed="0.017694"/>
+</kw>
+<msg time="2026-02-21T23:33:20.020899" level="INFO">${exists} = True</msg>
+<var>${exists}</var>
+<arg>Page Should Contain</arg>
+<arg>already registered</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-21T23:33:20.002434" elapsed="0.018532"/>
+</kw>
+<if>
+<branch type="IF" condition="${logout}">
+<kw name="Log" owner="BuiltIn">
+<arg>New user registered</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:20.021382" elapsed="0.000052"/>
+</kw>
+<kw name="Logout User" owner="login_keywords">
+<status status="NOT RUN" start="2026-02-21T23:33:20.021675" elapsed="0.000049"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=username</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:20.021894" elapsed="0.000053"/>
+</kw>
+<status status="NOT RUN" start="2026-02-21T23:33:20.021131" elapsed="0.000886"/>
+</branch>
+<branch type="ELSE IF" condition="${exists}">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:20.162005" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-52.png"&gt;&lt;img src="selenium-screenshot-52.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-02-21T23:33:20.022296" elapsed="0.139835"/>
+</kw>
+<kw name="Fail" owner="BuiltIn">
+<msg time="2026-02-21T23:33:20.162710" level="FAIL">User already registered — registration must be new</msg>
+<arg>User already registered — registration must be new</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="FAIL" start="2026-02-21T23:33:20.162319" elapsed="0.000486">User already registered — registration must be new</status>
+</kw>
+<status status="FAIL" start="2026-02-21T23:33:20.022071" elapsed="0.140942">User already registered — registration must be new</status>
+</branch>
+<branch type="ELSE">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:20.163239" elapsed="0.000039"/>
+</kw>
+<kw name="Fail" owner="BuiltIn">
+<arg>Registration result not detected</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:20.163396" elapsed="0.000044"/>
+</kw>
+<status status="NOT RUN" start="2026-02-21T23:33:20.163090" elapsed="0.000404"/>
+</branch>
+<status status="FAIL" start="2026-02-21T23:33:20.021093" elapsed="0.142449">User already registered — registration must be new</status>
+</if>
+<status status="FAIL" start="2026-02-21T23:33:19.504255" elapsed="0.659414">User already registered — registration must be new</status>
+</kw>
+<kw name="Check Registration Result">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:22.603719" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-53.png"&gt;&lt;img src="selenium-screenshot-53.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-21T23:33:22.603910" level="FAIL">Page should have contained text 'Logout' but did not.</msg>
+<arg>Logout</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="FAIL" start="2026-02-21T23:33:22.165549" elapsed="0.439305">Page should have contained text 'Logout' but did not.</status>
+</kw>
+<msg time="2026-02-21T23:33:22.605045" level="INFO">${logout} = False</msg>
+<var>${logout}</var>
+<arg>Page Should Contain</arg>
+<arg>Logout</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-21T23:33:22.165048" elapsed="0.440069"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:22.618277" level="INFO">Current page contains text 'already registered'.</msg>
+<arg>already registered</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-02-21T23:33:22.605793" elapsed="0.012641"/>
+</kw>
+<msg time="2026-02-21T23:33:22.618600" level="INFO">${exists} = True</msg>
+<var>${exists}</var>
+<arg>Page Should Contain</arg>
+<arg>already registered</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-21T23:33:22.605366" elapsed="0.013273"/>
+</kw>
+<if>
+<branch type="IF" condition="${logout}">
+<kw name="Log" owner="BuiltIn">
+<arg>New user registered</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:22.618953" elapsed="0.000039"/>
+</kw>
+<kw name="Logout User" owner="login_keywords">
+<status status="NOT RUN" start="2026-02-21T23:33:22.619166" elapsed="0.000039"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=username</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:22.619342" elapsed="0.000048"/>
+</kw>
+<status status="NOT RUN" start="2026-02-21T23:33:22.618764" elapsed="0.000676"/>
+</branch>
+<branch type="ELSE IF" condition="${exists}">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:22.727616" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-54.png"&gt;&lt;img src="selenium-screenshot-54.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-02-21T23:33:22.619663" elapsed="0.108074"/>
+</kw>
+<kw name="Fail" owner="BuiltIn">
+<msg time="2026-02-21T23:33:22.728410" level="FAIL">User already registered — registration must be new</msg>
+<arg>User already registered — registration must be new</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="FAIL" start="2026-02-21T23:33:22.727927" elapsed="0.000601">User already registered — registration must be new</status>
+</kw>
+<status status="FAIL" start="2026-02-21T23:33:22.619486" elapsed="0.109145">User already registered — registration must be new</status>
+</branch>
+<branch type="ELSE">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:22.728846" elapsed="0.000039"/>
+</kw>
+<kw name="Fail" owner="BuiltIn">
+<arg>Registration result not detected</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:22.728996" elapsed="0.000035"/>
+</kw>
+<status status="NOT RUN" start="2026-02-21T23:33:22.728695" elapsed="0.000386"/>
+</branch>
+<status status="FAIL" start="2026-02-21T23:33:22.618734" elapsed="0.110392">User already registered — registration must be new</status>
+</if>
+<status status="FAIL" start="2026-02-21T23:33:22.164558" elapsed="0.564690">User already registered — registration must be new</status>
+</kw>
+<kw name="Check Registration Result">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:25.154645" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-55.png"&gt;&lt;img src="selenium-screenshot-55.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-21T23:33:25.154829" level="FAIL">Page should have contained text 'Logout' but did not.</msg>
+<arg>Logout</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="FAIL" start="2026-02-21T23:33:24.732291" elapsed="0.423286">Page should have contained text 'Logout' but did not.</status>
+</kw>
+<msg time="2026-02-21T23:33:25.155713" level="INFO">${logout} = False</msg>
+<var>${logout}</var>
+<arg>Page Should Contain</arg>
+<arg>Logout</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-21T23:33:24.731349" elapsed="0.424395"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:25.167792" level="INFO">Current page contains text 'already registered'.</msg>
+<arg>already registered</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-02-21T23:33:25.156190" elapsed="0.011705"/>
+</kw>
+<msg time="2026-02-21T23:33:25.168071" level="INFO">${exists} = True</msg>
+<var>${exists}</var>
+<arg>Page Should Contain</arg>
+<arg>already registered</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-21T23:33:25.155887" elapsed="0.012236"/>
+</kw>
+<if>
+<branch type="IF" condition="${logout}">
+<kw name="Log" owner="BuiltIn">
+<arg>New user registered</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:25.168527" elapsed="0.000043"/>
+</kw>
+<kw name="Logout User" owner="login_keywords">
+<status status="NOT RUN" start="2026-02-21T23:33:25.168793" elapsed="0.000047"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=username</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:25.168942" elapsed="0.000029"/>
+</kw>
+<status status="NOT RUN" start="2026-02-21T23:33:25.168268" elapsed="0.000746"/>
+</branch>
+<branch type="ELSE IF" condition="${exists}">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:25.292858" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-56.png"&gt;&lt;img src="selenium-screenshot-56.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-02-21T23:33:25.169188" elapsed="0.123839"/>
+</kw>
+<kw name="Fail" owner="BuiltIn">
+<msg time="2026-02-21T23:33:25.293585" level="FAIL">User already registered — registration must be new</msg>
+<arg>User already registered — registration must be new</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="FAIL" start="2026-02-21T23:33:25.293218" elapsed="0.000465">User already registered — registration must be new</status>
+</kw>
+<status status="FAIL" start="2026-02-21T23:33:25.169054" elapsed="0.124725">User already registered — registration must be new</status>
+</branch>
+<branch type="ELSE">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:25.293987" elapsed="0.000036"/>
+</kw>
+<kw name="Fail" owner="BuiltIn">
+<arg>Registration result not detected</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:25.294143" elapsed="0.000036"/>
+</kw>
+<status status="NOT RUN" start="2026-02-21T23:33:25.293854" elapsed="0.000374"/>
+</branch>
+<status status="FAIL" start="2026-02-21T23:33:25.168236" elapsed="0.126036">User already registered — registration must be new</status>
+</if>
+<status status="FAIL" start="2026-02-21T23:33:24.730410" elapsed="0.563976">User already registered — registration must be new</status>
+</kw>
+<kw name="Check Registration Result">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:27.757705" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-57.png"&gt;&lt;img src="selenium-screenshot-57.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-21T23:33:27.757860" level="FAIL">Page should have contained text 'Logout' but did not.</msg>
+<arg>Logout</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="FAIL" start="2026-02-21T23:33:27.302491" elapsed="0.456036">Page should have contained text 'Logout' but did not.</status>
+</kw>
+<msg time="2026-02-21T23:33:27.758701" level="INFO">${logout} = False</msg>
+<var>${logout}</var>
+<arg>Page Should Contain</arg>
+<arg>Logout</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-21T23:33:27.300614" elapsed="0.458133"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:27.771899" level="INFO">Current page contains text 'already registered'.</msg>
+<arg>already registered</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-02-21T23:33:27.759300" elapsed="0.012698"/>
+</kw>
+<msg time="2026-02-21T23:33:27.772142" level="INFO">${exists} = True</msg>
+<var>${exists}</var>
+<arg>Page Should Contain</arg>
+<arg>already registered</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-21T23:33:27.758957" elapsed="0.013220"/>
+</kw>
+<if>
+<branch type="IF" condition="${logout}">
+<kw name="Log" owner="BuiltIn">
+<arg>New user registered</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:27.772482" elapsed="0.000039"/>
+</kw>
+<kw name="Logout User" owner="login_keywords">
+<status status="NOT RUN" start="2026-02-21T23:33:27.772693" elapsed="0.000038"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=username</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:27.772843" elapsed="0.000033"/>
+</kw>
+<status status="NOT RUN" start="2026-02-21T23:33:27.772292" elapsed="0.000633"/>
+</branch>
+<branch type="ELSE IF" condition="${exists}">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:27.884518" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-58.png"&gt;&lt;img src="selenium-screenshot-58.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-02-21T23:33:27.773119" elapsed="0.111593"/>
+</kw>
+<kw name="Fail" owner="BuiltIn">
+<msg time="2026-02-21T23:33:27.885447" level="FAIL">User already registered — registration must be new</msg>
+<arg>User already registered — registration must be new</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="FAIL" start="2026-02-21T23:33:27.884986" elapsed="0.000566">User already registered — registration must be new</status>
+</kw>
+<status status="FAIL" start="2026-02-21T23:33:27.772971" elapsed="0.112698">User already registered — registration must be new</status>
+</branch>
+<branch type="ELSE">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:27.885898" elapsed="0.000041"/>
+</kw>
+<kw name="Fail" owner="BuiltIn">
+<arg>Registration result not detected</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:27.886074" elapsed="0.000040"/>
+</kw>
+<status status="NOT RUN" start="2026-02-21T23:33:27.885738" elapsed="0.000439"/>
+</branch>
+<status status="FAIL" start="2026-02-21T23:33:27.772265" elapsed="0.113965">User already registered — registration must be new</status>
+</if>
+<status status="FAIL" start="2026-02-21T23:33:27.298421" elapsed="0.587949">User already registered — registration must be new</status>
+</kw>
+<kw name="Check Registration Result">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:30.335522" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-59.png"&gt;&lt;img src="selenium-screenshot-59.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-21T23:33:30.335732" level="FAIL">Page should have contained text 'Logout' but did not.</msg>
+<arg>Logout</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="FAIL" start="2026-02-21T23:33:29.890402" elapsed="0.446197">Page should have contained text 'Logout' but did not.</status>
+</kw>
+<msg time="2026-02-21T23:33:30.336759" level="INFO">${logout} = False</msg>
+<var>${logout}</var>
+<arg>Page Should Contain</arg>
+<arg>Logout</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-21T23:33:29.888872" elapsed="0.447923"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:30.350909" level="INFO">Current page contains text 'already registered'.</msg>
+<arg>already registered</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-02-21T23:33:30.337338" elapsed="0.013672"/>
+</kw>
+<msg time="2026-02-21T23:33:30.351158" level="INFO">${exists} = True</msg>
+<var>${exists}</var>
+<arg>Page Should Contain</arg>
+<arg>already registered</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-21T23:33:30.336975" elapsed="0.014220"/>
+</kw>
+<if>
+<branch type="IF" condition="${logout}">
+<kw name="Log" owner="BuiltIn">
+<arg>New user registered</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:30.351498" elapsed="0.000038"/>
+</kw>
+<kw name="Logout User" owner="login_keywords">
+<status status="NOT RUN" start="2026-02-21T23:33:30.351832" elapsed="0.000037"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=username</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:30.351974" elapsed="0.000030"/>
+</kw>
+<status status="NOT RUN" start="2026-02-21T23:33:30.351315" elapsed="0.000732"/>
+</branch>
+<branch type="ELSE IF" condition="${exists}">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:30.465573" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-60.png"&gt;&lt;img src="selenium-screenshot-60.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-02-21T23:33:30.352227" elapsed="0.113444"/>
+</kw>
+<kw name="Fail" owner="BuiltIn">
+<msg time="2026-02-21T23:33:30.466110" level="FAIL">User already registered — registration must be new</msg>
+<arg>User already registered — registration must be new</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="FAIL" start="2026-02-21T23:33:30.465815" elapsed="0.000364">User already registered — registration must be new</status>
+</kw>
+<status status="FAIL" start="2026-02-21T23:33:30.352087" elapsed="0.114166">User already registered — registration must be new</status>
+</branch>
+<branch type="ELSE">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:30.466430" elapsed="0.000027"/>
+</kw>
+<kw name="Fail" owner="BuiltIn">
+<arg>Registration result not detected</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:30.466540" elapsed="0.000038"/>
+</kw>
+<status status="NOT RUN" start="2026-02-21T23:33:30.466299" elapsed="0.000315"/>
+</branch>
+<status status="FAIL" start="2026-02-21T23:33:30.351286" elapsed="0.115360">User already registered — registration must be new</status>
+</if>
+<status status="FAIL" start="2026-02-21T23:33:29.887630" elapsed="0.579102">User already registered — registration must be new</status>
+</kw>
+<msg time="2026-02-21T23:33:30.466810" level="FAIL">Keyword 'Check Registration Result' failed after retrying for 15 seconds. The last error was: User already registered — registration must be new</msg>
+<arg>15s</arg>
+<arg>2s</arg>
+<arg>Check Registration Result</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="FAIL" start="2026-02-21T23:33:14.231615" elapsed="16.235280">Keyword 'Check Registration Result' failed after retrying for 15 seconds. The last error was: User already registered — registration must be new</status>
+</kw>
+<arg>${EMAIL}</arg>
+<arg>${PASSWORD}</arg>
+<status status="FAIL" start="2026-02-21T23:33:10.356151" elapsed="20.110837">Keyword 'Check Registration Result' failed after retrying for 15 seconds. The last error was: User already registered — registration must be new</status>
+</kw>
+<kw name="Login Validation">
+<arg>${EMAIL}</arg>
+<arg>${PASSWORD}</arg>
+<status status="NOT RUN" start="2026-02-21T23:33:30.467169" elapsed="0.000028"/>
+</kw>
+<kw name="Search Validation">
+<status status="NOT RUN" start="2026-02-21T23:33:30.467311" elapsed="0.000025"/>
+</kw>
+<kw name="Sorting Validation">
+<status status="NOT RUN" start="2026-02-21T23:33:30.467439" elapsed="0.000024"/>
+</kw>
+<kw name="Cart Validation">
+<status status="NOT RUN" start="2026-02-21T23:33:30.467559" elapsed="0.000024"/>
+</kw>
+<kw name="Billing Validation">
+<arg>${EMAIL}</arg>
+<arg>${FIRSTNAME}</arg>
+<arg>${LASTNAME}</arg>
+<arg>${PHONE}</arg>
+<arg>${CITY}</arg>
+<arg>${POSTCODE}</arg>
+<status status="NOT RUN" start="2026-02-21T23:33:30.467708" elapsed="0.000024"/>
+</kw>
+<kw name="Logout Validation">
+<status status="NOT RUN" start="2026-02-21T23:33:30.467832" elapsed="0.000022"/>
+</kw>
+<arg>EMAIL=testuser004@test.com</arg>
+<arg>PASSWORD=Neeraja@123</arg>
+<arg>FIRSTNAME=Omkar</arg>
+<arg>LASTNAME=Reddy</arg>
+<arg>PHONE=9876543210</arg>
+<arg>CITY=Hyderabad</arg>
+<arg>POSTCODE=500001</arg>
+<status status="FAIL" start="2026-02-21T23:33:10.344390" elapsed="20.123535">Keyword 'Check Registration Result' failed after retrying for 15 seconds. The last error was: User already registered — registration must be new</status>
+</kw>
+<kw name="End User Session" type="TEARDOWN">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:30.585565" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-61.png"&gt;&lt;img src="selenium-screenshot-61.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-02-21T23:33:30.468867" elapsed="0.116838"/>
+</kw>
+<kw name="Close Application" owner="common">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-02-21T23:33:30.586329" elapsed="2.407331"/>
+</kw>
+<status status="PASS" start="2026-02-21T23:33:30.585968" elapsed="2.408147"/>
+</kw>
+<status status="PASS" start="2026-02-21T23:33:30.468519" elapsed="2.525902"/>
+</kw>
+<status status="FAIL" start="2026-02-21T23:33:04.658045" elapsed="28.336994">Keyword 'Check Registration Result' failed after retrying for 15 seconds. The last error was: User already registered — registration must be new</status>
+</test>
+<test id="s1-t2" name="User2" line="21">
+<kw name="Start User Session" type="SETUP">
+<kw name="Open Application" owner="common">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:33.003135" level="INFO">Opening browser 'chrome' to base url 'https://practice.automationtesting.in/'.</msg>
+<arg>${URL}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-21T23:33:33.002298" elapsed="3.356363"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-02-21T23:33:36.358883" elapsed="0.060688"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>${TIMEOUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2026-02-21T23:33:36.419914" elapsed="0.001448"/>
+</kw>
+<arg>${BROWSER}</arg>
+<status status="PASS" start="2026-02-21T23:33:33.001015" elapsed="3.420466"/>
+</kw>
+<status status="PASS" start="2026-02-21T23:33:33.000097" elapsed="3.421482"/>
+</kw>
+<kw name="Ecommerce Flow">
+<kw name="Registration Validation">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:36.423668" level="INFO">Opening url 'https://practice.automationtesting.in/my-account/'</msg>
+<arg>${BASE_URL}/my-account/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-02-21T23:33:36.423355" elapsed="1.621981"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=reg_email</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-21T23:33:38.045516" elapsed="0.035833"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:38.082067" level="INFO">Typing text 'testuser1@test.com' into text field 'id=reg_email'.</msg>
+<arg>id=reg_email</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-21T23:33:38.081649" elapsed="0.235862"/>
+</kw>
+<kw name="Textfield Value Should Be" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:38.376768" level="INFO">Content of text field 'id=reg_email' is 'testuser1@test.com'.</msg>
+<arg>id=reg_email</arg>
+<arg>${EMAIL}</arg>
+<doc>Verifies text field ``locator`` has exactly text ``expected``.</doc>
+<status status="PASS" start="2026-02-21T23:33:38.317941" elapsed="0.058946"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:38.377356" level="INFO">Typing text 'Omkar@2003' into text field 'id=reg_password'.</msg>
+<arg>id=reg_password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-21T23:33:38.377075" elapsed="0.188045"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:38.586178" level="INFO">Element 'id=reg_password' is displayed.</msg>
+<arg>id=reg_password</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-21T23:33:38.565645" elapsed="0.020661"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:38.586739" level="INFO">Clicking button 'name=register'.</msg>
+<arg>name=register</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-21T23:33:38.586475" elapsed="1.632390"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Check Registration Result">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:40.801712" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-62.png"&gt;&lt;img src="selenium-screenshot-62.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-21T23:33:40.801858" level="FAIL">Page should have contained text 'Logout' but did not.</msg>
+<arg>Logout</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="FAIL" start="2026-02-21T23:33:40.220447" elapsed="0.581980">Page should have contained text 'Logout' but did not.</status>
+</kw>
+<msg time="2026-02-21T23:33:40.802552" level="INFO">${logout} = False</msg>
+<var>${logout}</var>
+<arg>Page Should Contain</arg>
+<arg>Logout</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-21T23:33:40.220159" elapsed="0.582420"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:40.819462" level="INFO">Current page contains text 'already registered'.</msg>
+<arg>already registered</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-02-21T23:33:40.803230" elapsed="0.016331"/>
+</kw>
+<msg time="2026-02-21T23:33:40.819707" level="INFO">${exists} = True</msg>
+<var>${exists}</var>
+<arg>Page Should Contain</arg>
+<arg>already registered</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-21T23:33:40.802842" elapsed="0.016900"/>
+</kw>
+<if>
+<branch type="IF" condition="${logout}">
+<kw name="Log" owner="BuiltIn">
+<arg>New user registered</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:40.820048" elapsed="0.000034"/>
+</kw>
+<kw name="Logout User" owner="login_keywords">
+<status status="NOT RUN" start="2026-02-21T23:33:40.820229" elapsed="0.000033"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=username</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:40.820365" elapsed="0.000028"/>
+</kw>
+<status status="NOT RUN" start="2026-02-21T23:33:40.819863" elapsed="0.000570"/>
+</branch>
+<branch type="ELSE IF" condition="${exists}">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:40.932747" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-63.png"&gt;&lt;img src="selenium-screenshot-63.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-02-21T23:33:40.820617" elapsed="0.112246"/>
+</kw>
+<kw name="Fail" owner="BuiltIn">
+<msg time="2026-02-21T23:33:40.933444" level="FAIL">User already registered — registration must be new</msg>
+<arg>User already registered — registration must be new</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="FAIL" start="2026-02-21T23:33:40.933056" elapsed="0.000501">User already registered — registration must be new</status>
+</kw>
+<status status="FAIL" start="2026-02-21T23:33:40.820472" elapsed="0.113186">User already registered — registration must be new</status>
+</branch>
+<branch type="ELSE">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:40.933860" elapsed="0.000036"/>
+</kw>
+<kw name="Fail" owner="BuiltIn">
+<arg>Registration result not detected</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:40.934005" elapsed="0.000047"/>
+</kw>
+<status status="NOT RUN" start="2026-02-21T23:33:40.933719" elapsed="0.000382"/>
+</branch>
+<status status="FAIL" start="2026-02-21T23:33:40.819833" elapsed="0.114311">User already registered — registration must be new</status>
+</if>
+<status status="FAIL" start="2026-02-21T23:33:40.219870" elapsed="0.714402">User already registered — registration must be new</status>
+</kw>
+<kw name="Check Registration Result">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:43.460034" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-64.png"&gt;&lt;img src="selenium-screenshot-64.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-21T23:33:43.460182" level="FAIL">Page should have contained text 'Logout' but did not.</msg>
+<arg>Logout</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="FAIL" start="2026-02-21T23:33:42.936753" elapsed="0.524214">Page should have contained text 'Logout' but did not.</status>
+</kw>
+<msg time="2026-02-21T23:33:43.461105" level="INFO">${logout} = False</msg>
+<var>${logout}</var>
+<arg>Page Should Contain</arg>
+<arg>Logout</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-21T23:33:42.936009" elapsed="0.525126"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:43.473288" level="INFO">Current page contains text 'already registered'.</msg>
+<arg>already registered</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-02-21T23:33:43.461594" elapsed="0.011798"/>
+</kw>
+<msg time="2026-02-21T23:33:43.473542" level="INFO">${exists} = True</msg>
+<var>${exists}</var>
+<arg>Page Should Contain</arg>
+<arg>already registered</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-21T23:33:43.461290" elapsed="0.012292"/>
+</kw>
+<if>
+<branch type="IF" condition="${logout}">
+<kw name="Log" owner="BuiltIn">
+<arg>New user registered</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:43.473884" elapsed="0.000035"/>
+</kw>
+<kw name="Logout User" owner="login_keywords">
+<status status="NOT RUN" start="2026-02-21T23:33:43.474113" elapsed="0.000038"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=username</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:43.474261" elapsed="0.000180"/>
+</kw>
+<status status="NOT RUN" start="2026-02-21T23:33:43.473702" elapsed="0.000785"/>
+</branch>
+<branch type="ELSE IF" condition="${exists}">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:43.588543" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-65.png"&gt;&lt;img src="selenium-screenshot-65.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-02-21T23:33:43.474677" elapsed="0.114005"/>
+</kw>
+<kw name="Fail" owner="BuiltIn">
+<msg time="2026-02-21T23:33:43.589331" level="FAIL">User already registered — registration must be new</msg>
+<arg>User already registered — registration must be new</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="FAIL" start="2026-02-21T23:33:43.588939" elapsed="0.000487">User already registered — registration must be new</status>
+</kw>
+<status status="FAIL" start="2026-02-21T23:33:43.474527" elapsed="0.115041">User already registered — registration must be new</status>
+</branch>
+<branch type="ELSE">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:43.589791" elapsed="0.000037"/>
+</kw>
+<kw name="Fail" owner="BuiltIn">
+<arg>Registration result not detected</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:43.589947" elapsed="0.000035"/>
+</kw>
+<status status="NOT RUN" start="2026-02-21T23:33:43.589644" elapsed="0.000398"/>
+</branch>
+<status status="FAIL" start="2026-02-21T23:33:43.473674" elapsed="0.116415">User already registered — registration must be new</status>
+</if>
+<status status="FAIL" start="2026-02-21T23:33:42.935358" elapsed="0.654857">User already registered — registration must be new</status>
+</kw>
+<kw name="Check Registration Result">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:46.123510" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-66.png"&gt;&lt;img src="selenium-screenshot-66.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-21T23:33:46.123958" level="FAIL">Page should have contained text 'Logout' but did not.</msg>
+<arg>Logout</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="FAIL" start="2026-02-21T23:33:45.592011" elapsed="0.532868">Page should have contained text 'Logout' but did not.</status>
+</kw>
+<msg time="2026-02-21T23:33:46.125109" level="INFO">${logout} = False</msg>
+<var>${logout}</var>
+<arg>Page Should Contain</arg>
+<arg>Logout</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-21T23:33:45.591624" elapsed="0.533538"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:46.138320" level="INFO">Current page contains text 'already registered'.</msg>
+<arg>already registered</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-02-21T23:33:46.125717" elapsed="0.012819"/>
+</kw>
+<msg time="2026-02-21T23:33:46.138787" level="INFO">${exists} = True</msg>
+<var>${exists}</var>
+<arg>Page Should Contain</arg>
+<arg>already registered</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-21T23:33:46.125371" elapsed="0.013459"/>
+</kw>
+<if>
+<branch type="IF" condition="${logout}">
+<kw name="Log" owner="BuiltIn">
+<arg>New user registered</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:46.139183" elapsed="0.000037"/>
+</kw>
+<kw name="Logout User" owner="login_keywords">
+<status status="NOT RUN" start="2026-02-21T23:33:46.139397" elapsed="0.000038"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=username</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:46.139565" elapsed="0.000049"/>
+</kw>
+<status status="NOT RUN" start="2026-02-21T23:33:46.138959" elapsed="0.000700"/>
+</branch>
+<branch type="ELSE IF" condition="${exists}">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:46.271005" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-67.png"&gt;&lt;img src="selenium-screenshot-67.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-02-21T23:33:46.139841" elapsed="0.131284"/>
+</kw>
+<kw name="Fail" owner="BuiltIn">
+<msg time="2026-02-21T23:33:46.271684" level="FAIL">User already registered — registration must be new</msg>
+<arg>User already registered — registration must be new</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="FAIL" start="2026-02-21T23:33:46.271305" elapsed="0.000470">User already registered — registration must be new</status>
+</kw>
+<status status="FAIL" start="2026-02-21T23:33:46.139702" elapsed="0.132173">User already registered — registration must be new</status>
+</branch>
+<branch type="ELSE">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:46.272082" elapsed="0.000038"/>
+</kw>
+<kw name="Fail" owner="BuiltIn">
+<arg>Registration result not detected</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:46.272232" elapsed="0.000036"/>
+</kw>
+<status status="NOT RUN" start="2026-02-21T23:33:46.271936" elapsed="0.000383"/>
+</branch>
+<status status="FAIL" start="2026-02-21T23:33:46.138930" elapsed="0.133436">User already registered — registration must be new</status>
+</if>
+<status status="FAIL" start="2026-02-21T23:33:45.591243" elapsed="0.681245">User already registered — registration must be new</status>
+</kw>
+<kw name="Check Registration Result">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:48.892658" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-68.png"&gt;&lt;img src="selenium-screenshot-68.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-21T23:33:48.892945" level="FAIL">Page should have contained text 'Logout' but did not.</msg>
+<arg>Logout</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="FAIL" start="2026-02-21T23:33:48.274788" elapsed="0.620480">Page should have contained text 'Logout' but did not.</status>
+</kw>
+<msg time="2026-02-21T23:33:48.895638" level="INFO">${logout} = False</msg>
+<var>${logout}</var>
+<arg>Page Should Contain</arg>
+<arg>Logout</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-21T23:33:48.273927" elapsed="0.621782"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:48.911990" level="INFO">Current page contains text 'already registered'.</msg>
+<arg>already registered</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-02-21T23:33:48.896692" elapsed="0.015445"/>
+</kw>
+<msg time="2026-02-21T23:33:48.912481" level="INFO">${exists} = True</msg>
+<var>${exists}</var>
+<arg>Page Should Contain</arg>
+<arg>already registered</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-21T23:33:48.896049" elapsed="0.016476"/>
+</kw>
+<if>
+<branch type="IF" condition="${logout}">
+<kw name="Log" owner="BuiltIn">
+<arg>New user registered</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:48.912896" elapsed="0.000042"/>
+</kw>
+<kw name="Logout User" owner="login_keywords">
+<status status="NOT RUN" start="2026-02-21T23:33:48.913120" elapsed="0.000041"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=username</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:48.913301" elapsed="0.000038"/>
+</kw>
+<status status="NOT RUN" start="2026-02-21T23:33:48.912694" elapsed="0.000696"/>
+</branch>
+<branch type="ELSE IF" condition="${exists}">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:49.063329" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-69.png"&gt;&lt;img src="selenium-screenshot-69.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-02-21T23:33:48.913629" elapsed="0.149837"/>
+</kw>
+<kw name="Fail" owner="BuiltIn">
+<msg time="2026-02-21T23:33:49.064070" level="FAIL">User already registered — registration must be new</msg>
+<arg>User already registered — registration must be new</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="FAIL" start="2026-02-21T23:33:49.063666" elapsed="0.000497">User already registered — registration must be new</status>
+</kw>
+<status status="FAIL" start="2026-02-21T23:33:48.913440" elapsed="0.150824">User already registered — registration must be new</status>
+</branch>
+<branch type="ELSE">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:49.064474" elapsed="0.000038"/>
+</kw>
+<kw name="Fail" owner="BuiltIn">
+<arg>Registration result not detected</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:49.064622" elapsed="0.000036"/>
+</kw>
+<status status="NOT RUN" start="2026-02-21T23:33:49.064329" elapsed="0.000384"/>
+</branch>
+<status status="FAIL" start="2026-02-21T23:33:48.912633" elapsed="0.152125">User already registered — registration must be new</status>
+</if>
+<status status="FAIL" start="2026-02-21T23:33:48.273254" elapsed="0.791633">User already registered — registration must be new</status>
+</kw>
+<kw name="Check Registration Result">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:51.523473" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-70.png"&gt;&lt;img src="selenium-screenshot-70.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-21T23:33:51.523629" level="FAIL">Page should have contained text 'Logout' but did not.</msg>
+<arg>Logout</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="FAIL" start="2026-02-21T23:33:51.066409" elapsed="0.457884">Page should have contained text 'Logout' but did not.</status>
+</kw>
+<msg time="2026-02-21T23:33:51.524439" level="INFO">${logout} = False</msg>
+<var>${logout}</var>
+<arg>Page Should Contain</arg>
+<arg>Logout</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-21T23:33:51.066106" elapsed="0.458378"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:51.536385" level="INFO">Current page contains text 'already registered'.</msg>
+<arg>already registered</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-02-21T23:33:51.524989" elapsed="0.011493"/>
+</kw>
+<msg time="2026-02-21T23:33:51.536623" level="INFO">${exists} = True</msg>
+<var>${exists}</var>
+<arg>Page Should Contain</arg>
+<arg>already registered</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-21T23:33:51.524656" elapsed="0.011999"/>
+</kw>
+<if>
+<branch type="IF" condition="${logout}">
+<kw name="Log" owner="BuiltIn">
+<arg>New user registered</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:51.536962" elapsed="0.000047"/>
+</kw>
+<kw name="Logout User" owner="login_keywords">
+<status status="NOT RUN" start="2026-02-21T23:33:51.537184" elapsed="0.000034"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=username</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:51.537324" elapsed="0.000029"/>
+</kw>
+<status status="NOT RUN" start="2026-02-21T23:33:51.536770" elapsed="0.000623"/>
+</branch>
+<branch type="ELSE IF" condition="${exists}">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:51.651371" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-71.png"&gt;&lt;img src="selenium-screenshot-71.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-02-21T23:33:51.537565" elapsed="0.113923"/>
+</kw>
+<kw name="Fail" owner="BuiltIn">
+<msg time="2026-02-21T23:33:51.652024" level="FAIL">User already registered — registration must be new</msg>
+<arg>User already registered — registration must be new</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="FAIL" start="2026-02-21T23:33:51.651658" elapsed="0.000450">User already registered — registration must be new</status>
+</kw>
+<status status="FAIL" start="2026-02-21T23:33:51.537434" elapsed="0.114767">User already registered — registration must be new</status>
+</branch>
+<branch type="ELSE">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:51.652420" elapsed="0.000033"/>
+</kw>
+<kw name="Fail" owner="BuiltIn">
+<arg>Registration result not detected</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:51.652548" elapsed="0.000029"/>
+</kw>
+<status status="NOT RUN" start="2026-02-21T23:33:51.652283" elapsed="0.000338"/>
+</branch>
+<status status="FAIL" start="2026-02-21T23:33:51.536741" elapsed="0.115935">User already registered — registration must be new</status>
+</if>
+<status status="FAIL" start="2026-02-21T23:33:51.065763" elapsed="0.587016">User already registered — registration must be new</status>
+</kw>
+<kw name="Check Registration Result">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:54.142311" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-72.png"&gt;&lt;img src="selenium-screenshot-72.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-21T23:33:54.142446" level="FAIL">Page should have contained text 'Logout' but did not.</msg>
+<arg>Logout</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="FAIL" start="2026-02-21T23:33:53.655287" elapsed="0.487831">Page should have contained text 'Logout' but did not.</status>
+</kw>
+<msg time="2026-02-21T23:33:54.143309" level="INFO">${logout} = False</msg>
+<var>${logout}</var>
+<arg>Page Should Contain</arg>
+<arg>Logout</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-21T23:33:53.654623" elapsed="0.488718"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:54.154879" level="INFO">Current page contains text 'already registered'.</msg>
+<arg>already registered</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-02-21T23:33:54.143790" elapsed="0.011291"/>
+</kw>
+<msg time="2026-02-21T23:33:54.155260" level="INFO">${exists} = True</msg>
+<var>${exists}</var>
+<arg>Page Should Contain</arg>
+<arg>already registered</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-21T23:33:54.143482" elapsed="0.011812"/>
+</kw>
+<if>
+<branch type="IF" condition="${logout}">
+<kw name="Log" owner="BuiltIn">
+<arg>New user registered</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:54.155574" elapsed="0.000037"/>
+</kw>
+<kw name="Logout User" owner="login_keywords">
+<status status="NOT RUN" start="2026-02-21T23:33:54.155784" elapsed="0.000035"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=username</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:54.155913" elapsed="0.000026"/>
+</kw>
+<status status="NOT RUN" start="2026-02-21T23:33:54.155407" elapsed="0.000571"/>
+</branch>
+<branch type="ELSE IF" condition="${exists}">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:54.268822" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-73.png"&gt;&lt;img src="selenium-screenshot-73.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-02-21T23:33:54.156134" elapsed="0.112810"/>
+</kw>
+<kw name="Fail" owner="BuiltIn">
+<msg time="2026-02-21T23:33:54.269493" level="FAIL">User already registered — registration must be new</msg>
+<arg>User already registered — registration must be new</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="FAIL" start="2026-02-21T23:33:54.269150" elapsed="0.000429">User already registered — registration must be new</status>
+</kw>
+<status status="FAIL" start="2026-02-21T23:33:54.156014" elapsed="0.113644">User already registered — registration must be new</status>
+</branch>
+<branch type="ELSE">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:54.269835" elapsed="0.000030"/>
+</kw>
+<kw name="Fail" owner="BuiltIn">
+<arg>Registration result not detected</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:54.269953" elapsed="0.000027"/>
+</kw>
+<status status="NOT RUN" start="2026-02-21T23:33:54.269708" elapsed="0.000313"/>
+</branch>
+<status status="FAIL" start="2026-02-21T23:33:54.155380" elapsed="0.114676">User already registered — registration must be new</status>
+</if>
+<status status="FAIL" start="2026-02-21T23:33:53.653958" elapsed="0.616190">User already registered — registration must be new</status>
+</kw>
+<kw name="Check Registration Result">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:57.277638" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-74.png"&gt;&lt;img src="selenium-screenshot-74.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-02-21T23:33:57.277892" level="FAIL">Page should have contained text 'Logout' but did not.</msg>
+<arg>Logout</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="FAIL" start="2026-02-21T23:33:56.273216" elapsed="1.005757">Page should have contained text 'Logout' but did not.</status>
+</kw>
+<msg time="2026-02-21T23:33:57.279234" level="INFO">${logout} = False</msg>
+<var>${logout}</var>
+<arg>Page Should Contain</arg>
+<arg>Logout</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-21T23:33:56.272736" elapsed="1.006558"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:57.294798" level="INFO">Current page contains text 'already registered'.</msg>
+<arg>already registered</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-02-21T23:33:57.280172" elapsed="0.014747"/>
+</kw>
+<msg time="2026-02-21T23:33:57.295086" level="INFO">${exists} = True</msg>
+<var>${exists}</var>
+<arg>Page Should Contain</arg>
+<arg>already registered</arg>
+<doc>Runs the specified keyword and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2026-02-21T23:33:57.279587" elapsed="0.015537"/>
+</kw>
+<if>
+<branch type="IF" condition="${logout}">
+<kw name="Log" owner="BuiltIn">
+<arg>New user registered</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:57.295472" elapsed="0.000040"/>
+</kw>
+<kw name="Logout User" owner="login_keywords">
+<status status="NOT RUN" start="2026-02-21T23:33:57.295690" elapsed="0.000039"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=username</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:57.295846" elapsed="0.000034"/>
+</kw>
+<status status="NOT RUN" start="2026-02-21T23:33:57.295252" elapsed="0.000676"/>
+</branch>
+<branch type="ELSE IF" condition="${exists}">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:57.424602" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-75.png"&gt;&lt;img src="selenium-screenshot-75.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-02-21T23:33:57.296166" elapsed="0.128624"/>
+</kw>
+<kw name="Fail" owner="BuiltIn">
+<msg time="2026-02-21T23:33:57.425578" level="FAIL">User already registered — registration must be new</msg>
+<arg>User already registered — registration must be new</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="FAIL" start="2026-02-21T23:33:57.425091" elapsed="0.000575">User already registered — registration must be new</status>
+</kw>
+<status status="FAIL" start="2026-02-21T23:33:57.295972" elapsed="0.129790">User already registered — registration must be new</status>
+</branch>
+<branch type="ELSE">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:57.425949" elapsed="0.000035"/>
+</kw>
+<kw name="Fail" owner="BuiltIn">
+<arg>Registration result not detected</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2026-02-21T23:33:57.426087" elapsed="0.000031"/>
+</kw>
+<status status="NOT RUN" start="2026-02-21T23:33:57.425819" elapsed="0.000347"/>
+</branch>
+<status status="FAIL" start="2026-02-21T23:33:57.295221" elapsed="0.130988">User already registered — registration must be new</status>
+</if>
+<status status="FAIL" start="2026-02-21T23:33:56.272250" elapsed="1.154068">User already registered — registration must be new</status>
+</kw>
+<msg time="2026-02-21T23:33:57.426485" level="FAIL">Keyword 'Check Registration Result' failed after retrying for 15 seconds. The last error was: User already registered — registration must be new</msg>
+<arg>15s</arg>
+<arg>2s</arg>
+<arg>Check Registration Result</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="FAIL" start="2026-02-21T23:33:40.219137" elapsed="17.207463">Keyword 'Check Registration Result' failed after retrying for 15 seconds. The last error was: User already registered — registration must be new</status>
+</kw>
+<arg>${EMAIL}</arg>
+<arg>${PASSWORD}</arg>
+<status status="FAIL" start="2026-02-21T23:33:36.422563" elapsed="21.004162">Keyword 'Check Registration Result' failed after retrying for 15 seconds. The last error was: User already registered — registration must be new</status>
+</kw>
+<kw name="Login Validation">
+<arg>${EMAIL}</arg>
+<arg>${PASSWORD}</arg>
+<status status="NOT RUN" start="2026-02-21T23:33:57.426963" elapsed="0.000038"/>
+</kw>
+<kw name="Search Validation">
+<status status="NOT RUN" start="2026-02-21T23:33:57.427153" elapsed="0.000033"/>
+</kw>
+<kw name="Sorting Validation">
+<status status="NOT RUN" start="2026-02-21T23:33:57.427324" elapsed="0.000052"/>
+</kw>
+<kw name="Cart Validation">
+<status status="NOT RUN" start="2026-02-21T23:33:57.428093" elapsed="0.000045"/>
+</kw>
+<kw name="Billing Validation">
+<arg>${EMAIL}</arg>
+<arg>${FIRSTNAME}</arg>
+<arg>${LASTNAME}</arg>
+<arg>${PHONE}</arg>
+<arg>${CITY}</arg>
+<arg>${POSTCODE}</arg>
+<status status="NOT RUN" start="2026-02-21T23:33:57.428383" elapsed="0.000041"/>
+</kw>
+<kw name="Logout Validation">
+<status status="NOT RUN" start="2026-02-21T23:33:57.428578" elapsed="0.000033"/>
+</kw>
+<arg>EMAIL=testuser1@test.com</arg>
+<arg>PASSWORD=Omkar@2003</arg>
+<arg>FIRSTNAME=Ravi</arg>
+<arg>LASTNAME=Kumar</arg>
+<arg>PHONE=9876543222</arg>
+<arg>CITY=Chennai</arg>
+<arg>POSTCODE=600001</arg>
+<status status="FAIL" start="2026-02-21T23:33:36.422040" elapsed="21.006673">Keyword 'Check Registration Result' failed after retrying for 15 seconds. The last error was: User already registered — registration must be new</status>
+</kw>
+<kw name="End User Session" type="TEARDOWN">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-02-21T23:33:57.555893" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-76.png"&gt;&lt;img src="selenium-screenshot-76.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-02-21T23:33:57.430288" elapsed="0.125712"/>
+</kw>
+<kw name="Close Application" owner="common">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-02-21T23:33:57.556578" elapsed="2.420817"/>
+</kw>
+<status status="PASS" start="2026-02-21T23:33:57.556220" elapsed="2.421349"/>
+</kw>
+<status status="PASS" start="2026-02-21T23:33:57.429727" elapsed="2.547950"/>
+</kw>
+<status status="FAIL" start="2026-02-21T23:33:32.997425" elapsed="26.980531">Keyword 'Check Registration Result' failed after retrying for 15 seconds. The last error was: User already registered — registration must be new</status>
+</test>
+<status status="FAIL" start="2026-02-21T23:33:04.313143" elapsed="55.666087"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="End To End" id="s1" pass="0" fail="2" skip="0">End To End</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

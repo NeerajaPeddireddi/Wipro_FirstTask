@@ -65,7 +65,7 @@ obj.child2()
 
 #Polymorphism
 #run time-->overriding and compile time-->overloading
-#__add__ this function will call when + is caled
+#__add__ this function will call when + is called
 class box1:
     def __init__(self,value):
         self.value = value

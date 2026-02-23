@@ -1,0 +1,105 @@
+2026-02-22 16:19:12,183 - INFO - ========== TEST SUITE STARTED ==========
+2026-02-22 16:19:12,679 - INFO - Reading login data from Excel file: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\../data\data.xlsx
+2026-02-22 16:19:12,690 - INFO - Total test data rows loaded: 3
+2026-02-22 16:19:12,695 - INFO - Reading login data from Excel file: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\../data\data.xlsx
+2026-02-22 16:19:12,705 - INFO - Total test data rows loaded: 2
+2026-02-22 16:19:12,710 - INFO - Reading login data from Excel file: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\../data\data.xlsx
+2026-02-22 16:19:12,722 - INFO - Total test data rows loaded: 2
+2026-02-22 16:19:12,725 - INFO - Reading place order data from Excel file: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\../data\data.xlsx
+2026-02-22 16:19:12,737 - INFO - Total test data rows loaded: 2
+2026-02-22 16:19:12,740 - INFO - Reading registration data from Excel file: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\../data\data.xlsx
+2026-02-22 16:19:12,750 - INFO - Total test data rows loaded: 1
+2026-02-22 16:19:12,757 - INFO - Reading search data from Excel file: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\../data\data.xlsx
+2026-02-22 16:19:12,766 - INFO - Total test data rows loaded: 2
+2026-02-22 16:19:12,770 - INFO - Reading sort data from Excel file: C:\Users\Neeraja\Desktop\Wipro_Practice\Capstone_Project\tests\../data\data.xlsx
+2026-02-22 16:19:12,782 - INFO - Total test data rows loaded: 6
+2026-02-22 16:19:12,786 - INFO - ------ Test Started: test_user_registration[data0] ------
+2026-02-22 16:19:12,788 - INFO - Browser Setup Started: edge
+2026-02-22 16:19:12,997 - INFO - ------ Test Finished: test_user_registration[data0] ------
+
+2026-02-22 16:19:12,998 - INFO - ------ Test Started: test_login[data0] ------
+2026-02-22 16:19:12,999 - INFO - Browser Setup Started: edge
+2026-02-22 16:19:13,010 - INFO - ------ Test Finished: test_login[data0] ------
+
+2026-02-22 16:19:13,010 - INFO - ------ Test Started: test_login[data1] ------
+2026-02-22 16:19:13,011 - INFO - Browser Setup Started: edge
+2026-02-22 16:19:13,022 - INFO - ------ Test Finished: test_login[data1] ------
+
+2026-02-22 16:19:13,022 - INFO - ------ Test Started: test_search_product[data0] ------
+2026-02-22 16:19:13,023 - INFO - Browser Setup Started: edge
+2026-02-22 16:19:13,032 - INFO - ------ Test Finished: test_search_product[data0] ------
+
+2026-02-22 16:19:13,032 - INFO - ------ Test Started: test_search_product[data1] ------
+2026-02-22 16:19:13,034 - INFO - Browser Setup Started: edge
+2026-02-22 16:19:13,044 - INFO - ------ Test Finished: test_search_product[data1] ------
+
+2026-02-22 16:19:13,044 - INFO - ------ Test Started: test_add_product_to_cart ------
+2026-02-22 16:19:13,046 - INFO - Browser Setup Started: edge
+2026-02-22 16:19:13,057 - INFO - ------ Test Finished: test_add_product_to_cart ------
+
+2026-02-22 16:19:13,057 - INFO - ------ Test Started: test_remove_product ------
+2026-02-22 16:19:13,059 - INFO - Browser Setup Started: edge
+2026-02-22 16:19:13,071 - INFO - ------ Test Finished: test_remove_product ------
+
+2026-02-22 16:19:13,072 - INFO - ------ Test Started: test_place_order_cod[data0] ------
+2026-02-22 16:19:13,073 - INFO - Browser Setup Started: edge
+2026-02-22 16:19:13,082 - INFO - ------ Test Finished: test_place_order_cod[data0] ------
+
+2026-02-22 16:19:13,082 - INFO - ------ Test Started: test_place_order_cod[data1] ------
+2026-02-22 16:19:13,084 - INFO - Browser Setup Started: edge
+2026-02-22 16:19:13,095 - INFO - ------ Test Finished: test_place_order_cod[data1] ------
+
+2026-02-22 16:19:13,095 - INFO - ------ Test Started: test_sort_products[data0] ------
+2026-02-22 16:19:13,096 - INFO - Browser Setup Started: edge
+2026-02-22 16:19:13,107 - INFO - ------ Test Finished: test_sort_products[data0] ------
+
+2026-02-22 16:19:13,107 - INFO - ------ Test Started: test_sort_products[data1] ------
+2026-02-22 16:19:13,108 - INFO - Browser Setup Started: edge
+2026-02-22 16:19:13,117 - INFO - ------ Test Finished: test_sort_products[data1] ------
+
+2026-02-22 16:19:13,118 - INFO - ------ Test Started: test_sort_products[data2] ------
+2026-02-22 16:19:13,120 - INFO - Browser Setup Started: edge
+2026-02-22 16:19:13,130 - INFO - ------ Test Finished: test_sort_products[data2] ------
+
+2026-02-22 16:19:13,130 - INFO - ------ Test Started: test_sort_products[data3] ------
+2026-02-22 16:19:13,131 - INFO - Browser Setup Started: edge
+2026-02-22 16:19:13,143 - INFO - ------ Test Finished: test_sort_products[data3] ------
+
+2026-02-22 16:19:13,143 - INFO - ------ Test Started: test_sort_products[data4] ------
+2026-02-22 16:19:13,145 - INFO - Browser Setup Started: edge
+2026-02-22 16:19:13,157 - INFO - ------ Test Finished: test_sort_products[data4] ------
+
+2026-02-22 16:19:13,157 - INFO - ------ Test Started: test_sort_products[data5] ------
+2026-02-22 16:19:13,158 - INFO - Browser Setup Started: edge
+2026-02-22 16:19:13,167 - INFO - ------ Test Finished: test_sort_products[data5] ------
+
+2026-02-22 16:19:13,168 - INFO - ------ Test Started: test_findOrdersByUser[data0] ------
+2026-02-22 16:19:13,172 - INFO - Browser Setup Started: edge
+2026-02-22 16:19:13,180 - INFO - ------ Test Finished: test_findOrdersByUser[data0] ------
+
+2026-02-22 16:19:13,181 - INFO - ------ Test Started: test_findOrdersByUser[data1] ------
+2026-02-22 16:19:13,182 - INFO - Browser Setup Started: edge
+2026-02-22 16:19:13,193 - INFO - ------ Test Finished: test_findOrdersByUser[data1] ------
+
+2026-02-22 16:19:13,193 - INFO - ------ Test Started: test_filter_product[data0] ------
+2026-02-22 16:19:13,194 - INFO - Browser Setup Started: edge
+2026-02-22 16:19:13,206 - INFO - ------ Test Finished: test_filter_product[data0] ------
+
+2026-02-22 16:19:13,207 - INFO - ------ Test Started: test_filter_product[data1] ------
+2026-02-22 16:19:13,208 - INFO - Browser Setup Started: edge
+2026-02-22 16:19:13,217 - INFO - ------ Test Finished: test_filter_product[data1] ------
+
+2026-02-22 16:19:13,219 - INFO - ------ Test Started: test_filter_product[data2] ------
+2026-02-22 16:19:13,221 - INFO - Browser Setup Started: edge
+2026-02-22 16:19:13,230 - INFO - ------ Test Finished: test_filter_product[data2] ------
+
+2026-02-22 16:19:13,230 - INFO - ------ Test Started: test_logout[data0] ------
+2026-02-22 16:19:13,231 - INFO - Browser Setup Started: edge
+2026-02-22 16:19:13,243 - INFO - ------ Test Finished: test_logout[data0] ------
+
+2026-02-22 16:19:13,243 - INFO - ------ Test Started: test_open_homepage ------
+2026-02-22 16:19:13,244 - INFO - Browser Setup Started: edge
+2026-02-22 16:19:13,257 - INFO - ------ Test Finished: test_open_homepage ------
+
+2026-02-22 16:19:13,259 - INFO - ========== TEST SUITE FINISHED ==========
+2026-02-22 16:19:13,259 - INFO - Total Tests Collected: 22

@@ -7,7 +7,7 @@ from Capstone_Project.utilities.logger import get_logger
 logger = get_logger()
 
 
-# 1️⃣ Add CLI option for browser
+# 1️ Add CLI option for browser
 def pytest_addoption(parser):
     parser.addoption(
         "--browser",
@@ -17,7 +17,7 @@ def pytest_addoption(parser):
     )
 
 
-# 2️⃣ Fixture to set up driver
+# 2️ Fixture to set up driver
 @pytest.fixture(scope="function")
 def setup(request):
     cli_browser = request.config.getoption("--browser")
@@ -28,10 +28,12 @@ def setup(request):
     if cli_browser:
         config["DEFAULT"]["browser"] = cli_browser.lower()
 
-    browser_name = config["DEFAULT"]["browser"].lower()
+    browser_name = cli_browser if cli_browser else config["DEFAULT"]["browser"]
+    browser_name = browser_name.lower()
+
     logger.info(f"Browser Setup Started: {browser_name}")
 
-    driver = get_driver()  # reads browser from config
+    driver = get_driver(browser_name)
 
     base_url = config["DEFAULT"]["base_url"]
     driver.get(base_url)

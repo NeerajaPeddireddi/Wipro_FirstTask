@@ -23,3 +23,4 @@ TC004_Login.robot
     Sleep    2s
     capture page screenshot    afterlogin.png
     close browser
+

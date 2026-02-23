@@ -7,12 +7,12 @@ from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.firefox import GeckoDriverManager
 import configparser
 import os
-def get_driver():
+def get_driver(browser):
 
     config = configparser.ConfigParser()
     config.read(os.path.join(os.path.dirname(__file__), "../config/config.ini"))
 
-    browser = config["DEFAULT"]["browser"].lower()
+    browser = browser.lower()
 
     if browser == "chrome":
         chrome_options = Options()

@@ -166,7 +166,7 @@ for key in dict2:
     print(key,dict2[key])
 #nested dict
 emp={
-    101:{"name":"manav","salary":2000},
+    101:{"name":"manu","salary":2000},
     102:{"name":"archu","salary":1000}
 }
 print(emp)
@@ -199,7 +199,7 @@ print(A&B)#Intersection
 a=b=2
 
 #control structures
-#If,elif,else,for,while-->dowhile not possible in python
+#If,elif,else,for,while-->do while not possible in python
 num=5
 if num%2==0:
     print("even")
